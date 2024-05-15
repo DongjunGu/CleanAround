@@ -56,10 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\2d-extras-2020.3\2d-extras-2020.3\Tests\Editor\PlaceholderTests.cs" />
+    <Compile Include="Assets\TileExtras\2d-extras-2020.3\Tests\Editor\PlaceholderTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\2d-extras-2020.3\2d-extras-2020.3\Tests\Editor\Unity.2D.Tilemap.Extras.EditorTests.asmdef" />
+    <None Include="Assets\TileExtras\2d-extras-2020.3\Tests\Editor\Unity.2D.Tilemap.Extras.EditorTests.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

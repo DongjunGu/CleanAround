@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public PlayerController player;
     public static GameManager instance;
+    public PlayerController player;
+    public PoolManager pool;
+    
     
     void Awake()
     {
