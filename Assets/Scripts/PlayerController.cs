@@ -7,15 +7,18 @@ public class PlayerController : MonoBehaviour
 {
     public Vector2 inputVector;
     public float playerSpeed;
+    public Scanner scanner;
 
     Rigidbody2D rigidBody;
     SpriteRenderer spriteRenderer;
     Animator playerAnimator;
+
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<Animator>();
+        scanner = GetComponent<Scanner>();
     }
 
     void FixedUpdate()

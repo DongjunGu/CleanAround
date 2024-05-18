@@ -15,7 +15,7 @@ TextureImporter:
       213: 6692457283542198840
     second: 7CBB187E-24EC-456D-A28A-7ECF2A932512_3
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -36,6 +36,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -74,7 +75,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -221,6 +221,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      7CBB187E-24EC-456D-A28A-7ECF2A932512_2: -3893335110489468631
+      7CBB187E-24EC-456D-A28A-7ECF2A932512_1: 6976009980530017832
+      7CBB187E-24EC-456D-A28A-7ECF2A932512_0: -5733126391962759931
+      7CBB187E-24EC-456D-A28A-7ECF2A932512_3: 6692457283542198840
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
