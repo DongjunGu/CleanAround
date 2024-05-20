@@ -33,7 +33,6 @@ public class Enemy : MonoBehaviour
         rigid.simulated = true;
         anim.SetBool("Dead", false);
         isHit = false;
-        Debug.Log("H");
         health = maxHealth;
         foreach(SpriteRenderer entireRenderer in entireRenderers)
         {
