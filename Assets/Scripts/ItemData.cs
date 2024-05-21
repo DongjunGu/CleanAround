@@ -5,11 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptable Object/ItemData")]
 public class ItemData : ScriptableObject
 {
-    public enum ItemType { Melee, Range, Water }
+    public enum ItemType { Melee, Range, Water, Posion }
     [Header("Main Info")]
     public ItemType itemType;
     public int itemId;
     public string itemName;
+    [TextArea]
     public string itemDesc;
     public Sprite itemIcon;
 

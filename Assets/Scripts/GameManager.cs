@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [Header("# Game Control")]
     public float gameTime;
     public float maxGameTime = 2 * 10f;
+    public LevelUI levelUI;
     void Awake()
     {
         instance = this;
@@ -25,6 +26,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+
+        //TODO
+        levelUI.Select(0);
     }
     void Update()
     {
@@ -37,9 +41,10 @@ public class GameManager : MonoBehaviour
     public void GetExp()
     {
         exp++;
-        if(exp == nextExp[level])
+        if(exp == nextExp[Mathf.Min(level,nextExp.Length-1)])
         {
             level++;
+            levelUI.PopUI();
             exp = 0;
         }
     }
