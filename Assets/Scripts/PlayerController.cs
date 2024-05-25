@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         scanner = GetComponent<Scanner>();
     }
-
     void FixedUpdate()
     {
         Vector2 moveVet = inputVector * playerSpeed * Time.fixedDeltaTime;
@@ -29,16 +28,37 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputValue value)
     {
+        if (!GameManager.instance.isLive)
+            return;
         inputVector = value.Get<Vector2>();
     }
     
     void LateUpdate()
     {
-        if(inputVector.x != 0)
+        if (!GameManager.instance.isLive)
+            return;
+        if (inputVector.x != 0)
         {
             spriteRenderer.flipX = inputVector.x > 0; //비교연산자
         }
 
         playerAnimator.SetFloat("playerSpeed", inputVector.magnitude);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (!GameManager.instance.isLive)
+            return;
+        GameManager.instance.health -= Time.deltaTime * 10;
+
+        if(GameManager.instance.health < 0)
+        {
+            for(int index = 2; index < transform.childCount; index++)
+            {
+                transform.GetChild(index).gameObject.SetActive(false);
+            }
+            playerAnimator.SetTrigger("Dead");
+            GameManager.instance.GameOver();
+        }
     }
 }

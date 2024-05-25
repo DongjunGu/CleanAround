@@ -6,7 +6,6 @@ public class LevelUI : MonoBehaviour
 {
     Item[] items;
     RectTransform rect;
-    bool isResume;
     void Awake()
     {
         rect = GetComponent<RectTransform>();
@@ -21,23 +20,23 @@ public class LevelUI : MonoBehaviour
     {
         Time.timeScale = 0;
         Next();
-        isResume = false;
+        GameManager.instance.isLive = false;
         StartCoroutine(WaitAndScale(0.1f, Vector3.one, 0.5f));
     }
     public void HideUI()
     {
-        isResume = true;
+        GameManager.instance.isLive = true;
         StartCoroutine(WaitAndScale(0.1f, Vector3.zero, 0.5f));
         
     }
 
-    IEnumerator WaitAndScale(float waitTime, Vector3 targetScale, float duration)
+    public IEnumerator WaitAndScale(float waitTime, Vector3 targetScale, float duration)
     {
         yield return new WaitForSecondsRealtime(waitTime);
 
         yield return StartCoroutine(ScaleOverTime(targetScale, duration));
     }
-    IEnumerator ScaleOverTime(Vector3 targetScale, float duration)
+    public IEnumerator ScaleOverTime(Vector3 targetScale, float duration)
     {
         Vector3 initialScale = rect.localScale;
         float elapsed = 0f;
@@ -50,7 +49,7 @@ public class LevelUI : MonoBehaviour
         }
         
         rect.localScale = targetScale;
-        if(isResume)
+        if(GameManager.instance.isLive)
             Time.timeScale = 1;
     }
 
@@ -64,6 +63,7 @@ public class LevelUI : MonoBehaviour
         int[] ran = new int[3];
         while (true)
         {
+            //리스트로만들어서 랜덤
             ran[0] = Random.Range(0, items.Length);
             ran[1] = Random.Range(0, items.Length);
             ran[2] = Random.Range(0, items.Length);
@@ -81,6 +81,7 @@ public class LevelUI : MonoBehaviour
             }
             else
             {
+                //만약 0 1 둘다 만렙일경우 특수 아이템활성화
                 //만약 노출되는게 2개라면 만렙이 아닌것들 노출
                 ranItem.gameObject.SetActive(true);
             }

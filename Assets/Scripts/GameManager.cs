@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,38 +9,79 @@ public class GameManager : MonoBehaviour
     [Header("# Game Object")]
     public PlayerController player;
     public PoolManager pool;
+    public bool isLive;
     [Header("# Player Info")]
-    public int health;
-    public int maxHealth = 100;
+    public float health;
+    public float maxHealth = 100;
     public int level;
     public int kill;
     public int exp;
-    public int[] nextExp = { 3, 10, 30, 100, 150, 210, 280, 360, 450, 600 };
+    public int[] nextExp = { 3, 10, 20, 45, 70, 120, 200, 300, 450, 600 };
     [Header("# Game Control")]
     public float gameTime;
     public float maxGameTime = 2 * 10f;
     public LevelUI levelUI;
+    public Result gameoverUI;
+    public GameObject enemyCleaner;
     void Awake()
     {
         instance = this;
     }
-    void Start()
+    public void GameStart()
     {
         health = maxHealth;
 
         //TODO
         levelUI.Select(0);
+
+        isLive = true;
+        Time.timeScale = 1;
+    }
+    public void GameOver()
+    {
+        StartCoroutine(GameOverCorou());
+    }
+    IEnumerator GameOverCorou()
+    {
+        isLive = false;
+        yield return new WaitForSeconds(0.5f);
+        gameoverUI.gameObject.SetActive(true);
+        gameoverUI.Fail();
+        Time.timeScale = 0;
+    }
+    public void GameEnd()
+    {
+        StartCoroutine(GameEndCorou());
+    }
+    IEnumerator GameEndCorou()
+    {
+        isLive = false;
+        enemyCleaner.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        gameoverUI.gameObject.SetActive(true);
+        gameoverUI.Victory();
+        Time.timeScale = 0;
+    }
+    public void GameRestart()
+    {
+        SceneManager.LoadScene(0);
     }
     void Update()
     {
+        if ((!isLive))
+            return;
         gameTime += Time.deltaTime;
         if (gameTime > maxGameTime)
         {
             gameTime = maxGameTime;
+            GameEnd();
         }
     }
     public void GetExp()
     {
+        if (!isLive)
+            return;
+
         exp++;
         if(exp == nextExp[Mathf.Min(level,nextExp.Length-1)])
         {
