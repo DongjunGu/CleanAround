@@ -27,28 +27,37 @@ public class Weapon : MonoBehaviour
             case 0:
                 transform.Rotate(Vector3.forward * speed * Time.deltaTime);
                 break;
-            default:
+            case 1:
                 timer += Time.deltaTime;
-                if(timer > speed)
+                if (timer > Item.attackSpeed)
                 {
                     timer = 0f;
                     Fire();
                 }
                 break;
+            case 4:
+                timer += Time.deltaTime;
+                if (timer > speed)
+                {
+                    timer = 0f;
+                    Throw();
+                }
+                break;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump")) //Test
         {
             LevelUp(10, 1);
         }
     }
-    
+
     public void LevelUp(float damage, int count)
     {
         this.damage = damage;
         this.count += count;
-        if (id == 0)
+        if (id == 0) //근접무기
             Batch();
+
     }
     public void Init(ItemData data)
     {
@@ -60,9 +69,9 @@ public class Weapon : MonoBehaviour
         damage = data.baseDamage;
         count = data.baseCount;
 
-        for(int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)
+        for (int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)
         {
-            if(data.prtojectile == GameManager.instance.pool.prefabs[index])
+            if (data.prtojectile == GameManager.instance.pool.prefabs[index])
             {
                 prefabId = index;
                 break;
@@ -74,18 +83,21 @@ public class Weapon : MonoBehaviour
                 speed = -150;
                 Batch();
                 break;
-            default:
-                speed = 0.5f;
+            case 1:
+                Item.attackSpeed = 0.5f;
+                break;
+            case 4:
+                speed = 4f;
                 break;
         }
     }
 
     void Batch()
     {
-        for(int index = 0; index < count; index++)
+        for (int index = 0; index < count; index++)
         {
             Transform bullet;
-            if(index < transform.childCount)
+            if (index < transform.childCount)
             {
                 bullet = transform.GetChild(index);
             }
@@ -101,7 +113,7 @@ public class Weapon : MonoBehaviour
             bullet.Rotate(rotateVec);
             bullet.Translate(bullet.up * 2.0f, Space.World); //이동
 
-            bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero); //관통
+            bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.Melee); //관통
         }
     }
     void Fire()
@@ -116,6 +128,30 @@ public class Weapon : MonoBehaviour
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = transform.position;
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
-        bullet.GetComponent<Bullet>().Init(damage, count, dir);
+        bullet.GetComponent<Bullet>().Init(damage, count, dir, ItemData.ItemType.Range);
+    }
+
+    void Throw()
+    {
+        for (int index = 0; index < count; index++)
+        {
+            Transform bullet;
+            bullet = GameManager.instance.pool.Get(prefabId).transform;
+            bullet.parent = transform;
+
+            float randomAngle = Random.Range(0f, 360f);
+            float radian = randomAngle * Mathf.Deg2Rad;
+            Vector2 targetPosition = new Vector2(Mathf.Cos(radian), Mathf.Sin(radian)).normalized; //360도 랜덤
+            bullet.position = transform.position;
+            bullet.Translate(bullet.up * 0.5f, Space.World);
+            bullet.GetComponent<Bullet>().Init(damage, -10, targetPosition, ItemData.ItemType.Garbage);
+            StartCoroutine(Deactivate(bullet.gameObject, 2.0f));
+        }
+        
+    }
+    IEnumerator Deactivate(GameObject bullet, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        bullet.SetActive(false);
     }
 }

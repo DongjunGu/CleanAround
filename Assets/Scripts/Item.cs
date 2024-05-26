@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
     public int level;
     public Weapon weapon;
     public SubItem subItem;
+    public static float attackSpeed;
     Image icon;
     Text textLevel;
     Text textName;
@@ -32,6 +33,7 @@ public class Item : MonoBehaviour
         {
             case ItemData.ItemType.Melee:
             case ItemData.ItemType.Range:
+            case ItemData.ItemType.Garbage:
                 textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100, data.counts[level]);
                 break;
             case ItemData.ItemType.Water:
@@ -54,7 +56,7 @@ public class Item : MonoBehaviour
         switch (data.itemType)
         {
             case ItemData.ItemType.Melee:
-            case ItemData.ItemType.Range:
+            case ItemData.ItemType.Garbage:
                 if (level == 0)
                 {
                     GameObject newWeapon = new GameObject();
@@ -71,7 +73,24 @@ public class Item : MonoBehaviour
                 }
                 level++;
                 break;
-
+            case ItemData.ItemType.Range:
+                if (level == 0)
+                {
+                    GameObject newWeapon = new GameObject();
+                    weapon =  newWeapon.AddComponent<Weapon>();
+                    weapon.Init(data);
+                }
+                else
+                {
+                    float nextDamage = data.baseDamage;
+                    int nextCount = 0;
+                    nextDamage += data.baseDamage * data.damages[level];
+                    nextCount += data.counts[level];
+                    weapon.LevelUp(nextDamage, nextCount);
+                    attackSpeed -= 0.1f;
+                }
+                level++;
+                break;
             case ItemData.ItemType.Water:
                 if(level == 0)
                 {

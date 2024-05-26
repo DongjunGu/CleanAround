@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public int[] nextExp = { 3, 10, 20, 45, 70, 120, 200, 300, 450, 600 };
     [Header("# Game Control")]
     public float gameTime;
-    public float maxGameTime = 2 * 10f;
+    public float maxGameTime;
     public LevelUI levelUI;
     public Result gameoverUI;
     public GameObject enemyCleaner;
@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
     {
         health = maxHealth;
 
-        //TODO
-        levelUI.Select(0);
+        //TODO 기본무기
+        levelUI.Select(1);
 
         isLive = true;
         Time.timeScale = 1;

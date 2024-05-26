@@ -15,15 +15,16 @@ MonoBehaviour:
   itemType: 1
   itemId: 1
   itemName: Sponge
-  itemDesc: "\uB300\uBBF8\uC9C0 {0}% \uC99D\uAC00\n\uAD00\uD1B5 {1} \uC99D\uAC00"
+  itemDesc: "\uB300\uBBF8\uC9C0 {0}% \uC99D\uAC00\n\uAD00\uD1B5 {1} \uC99D\uAC00\n\uC5F0\uC0AC\uC18D\uB3C4
+    \uC99D\uAC00"
   itemIcon: {fileID: 21300000, guid: 1912063d1a859274b98c801bbadd1dd4, type: 3}
   baseDamage: 1.5
   baseCount: 0
   damages:
-  - 0.35
+  - 0.3
+  - 0.3
+  - 0.3
   - 0.5
   - 0.7
-  - 1
-  - 1.5
-  counts: 0100000001000000020000000300000004000000
+  counts: 0000000000000000000000000100000002000000
   prtojectile: {fileID: 4008690649547652137, guid: 17f7ab45a8207f84f870719f0ec903d6, type: 3}
