@@ -56,17 +56,17 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\TerrainTile\TerrainTile.cs" />
+    <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\RuleOverrideTile\RuleOverrideTile.cs" />
+    <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\RuleOverrideTile\AdvancedRuleOverrideTile.cs" />
+    <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\AnimatedTile\AnimatedTile.cs" />
     <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\RandomTile\RandomTile.cs" />
     <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\GridInformation\GridInformation.cs" />
-    <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\TerrainTile\TerrainTile.cs" />
     <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\PipelineTile\PipelineTile.cs" />
     <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Brushes\TintTextureGenerator.cs" />
-    <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\RuleOverrideTile\RuleOverrideTile.cs" />
     <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\IsometricRuleTile\IsometricRuleTile.cs" />
     <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\HexagonalRuleTile\HexagonalRuleTile.cs" />
     <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\RuleTile\RuleTile.cs" />
-    <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\RuleOverrideTile\AdvancedRuleOverrideTile.cs" />
-    <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\AnimatedTile\AnimatedTile.cs" />
     <Compile Include="Assets\TileExtras\2d-extras-2020.3\Runtime\Tiles\WeightedRandomTile\WeightedRandomTile.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -319,6 +319,9 @@
     </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.10.1\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.48f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

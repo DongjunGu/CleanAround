@@ -9,7 +9,6 @@ public class Item : MonoBehaviour
     public int level;
     public Weapon weapon;
     public SubItem subItem;
-    public static float attackSpeed;
     Image icon;
     Text textLevel;
     Text textName;
@@ -34,6 +33,7 @@ public class Item : MonoBehaviour
             case ItemData.ItemType.Melee:
             case ItemData.ItemType.Range:
             case ItemData.ItemType.Garbage:
+            case ItemData.ItemType.FeatherDuster:
                 textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100, data.counts[level]);
                 break;
             case ItemData.ItemType.Water:
@@ -56,6 +56,22 @@ public class Item : MonoBehaviour
         switch (data.itemType)
         {
             case ItemData.ItemType.Melee:
+                if (level == 0)
+                {
+                    GameObject newWeapon = new GameObject();
+                    weapon = newWeapon.AddComponent<Weapon>();
+                    weapon.Init(data);
+                }
+                else
+                {
+                    float nextDamage = data.baseDamage;
+                    int nextCount = 0;
+                    nextDamage += data.baseDamage * data.damages[level - 1];
+                    nextCount += data.counts[level - 1];
+                    weapon.LevelUp(nextDamage, nextCount);
+                }
+                level++;
+                break;
             case ItemData.ItemType.Garbage:
                 if (level == 0)
                 {
@@ -67,9 +83,10 @@ public class Item : MonoBehaviour
                 {
                     float nextDamage = data.baseDamage;
                     int nextCount = 0;
-                    nextDamage += data.baseDamage * data.damages[level];
-                    nextCount += data.counts[level];
+                    nextDamage += data.baseDamage * data.damages[level - 1];
+                    nextCount += data.counts[level - 1];
                     weapon.LevelUp(nextDamage, nextCount);
+                    weapon.speed -= 0.3f;
                 }
                 level++;
                 break;
@@ -84,10 +101,10 @@ public class Item : MonoBehaviour
                 {
                     float nextDamage = data.baseDamage;
                     int nextCount = 0;
-                    nextDamage += data.baseDamage * data.damages[level];
-                    nextCount += data.counts[level];
+                    nextDamage += data.baseDamage * data.damages[level-1];
+                    nextCount += data.counts[level - 1];
                     weapon.LevelUp(nextDamage, nextCount);
-                    attackSpeed -= 0.1f;
+                    weapon.speed -= 0.1f;
                 }
                 level++;
                 break;
@@ -100,8 +117,28 @@ public class Item : MonoBehaviour
                 }
                 else
                 {
-                    float nextRate = data.damages[level];
+                    float nextRate = data.damages[level - 1];
                     subItem.LevelUp(nextRate);
+                }
+                level++;
+                break;
+            case ItemData.ItemType.FeatherDuster:
+                if (level == 0)
+                {
+                    GameObject newWeapon = new GameObject();
+                    weapon = newWeapon.AddComponent<Weapon>();
+                    weapon.Init(data);
+                }
+                else
+                {
+                    float nextDamage = data.baseDamage;
+                    int nextCount = 0;
+                    nextDamage += data.baseDamage * data.damages[level - 1];
+                    nextCount += data.counts[level - 1];
+                    weapon.LevelUp(nextDamage, nextCount);
+                    weapon.speed -= 0.5f;
+                    FeatherParticle.featherSize += 0.3f;
+                    FeatherParticle.sphereRadiusSize += 0.3f;
                 }
                 level++;
                 break;

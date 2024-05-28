@@ -29,7 +29,7 @@ public class Weapon : MonoBehaviour
                 break;
             case 1:
                 timer += Time.deltaTime;
-                if (timer > Item.attackSpeed)
+                if (timer > speed)
                 {
                     timer = 0f;
                     Fire();
@@ -39,9 +39,19 @@ public class Weapon : MonoBehaviour
                 timer += Time.deltaTime;
                 if (timer > speed)
                 {
-                    timer = 0f;
                     Throw();
+                    timer = 0f;
                 }
+                break;
+            case 5:
+                timer += Time.deltaTime;
+                if (timer > speed)
+                {
+                    Swipe();
+                    timer = 0f;
+                }
+                break;
+            default:
                 break;
         }
 
@@ -84,10 +94,15 @@ public class Weapon : MonoBehaviour
                 Batch();
                 break;
             case 1:
-                Item.attackSpeed = 0.5f;
+                speed = 0.5f;
                 break;
             case 4:
+                Throw();
                 speed = 4f;
+                break;
+            case 5:
+                Swipe();
+                speed = 3f;
                 break;
         }
     }
@@ -147,11 +162,31 @@ public class Weapon : MonoBehaviour
             bullet.GetComponent<Bullet>().Init(damage, -10, targetPosition, ItemData.ItemType.Garbage);
             StartCoroutine(Deactivate(bullet.gameObject, 2.0f));
         }
-        
+
     }
     IEnumerator Deactivate(GameObject bullet, float delay)
     {
         yield return new WaitForSeconds(delay);
         bullet.SetActive(false);
+    }
+
+    void Swipe()
+    {
+        Transform bullet;
+        if (transform.childCount > 0)
+        {
+            bullet = transform.GetChild(0);
+        }
+        else
+        {
+            bullet = GameManager.instance.pool.Get(5).transform;
+            bullet.parent = transform;
+        }
+        bullet.gameObject.SetActive(true);
+        bullet.localPosition = Vector3.zero;
+        //bullet.localRotation = Quaternion.identity;
+        bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.FeatherDuster);
+        StartCoroutine(Deactivate(bullet.gameObject, 0.5f));
+
     }
 }

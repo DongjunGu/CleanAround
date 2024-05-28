@@ -17,13 +17,13 @@ MonoBehaviour:
   itemName: Garbage
   itemDesc: "\uB300\uBBF8\uC9C0 {0}% \uC99D\uAC00\n\uD22C\uC0AC\uCCB4 {1}\uAC1C \uCD94\uAC00"
   itemIcon: {fileID: 21300000, guid: 8399103d8a34d3048ba8b0d2a0d299e7, type: 3}
-  baseDamage: 3
+  baseDamage: 4
   baseCount: 1
   damages:
   - 0.3
-  - 0.3
-  - 0.5
-  - 0.5
-  - 0.6
+  - 1
+  - 4
+  - 6
+  - 10
   counts: 0100000001000000010000000200000002000000
   prtojectile: {fileID: 1016890420588081134, guid: 8c6ef26b3df88154abf88cb24bd14d1a, type: 3}
