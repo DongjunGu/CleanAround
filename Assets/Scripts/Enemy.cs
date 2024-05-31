@@ -87,7 +87,8 @@ public class Enemy : MonoBehaviour
             col.enabled = false;
             rigid.simulated = false;
             GameManager.instance.kill++;
-            GameManager.instance.GetExp();
+            DropExp();
+            //GameManager.instance.GetExp();
         }
        
     }
@@ -100,7 +101,13 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         isHit = false;
     }
-    void Death()
+    
+    void DropExp()
+    {
+        GameObject exp = GameManager.instance.pool.Get(2);
+        exp.transform.position = transform.position;
+    }
+    void Death() //animation에서 호출
     {
         gameObject.SetActive(false);
     }

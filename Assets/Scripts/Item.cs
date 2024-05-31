@@ -40,6 +40,7 @@ public class Item : MonoBehaviour
                 textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100);
                 break;
             case ItemData.ItemType.Posion:
+            case ItemData.ItemType.Magnetic:
                 textDesc.text = string.Format(data.itemDesc);
                 break;
             default:
@@ -142,7 +143,23 @@ public class Item : MonoBehaviour
                 }
                 level++;
                 break;
-
+            case ItemData.ItemType.Magnetic:
+                if (level == 0)
+                {
+                    GameObject newWeapon = new GameObject();
+                    weapon = newWeapon.AddComponent<Weapon>();
+                    weapon.Init(data);
+                }
+                else
+                {
+                    float nextDamage = data.baseDamage;
+                    int nextCount = 0;
+                    nextDamage += data.baseDamage + data.damages[level - 1];
+                    weapon.LevelUp(nextDamage, nextCount);
+                    weapon.MagneticUpgrade();
+                }
+                level++;
+                break;
             case ItemData.ItemType.Posion:
                 GameManager.instance.health = GameManager.instance.maxHealth;
                 break;

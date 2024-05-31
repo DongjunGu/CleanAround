@@ -38,6 +38,8 @@ public class FeatherParticle : MonoBehaviour
     }
     private void HandleRotationInput()
     {
+        if (!GameManager.instance.isLive)
+            return;
         if (Input.GetKey(KeyCode.A))
         {
             SetRotation(0f);

@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Magnetic.cs" />
     <Compile Include="Assets\Scripts\EnemyClean.cs" />
     <Compile Include="Assets\Scripts\LevelUI.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Assets\Scripts\FeatherParticle.cs" />
     <Compile Include="Assets\Scripts\ItemData.cs" />
     <Compile Include="Assets\Scripts\GarbageRotate.cs" />
+    <Compile Include="Assets\Scripts\Exp.cs" />
     <Compile Include="Assets\Scripts\SubItem.cs" />
     <Compile Include="Assets\Scripts\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Reposition.cs" />
@@ -726,6 +728,9 @@
     <Reference Include="Unity.2D.Path.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -747,8 +752,8 @@
     <Reference Include="Unity.InternalAPIEditorBridge.001">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -764,9 +769,6 @@
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Editor.dll</HintPath>
@@ -807,13 +809,13 @@
       <Project>{2CA109C5-73F3-EB5C-664E-AE38802C8DF8}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
-      <Project>{F0DD09B5-D8D4-3A8A-DDCD-D246929C6AE4}</Project>
-      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="CFXREditor.csproj">
       <Project>{A08D44F2-EACB-D99C-A09C-9B9D3D2CD515}</Project>
       <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
+      <Project>{F0DD09B5-D8D4-3A8A-DDCD-D246929C6AE4}</Project>
+      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRRuntime.csproj">
       <Project>{163AB0A8-DBC1-8B18-B33B-97B6F725E8DD}</Project>

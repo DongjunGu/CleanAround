@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
 
     float timer;
     PlayerController player;
-
+    Transform magnetic;
     void Awake()
     {
         player = GameManager.instance.player;
@@ -104,6 +104,11 @@ public class Weapon : MonoBehaviour
                 Swipe();
                 speed = 3f;
                 break;
+            case 6:
+                Magnetic();
+                break;
+            default:
+                break;
         }
     }
 
@@ -179,14 +184,30 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            bullet = GameManager.instance.pool.Get(5).transform;
+            bullet = GameManager.instance.pool.Get(prefabId).transform;
             bullet.parent = transform;
         }
         bullet.gameObject.SetActive(true);
         bullet.localPosition = Vector3.zero;
-        //bullet.localRotation = Quaternion.identity;
         bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.FeatherDuster);
         StartCoroutine(Deactivate(bullet.gameObject, 0.5f));
 
     }
+    void Magnetic()
+    {
+        if (transform.childCount != 0)
+            return;
+        else
+        {
+            magnetic = GameManager.instance.pool.Get(prefabId).transform;
+            magnetic.parent = transform;
+        }
+        magnetic.localPosition = new Vector3(0f, -0.2f, 0f);
+        
+    }
+    public void MagneticUpgrade()
+    {
+        magnetic.GetComponent<Magnetic>().Init(damage);
+    }
 }
+
