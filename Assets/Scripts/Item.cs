@@ -37,6 +37,8 @@ public class Item : MonoBehaviour
                 textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100, data.counts[level]);
                 break;
             case ItemData.ItemType.Water:
+            case ItemData.ItemType.Detergent:
+            case ItemData.ItemType.Iron:
                 textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100);
                 break;
             case ItemData.ItemType.Posion:
@@ -157,6 +159,51 @@ public class Item : MonoBehaviour
                     nextDamage += data.baseDamage + data.damages[level - 1];
                     weapon.LevelUp(nextDamage, nextCount);
                     weapon.MagneticUpgrade();
+                }
+                level++;
+                break;
+            case ItemData.ItemType.Detergent:
+                if (level == 0)
+                {
+                    GameObject newWeapon = new GameObject();
+                    weapon = newWeapon.AddComponent<Weapon>();
+                    weapon.Init(data);
+                }
+                else
+                {
+                    float nextDamage = data.baseDamage;
+                    int nextCount = 0;
+                    nextDamage += data.baseDamage * data.damages[level - 1];
+                    nextCount += data.counts[level - 1];
+                    weapon.LevelUp(nextDamage, nextCount);
+                }
+                level++;
+                break;
+            case ItemData.ItemType.Iron:
+                if (level == 0)
+                {
+                    GameObject newSubItem = new GameObject();
+                    subItem = newSubItem.AddComponent<SubItem>();
+                    subItem.Init(data);
+                }
+                else
+                {
+                    float nextRate = data.damages[level];
+                    subItem.LevelUp(nextRate);
+                }
+                level++;
+                break;
+            case ItemData.ItemType.Bin:
+                if (level == 0)
+                {
+                    GameObject newSubItem = new GameObject();
+                    subItem = newSubItem.AddComponent<SubItem>();
+                    subItem.Init(data);
+                }
+                else
+                {
+                    float nextRate = data.damages[level];
+                    subItem.LevelUp(nextRate);
                 }
                 level++;
                 break;

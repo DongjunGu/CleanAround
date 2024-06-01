@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
     public float maxHealth = 100;
     public int level;
     public int kill;
-    public int exp;
+    public float exp;
+    public float increaseExp = 1.5f;
     public int[] nextExp = { 3, 10, 20, 45, 70, 120, 200, 300, 450, 600 };
     [Header("# Game Control")]
     public float gameTime;
@@ -82,8 +83,8 @@ public class GameManager : MonoBehaviour
         if (!isLive)
             return;
 
-        exp++;
-        if(exp == nextExp[Mathf.Min(level,nextExp.Length-1)])
+        exp += (1 * increaseExp);
+        if(exp >= nextExp[Mathf.Min(level,nextExp.Length-1)])
         {
             level++;
             levelUI.PopUI();

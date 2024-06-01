@@ -16,7 +16,7 @@ MonoBehaviour:
   itemId: 6
   itemName: Magnetic
   itemDesc: "\uC790\uB825\uD6A8\uACFC"
-  itemIcon: {fileID: 21300000, guid: f83e3577003ab2e4f86fa9f52b2bbc9f, type: 3}
+  itemIcon: {fileID: 21300000, guid: 98aa11558bc17ca4a8018021dad47b23, type: 3}
   baseDamage: 0
   baseCount: 0
   damages:

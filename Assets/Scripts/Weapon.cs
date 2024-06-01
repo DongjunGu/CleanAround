@@ -51,6 +51,14 @@ public class Weapon : MonoBehaviour
                     timer = 0f;
                 }
                 break;
+            case 7:
+                timer += Time.deltaTime;
+                if (timer > speed)
+                {
+                    Detergent();
+                    timer = 0f;
+                }
+                break;
             default:
                 break;
         }
@@ -106,6 +114,10 @@ public class Weapon : MonoBehaviour
                 break;
             case 6:
                 Magnetic();
+                break;
+            case 7:
+                speed = 0.03f;
+                Detergent();
                 break;
             default:
                 break;
@@ -208,6 +220,15 @@ public class Weapon : MonoBehaviour
     public void MagneticUpgrade()
     {
         magnetic.GetComponent<Magnetic>().Init(damage);
+    }
+    void Detergent()
+    {
+        Transform bullet;
+        bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.position = GameManager.instance.player.transform.position -  new Vector3(0f,0.3f,0f);
+        bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.Detergent);
+        StartCoroutine(Deactivate(bullet.gameObject, 1.5f));
+
     }
 }
 

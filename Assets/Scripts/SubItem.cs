@@ -6,7 +6,7 @@ public class SubItem : MonoBehaviour
 {
     public ItemData.ItemType type;
     public float rate;
-
+    float timer;
     public void Init(ItemData data)
     {
         name = "SubItem " + data.itemId;
@@ -17,7 +17,26 @@ public class SubItem : MonoBehaviour
         rate = data.damages[0];
         ApplySub();
     }
-
+    void Update()
+    {
+        if (!GameManager.instance.isLive)
+            return;
+        switch (type)
+        {
+            case ItemData.ItemType.Water:
+                break;
+            case ItemData.ItemType.Iron:
+                timer += Time.deltaTime;
+                if (timer > 5)
+                {
+                    HealthRecharge();
+                    timer = 0f;
+                }
+                break;
+            default:
+                break;
+        }
+    }
     public void LevelUp(float rate)
     {
         this.rate = rate;
@@ -29,6 +48,12 @@ public class SubItem : MonoBehaviour
         {
             case ItemData.ItemType.Water:
                 SpeedUp();
+                break;
+            case ItemData.ItemType.Iron:
+                HealthRecharge();
+                break;
+            case ItemData.ItemType.Bin:
+                ExpIncrease();
                 break;
         }
     }
@@ -52,5 +77,13 @@ public class SubItem : MonoBehaviour
     {
         float speed = 5;
         GameManager.instance.player.playerSpeed = speed + speed * rate;
+    }
+    void HealthRecharge()
+    {
+        GameManager.instance.health += rate;
+    }
+    void ExpIncrease()
+    {
+        GameManager.instance.increaseExp = rate;
     }
 }
