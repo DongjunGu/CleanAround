@@ -55,6 +55,9 @@ public class SubItem : MonoBehaviour
             case ItemData.ItemType.Bin:
                 ExpIncrease();
                 break;
+            case ItemData.ItemType.DustPan:
+                MaxHpIncrease();
+                break;
         }
     }
     //void RateUp()
@@ -85,5 +88,9 @@ public class SubItem : MonoBehaviour
     void ExpIncrease()
     {
         GameManager.instance.increaseExp = rate;
+    }
+    void MaxHpIncrease()
+    {
+        GameManager.instance.maxHealth = rate;
     }
 }

@@ -207,6 +207,20 @@ public class Item : MonoBehaviour
                 }
                 level++;
                 break;
+            case ItemData.ItemType.DustPan:
+                if (level == 0)
+                {
+                    GameObject newSubItem = new GameObject();
+                    subItem = newSubItem.AddComponent<SubItem>();
+                    subItem.Init(data);
+                }
+                else
+                {
+                    float nextRate = data.damages[level];
+                    subItem.LevelUp(nextRate);
+                }
+                level++;
+                break;
             case ItemData.ItemType.Posion:
                 GameManager.instance.health = GameManager.instance.maxHealth;
                 break;

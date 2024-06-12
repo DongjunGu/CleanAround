@@ -21,12 +21,12 @@ public class LevelUI : MonoBehaviour
         Time.timeScale = 0;
         Next();
         GameManager.instance.isLive = false;
-        StartCoroutine(WaitAndScale(0.1f, Vector3.one, 0.5f));
+        StartCoroutine(WaitAndScale(0.1f, Vector3.one, 0.2f));
     }
     public void HideUI()
     {
         GameManager.instance.isLive = true;
-        StartCoroutine(WaitAndScale(0.1f, Vector3.zero, 0.5f));
+        StartCoroutine(WaitAndScale(0.1f, Vector3.zero, 0.2f));
         
     }
 
