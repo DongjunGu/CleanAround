@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         health = maxHealth;
 
         //TODO 기본무기
-        levelUI.Select(1);
+        levelUI.Select(0);
 
         isLive = true;
         Time.timeScale = 1;
