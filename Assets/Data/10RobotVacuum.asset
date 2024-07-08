@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e4ea7cfb1551b4b9e5d0bc8eeefb44, type: 3}
+  m_Name: 10RobotVacuum
+  m_EditorClassIdentifier: 
+  itemType: 11
+  itemId: 10
+  itemName: R-Vacuum
+  itemDesc: "\uB85C\uBD07\uCCAD\uC18C\uAE30 \uD65C\uC131\uD654"
+  itemIcon: {fileID: 21300000, guid: adaa336a54f258a479ea4571c7bf55f7, type: 3}
+  baseDamage: 20
+  baseCount: 0
+  damages:
+  - 0
+  counts: 00000000
+  prtojectile: {fileID: 2043007523280660334, guid: 83506d70f4e314c4d94dfb70f38a0936, type: 3}

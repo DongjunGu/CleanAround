@@ -43,6 +43,7 @@ public class Item : MonoBehaviour
                 break;
             case ItemData.ItemType.Posion:
             case ItemData.ItemType.Magnetic:
+            case ItemData.ItemType.RobotVacuum:
                 textDesc.text = string.Format(data.itemDesc);
                 break;
             default:
@@ -176,6 +177,15 @@ public class Item : MonoBehaviour
                     nextDamage += data.baseDamage * data.damages[level - 1];
                     nextCount += data.counts[level - 1];
                     weapon.LevelUp(nextDamage, nextCount);
+                }
+                level++;
+                break;
+            case ItemData.ItemType.RobotVacuum:
+                if (level == 0)
+                {
+                    GameObject newWeapon = new GameObject();
+                    weapon = newWeapon.AddComponent<Weapon>();
+                    weapon.Init(data);
                 }
                 level++;
                 break;

@@ -1,0 +1,2366 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.48f1 (b805b124c6b7) revision 12060081'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'ko' Physical Memory: 24331 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.48f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Github/CleanAround
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64287
+Successfully changed project path to: D:/Github/CleanAround
+D:/Github/CleanAround
+Using Asset Import Pipeline V2.
+Player connection [28312] Host "[IP] 175.121.163.168 [Port] 805523808 [Flags] 2 [Guid] 1631730283 [EditorId] 1631730283 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KUQOSKS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [28312] Host "[IP] 175.121.163.168 [Port] 805523808 [Flags] 2 [Guid] 1631730283 [EditorId] 1631730283 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KUQOSKS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 64.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.48f1 (b805b124c6b7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.48f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Github/CleanAround/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f82)
+    Vendor:   
+    VRAM:     3937 MB
+    Driver:   31.0.15.5134
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.48f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.48f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56896
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.48f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001592 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 70.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.479 seconds
+Domain Reload Profiling:
+	ReloadAssembly (479ms)
+		BeginReloadAssembly (56ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (371ms)
+			LoadAssemblies (54ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (97ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (165ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (71ms)
+				BeforeProcessingInitializeOnLoad (13ms)
+				ProcessInitializeOnLoadAttributes (58ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002255 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 64.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.009 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1010ms)
+		BeginReloadAssembly (105ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (13ms)
+		EndReloadAssembly (862ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (242ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (391ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (65ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (229ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (1ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.8 MB.
+System memory in use after: 177.9 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 4383.
+Total: 2.806300 ms (FindLiveObjects: 0.194000 ms CreateObjectMapping: 0.088600 ms MarkObjects: 2.425400 ms  DeleteObjects: 0.097600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/JMO Assets/Cartoon FX Remaster
+  artifactKey: Guid(b56551e9e3ab84e4180b7b30c06ff232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX Remaster using Guid(b56551e9e3ab84e4180b7b30c06ff232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32547c54f178874f4c7845cbba2b1199') in 0.010413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets
+  artifactKey: Guid(bd9d1d014bf0b14428db03b2527d2d93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets using Guid(bd9d1d014bf0b14428db03b2527d2d93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe5a63952c1cb72aa84955455163e681') in 0.007647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.243537 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale
+  artifactKey: Guid(862268f254eb5ff48bf254a935e40936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale using Guid(862268f254eb5ff48bf254a935e40936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e7afc87a5058725d0252231d17c12a') in 0.007565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.684480 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut
+  artifactKey: Guid(5087a08e91344de8b64609eb1abe0434) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut using Guid(5087a08e91344de8b64609eb1abe0434) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6bc55599e0ea2758b30de76adc76676') in 0.007573 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.593580 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A
+  artifactKey: Guid(90f694900ee04d2f9df6fc6360b37fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A using Guid(90f694900ee04d2f9df6fc6360b37fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf2ff333d512bfd57add39ab6ea2ab0') in 0.007598 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.256743 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Animations
+  artifactKey: Guid(6ac4cc8d1d8b4454bb0c3042973bd293) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Animations using Guid(6ac4cc8d1d8b4454bb0c3042973bd293) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ac7d01214437dd9d0688decc06f2bca') in 0.007313 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.5 MB.
+System memory in use after: 97.7 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4383.
+Total: 2.540000 ms (FindLiveObjects: 0.180200 ms CreateObjectMapping: 0.083400 ms MarkObjects: 2.197500 ms  DeleteObjects: 0.078300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 66.186986 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Animations/jump_down.anim
+  artifactKey: Guid(56bd8ddffa484029b55e02b245292ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Animations/jump_down.anim using Guid(56bd8ddffa484029b55e02b245292ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f52227bd0a09cb55c6987d40d4ded58') in 0.046327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.011962 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Animations/jump_down.controller
+  artifactKey: Guid(88cec52a8b874ffcbd72c1cc9977eeb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Animations/jump_down.controller using Guid(88cec52a8b874ffcbd72c1cc9977eeb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b277b8736d60af03407fb395e2256e0') in 0.007978 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.699183 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs
+  artifactKey: Guid(812ba96a173e41c1b442eabccd85d35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs using Guid(812ba96a173e41c1b442eabccd85d35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afc3e70c81704b9725a3681459f40dab') in 0.007097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.430112 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character
+  artifactKey: Guid(2628c7b9152a4b6a8de4f02f0444e961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character using Guid(2628c7b9152a4b6a8de4f02f0444e961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abb5bb88bab3b1a185c30f4151f36882') in 0.008918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.971496 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_hold_down.prefab
+  artifactKey: Guid(565f5d97d0464129bec2037100f5b0a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_hold_down.prefab using Guid(565f5d97d0464129bec2037100f5b0a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '052621fa4b953d26264e542ed9e76f79') in 0.664605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.827236 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_hold_side.prefab
+  artifactKey: Guid(ad42606c98304ea59672bb888cd08556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_hold_side.prefab using Guid(ad42606c98304ea59672bb888cd08556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ad080ace297482b4286c1d2cc85e1ca') in 0.736886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_throw_down.prefab
+  artifactKey: Guid(49e9a140ce8f46e7a11bf5447fba2905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_throw_down.prefab using Guid(49e9a140ce8f46e7a11bf5447fba2905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c424861863120c81ba6ec3d9c94382a') in 0.391544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_hold_up.prefab
+  artifactKey: Guid(47e4f348c4894fe095feeb5f85de1d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_hold_up.prefab using Guid(47e4f348c4894fe095feeb5f85de1d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1649008766b59d93fdc192b8a94bb8a9') in 0.329870 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_throw_side.prefab
+  artifactKey: Guid(22cfe9631a7343f9b6ec8f2de454f2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_throw_side.prefab using Guid(22cfe9631a7343f9b6ec8f2de454f2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59198b9a41f00253382a6c2d72f7f0c8') in 0.384718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.189171 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_throw_up.prefab
+  artifactKey: Guid(da4551d8f4b64d2eac925befe56b930c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_throw_up.prefab using Guid(da4551d8f4b64d2eac925befe56b930c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8172df3aba894f9c6e8c93ebe8f3ad25') in 0.367424 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_walk_down.prefab
+  artifactKey: Guid(c57ba2e295d3499cbb668f6bfccc3cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_walk_down.prefab using Guid(c57ba2e295d3499cbb668f6bfccc3cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64a99f96298a506709945db1b7906d0b') in 0.272421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_walk_side.prefab
+  artifactKey: Guid(48fa1b934b6f4811be9d7391029ebe2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_walk_side.prefab using Guid(48fa1b934b6f4811be9d7391029ebe2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '502ac22c97e6acaea7547436ab6f594f') in 0.689645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_down.prefab
+  artifactKey: Guid(3a63838f7d0941d4a3c9a0a190cc286f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_down.prefab using Guid(3a63838f7d0941d4a3c9a0a190cc286f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a1a87f6ab4c1e6523b0c2d56e9e415b') in 0.034524 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_side.prefab
+  artifactKey: Guid(d0051fb6fb8246a6b721e0043681fe69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_side.prefab using Guid(d0051fb6fb8246a6b721e0043681fe69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e641b0d9f396fe1ff8a1f682b7ea5a2f') in 0.089954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_walk_up.prefab
+  artifactKey: Guid(75e3c0162f9840debece9ea3be4ab270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bomb_walk_up.prefab using Guid(75e3c0162f9840debece9ea3be4ab270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dc3c5a4db7b23e39da3738b9be88cca') in 0.362814 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_walk_down.prefab
+  artifactKey: Guid(12ff99b5176f48059335553773e06e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_walk_down.prefab using Guid(12ff99b5176f48059335553773e06e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21e5972a42493bd23a763da8d55547f4') in 0.692871 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_up.prefab
+  artifactKey: Guid(0ba8d6a564454d12913d23b0f5cff947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_up.prefab using Guid(0ba8d6a564454d12913d23b0f5cff947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '261819edd3559e61e053b656a907fe65') in 0.040455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_walk_up.prefab
+  artifactKey: Guid(22c8a0ac9a9644a6a033b6680811a8bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_walk_up.prefab using Guid(22c8a0ac9a9644a6a033b6680811a8bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c634108809ad5e781b4ce5783e65eb0') in 0.279140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/crawl_down.prefab
+  artifactKey: Guid(8992442d4cb347bba544eb5777e717d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/crawl_down.prefab using Guid(8992442d4cb347bba544eb5777e717d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e850761d3f716d8e165611cb989896a9') in 0.344508 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/crawl_side.prefab
+  artifactKey: Guid(82e9c79c2a184dd0a4ab3e9c13f06243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/crawl_side.prefab using Guid(82e9c79c2a184dd0a4ab3e9c13f06243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dade324057da24b4f981d628286ca9ec') in 0.316604 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_walk_side.prefab
+  artifactKey: Guid(c234c2d9dd844e6bbfcf2069ccf9e865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/bow_walk_side.prefab using Guid(c234c2d9dd844e6bbfcf2069ccf9e865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '048055d9787598e9592612d1bcedea58') in 0.769103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/duck_down.prefab
+  artifactKey: Guid(05f2f7e4c6834edb96542c4c80c2b0f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/duck_down.prefab using Guid(05f2f7e4c6834edb96542c4c80c2b0f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98eb1096f09b21fb2855d5ea5835e3bc') in 0.329545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/duck_side.prefab
+  artifactKey: Guid(368a83de40104a47845dbfcddd24cf1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/duck_side.prefab using Guid(368a83de40104a47845dbfcddd24cf1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b8730aff8d94b8ba0e3828421ad0694') in 0.420922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/duck_up.prefab
+  artifactKey: Guid(ebd408e93abf480c803f607235a0ce18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/duck_up.prefab using Guid(ebd408e93abf480c803f607235a0ce18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e629813f439e5cef865502039aa16d1') in 0.426943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_down.prefab
+  artifactKey: Guid(217870614ba740ae8f7668ea9af7ffd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_down.prefab using Guid(217870614ba740ae8f7668ea9af7ffd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2365b344e78aee5eb63c770c2e1a5ec4') in 0.018488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/crawl_up.prefab
+  artifactKey: Guid(ca08bf1b12604409a9c9a87a67777a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/crawl_up.prefab using Guid(ca08bf1b12604409a9c9a87a67777a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e17d26bf39de808a9c485fde3a009dd') in 0.343794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_up.prefab
+  artifactKey: Guid(e3096d10da0549ae97147f8bc95d88b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_up.prefab using Guid(e3096d10da0549ae97147f8bc95d88b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd97aebfa0e881fcc95f6a2d5ae52d87d') in 0.020902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_walk_down.prefab
+  artifactKey: Guid(c404a132b4d140f58a1281b6b936bd5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_walk_down.prefab using Guid(c404a132b4d140f58a1281b6b936bd5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d1eba8498a4c71ecb6da74edfbf6678') in 0.137192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_side.prefab
+  artifactKey: Guid(8343baefce9449a4973fb62da85193f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_side.prefab using Guid(8343baefce9449a4973fb62da85193f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4810d48be717ff0e25b7fddc1720a58a') in 0.018638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.129638 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_walk_side.prefab
+  artifactKey: Guid(e8cd5c3f63ed4dc283fb17b4b28f68d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_walk_side.prefab using Guid(e8cd5c3f63ed4dc283fb17b4b28f68d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7da1911b33b823cc73b549159083cc99') in 0.412344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_walk_up.prefab
+  artifactKey: Guid(bbee44c1f535429dbbe3d1596a088223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/gun_walk_up.prefab using Guid(bbee44c1f535429dbbe3d1596a088223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b05d827e544c5d17b13361c51858ecf') in 0.024216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.216087 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_attack_down.prefab
+  artifactKey: Guid(e1028b3f5d2e494d96f9235fe910ae92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_attack_down.prefab using Guid(e1028b3f5d2e494d96f9235fe910ae92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7bbf9f1c9013ab711a345066946943') in 1.193945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_attack_side.prefab
+  artifactKey: Guid(876c6e74fbdb45d4bcd95e5ebc8410a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_attack_side.prefab using Guid(876c6e74fbdb45d4bcd95e5ebc8410a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8f1dc500945bb32fdde32a9b116a6f4') in 1.217960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_attack_up.prefab
+  artifactKey: Guid(0d8fd2172fb14097baef11f265f0f168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_attack_up.prefab using Guid(0d8fd2172fb14097baef11f265f0f168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a37bd24cd5abd68c0a73c2a4ca036a27') in 0.857033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_A_up.prefab
+  artifactKey: Guid(854878ce36684a17bda3a565bb711ed1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_A_up.prefab using Guid(854878ce36684a17bda3a565bb711ed1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aa16d16cfaf634f05a9168c24018fe6') in 0.182727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_B_side.prefab
+  artifactKey: Guid(ad7c845a8ea14e87a039b7413b5227b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_B_side.prefab using Guid(ad7c845a8ea14e87a039b7413b5227b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9cef27d2c76b2aff086813b072c12e6') in 0.261439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_A_down.prefab
+  artifactKey: Guid(531574cfc7f44b08beee2906d2373f35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_A_down.prefab using Guid(531574cfc7f44b08beee2906d2373f35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '100547e090c08471d65e24963b95fd7f') in 0.214995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_B_up.prefab
+  artifactKey: Guid(51fc31a0d21f409797c817fb3c6b5b06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_B_up.prefab using Guid(51fc31a0d21f409797c817fb3c6b5b06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c4ca0a25051acd38283c12a8f8851bc') in 0.235445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_A_side.prefab
+  artifactKey: Guid(d73d9aa386164e56889d4c0e8092be3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_A_side.prefab using Guid(d73d9aa386164e56889d4c0e8092be3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54a6f044c4a497b7ae7d37037608f699') in 0.166482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_idle_side.prefab
+  artifactKey: Guid(8179e198a28e4bf783be1cee87b77072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_idle_side.prefab using Guid(8179e198a28e4bf783be1cee87b77072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dd1625a517d6820a2b0c56a2eceaad9') in 0.020488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/idle_side.prefab
+  artifactKey: Guid(df254403676944e786502cd04e5bc31e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/idle_side.prefab using Guid(df254403676944e786502cd04e5bc31e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e594aa6e822fee16805a98b9dcbabd4') in 0.458471 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/idle_up.prefab
+  artifactKey: Guid(7a0e446aa89944b98f276de128c71685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/idle_up.prefab using Guid(7a0e446aa89944b98f276de128c71685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87734e86f62ea5cbafd04cca9636ce71') in 0.302006 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_idle_down.prefab
+  artifactKey: Guid(adb8a8476fa14e97b2e1857f01adf678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_idle_down.prefab using Guid(adb8a8476fa14e97b2e1857f01adf678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6cba0e739a554eae11b1f5edd0c300f') in 0.013595 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_B_down.prefab
+  artifactKey: Guid(ccda0c9ecc8a4540a26aeaac461f2fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hit_B_down.prefab using Guid(ccda0c9ecc8a4540a26aeaac461f2fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f75e0c3a5d380c6a489cf2d5de16dba') in 0.210697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_idle_up.prefab
+  artifactKey: Guid(2c39c5a44273481d96228c2c7170877a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/hammer_idle_up.prefab using Guid(2c39c5a44273481d96228c2c7170877a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1947f4b93f39e102378e28298384272f') in 0.014042 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/idle_down.prefab
+  artifactKey: Guid(ea418c003ed241c492ae4bf7204c3e3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/idle_down.prefab using Guid(ea418c003ed241c492ae4bf7204c3e3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '262d65236e759ff1a0fb42ace726c2a9') in 0.029115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.083995 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/jump_down.prefab
+  artifactKey: Guid(6a4aad03b07243e9ba5cd243de0e4c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/jump_down.prefab using Guid(6a4aad03b07243e9ba5cd243de0e4c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25f971c9d721cff81d03bd4a672031e6') in 0.332159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.106525 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/jump_side.prefab
+  artifactKey: Guid(d57bfa8a670a4f749eb75d67accebbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/jump_side.prefab using Guid(d57bfa8a670a4f749eb75d67accebbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce9bfb42a5a8100c72afd4e3cf2ff865') in 0.370581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.500282 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/jump_up.prefab
+  artifactKey: Guid(a80fcb84c3544eef9abb48384db6f71d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/jump_up.prefab using Guid(a80fcb84c3544eef9abb48384db6f71d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '784e2227aa232db971337a1e3a6e83cc') in 0.446541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.030371 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_down.prefab
+  artifactKey: Guid(5f265aa0b73846a2b249e97abf3b5eb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_down.prefab using Guid(5f265aa0b73846a2b249e97abf3b5eb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b96fcd4f7cf06fd64dc87cc164e5014') in 0.037859 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.460715 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_side.prefab
+  artifactKey: Guid(06dc51e5077f4ab4b26c3e1d111b0fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_side.prefab using Guid(06dc51e5077f4ab4b26c3e1d111b0fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '248f4b8c6f8f9128f4a0d2e293f4b49b') in 0.018270 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.320179 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_up.prefab
+  artifactKey: Guid(624428a987e3412a8abf426a0c8d848f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_up.prefab using Guid(624428a987e3412a8abf426a0c8d848f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65c48f86ae1b75199f7b17455f03f5d1') in 0.018845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.290539 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_walk_down.prefab
+  artifactKey: Guid(b297c4ee17b140fa904ab7b37aa2b866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_walk_down.prefab using Guid(b297c4ee17b140fa904ab7b37aa2b866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '560d2b030439b2f045a20b680d463974') in 0.025266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.303779 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_walk_side.prefab
+  artifactKey: Guid(298290266376460ba25b329ac3873bbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_walk_side.prefab using Guid(298290266376460ba25b329ac3873bbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42769c9c1c16d0a3469e81fe0c27d36c') in 0.259568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014601 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_walk_up.prefab
+  artifactKey: Guid(5af27cfeed664ab5bf5d45f09e8c83f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/rifle_walk_up.prefab using Guid(5af27cfeed664ab5bf5d45f09e8c83f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b9a5844628a9d40a134c0d7dc814f45') in 0.019073 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.283193 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/run_down.prefab
+  artifactKey: Guid(82513494e13e4eaba9a8d9bba0155522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/run_down.prefab using Guid(82513494e13e4eaba9a8d9bba0155522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b6a2f630fe4eb12df01a81085b62696') in 0.199280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.079359 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/run_side.prefab
+  artifactKey: Guid(7e0019e55c414257813a0b5126d6faf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/run_side.prefab using Guid(7e0019e55c414257813a0b5126d6faf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4efaeb046f5279f42da86a8cc59913cc') in 0.020855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.456892 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/run_up.prefab
+  artifactKey: Guid(c024ea44a3f640d39f84454334b12958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/run_up.prefab using Guid(c024ea44a3f640d39f84454334b12958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86dd79604ddd82a7208cf7923b89158f') in 0.162362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.322318 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_attack_down.prefab
+  artifactKey: Guid(5997e00d6e914d46b68e5948e9d9ad4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_attack_down.prefab using Guid(5997e00d6e914d46b68e5948e9d9ad4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0efb337941692c4b427eb179405b456b') in 0.781208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_attack_side.prefab
+  artifactKey: Guid(baf348122ca149d99149f61f12e159cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_attack_side.prefab using Guid(baf348122ca149d99149f61f12e159cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '015b0bc24c2f411c21ca6af2ca946dc6') in 0.863673 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_attack_up.prefab
+  artifactKey: Guid(b0f7b27631384f9aa7177ea06ea4d8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_attack_up.prefab using Guid(b0f7b27631384f9aa7177ea06ea4d8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c2f00da304dfbb5945c2aee569bff7d') in 0.537965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_idle_up.prefab
+  artifactKey: Guid(822c8560271f458da388fa51b01b413b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_idle_up.prefab using Guid(822c8560271f458da388fa51b01b413b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7587ab11fcbf89028cbea1446d4e3bd') in 0.017361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/slide_down.prefab
+  artifactKey: Guid(2b6d3483b520416bae591cdfccaeba1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/slide_down.prefab using Guid(2b6d3483b520416bae591cdfccaeba1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b0065a9e398b83c0a15d179c79c844') in 0.226809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_idle_side.prefab
+  artifactKey: Guid(49b171ae6c5b43de8be09b3621a44596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_idle_side.prefab using Guid(49b171ae6c5b43de8be09b3621a44596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2f561234de35f3554d9a09c9e00827c') in 0.015110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_idle_down.prefab
+  artifactKey: Guid(a0ad5f57d3e643ecbc49ad0d17e2ab53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/scythe_idle_down.prefab using Guid(a0ad5f57d3e643ecbc49ad0d17e2ab53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a828f0704b0fba5f4e0e1909b41ad20') in 0.031278 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/slide_side.prefab
+  artifactKey: Guid(3e0070bde80642d59118db4faee01114) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/slide_side.prefab using Guid(3e0070bde80642d59118db4faee01114) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '921d414aab2a1f7d1a6ed394d13bc180') in 0.184574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.805436 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/slide_up.prefab
+  artifactKey: Guid(f2d2c93d9ce14511865c3d722ae00e67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/slide_up.prefab using Guid(f2d2c93d9ce14511865c3d722ae00e67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c60bc452d0fd1b13c92e5262bd7e93') in 0.157897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.245366 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_attack_down.prefab
+  artifactKey: Guid(af56e0aab1b64acb8ea566b4466f81cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_attack_down.prefab using Guid(af56e0aab1b64acb8ea566b4466f81cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c9a12eefe4e61ac6e9cdc78061079b7') in 0.650391 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_attack_side.prefab
+  artifactKey: Guid(7d6bcb1ac80845bd89929ea472bf397e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_attack_side.prefab using Guid(7d6bcb1ac80845bd89929ea472bf397e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47ca66e518ba0544fe1685c626483cf1') in 0.686409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_idle_down.prefab
+  artifactKey: Guid(2a332253c4314d9e94e057438109b1f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_idle_down.prefab using Guid(2a332253c4314d9e94e057438109b1f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb79b3eef1e4e79e5bb8710aba9e4f80') in 0.013654 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_attack_up.prefab
+  artifactKey: Guid(e0fd852a6d824f568f0b73360986d1e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_attack_up.prefab using Guid(e0fd852a6d824f568f0b73360986d1e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b75243fbb5241290161b9d54839bbd87') in 0.405050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_idle_side.prefab
+  artifactKey: Guid(fe6573a3826c43879c128f123f5a9614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_idle_side.prefab using Guid(fe6573a3826c43879c128f123f5a9614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '342df8fd4fa584a53a9eefae7899cb4d') in 0.011274 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_idle_up.prefab
+  artifactKey: Guid(8fb08c3029fe47eda1c9fb3f11c67573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/sword_idle_up.prefab using Guid(8fb08c3029fe47eda1c9fb3f11c67573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '560e5de97dad277db55ff0236bc26551') in 0.013823 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.042642 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/vanish.prefab
+  artifactKey: Guid(e52cb4ef486041afb747a7819727c44d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/vanish.prefab using Guid(e52cb4ef486041afb747a7819727c44d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52857e2bc118afb59146c087569c9a08') in 0.580229 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/walk_down.prefab
+  artifactKey: Guid(d26ff5f02dca4873a68dd384f05ca496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/walk_down.prefab using Guid(d26ff5f02dca4873a68dd384f05ca496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51465123cede6854fdfec5728693e9e7') in 0.285325 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.333907 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/walk_side.prefab
+  artifactKey: Guid(b8ce4a6200b44dfaae185d7347ed4cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/walk_side.prefab using Guid(b8ce4a6200b44dfaae185d7347ed4cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d004b7c4b3887029ce6173b4ef9cc64') in 0.231721 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/walk_up.prefab
+  artifactKey: Guid(3d59b5c879e84207a817278b73e6b646) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Prefabs/Character/walk_up.prefab using Guid(3d59b5c879e84207a817278b73e6b646) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1fcc3c2c7b4c54a9c659f6534239034') in 0.200866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 122.270340 seconds.
+  path: Assets/Animations/Cleanny.controller
+  artifactKey: Guid(48d9c9739c2db9b41babf70580527eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Cleanny.controller using Guid(48d9c9739c2db9b41babf70580527eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e7f703dae28b5c157591b65d14d67ad') in 0.010855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 310.171140 seconds.
+  path: Assets/Cleaning Items Asset/Cleaning Item/Resource/Towel.png
+  artifactKey: Guid(822c5358501c1d545bf4b8370b5e5680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cleaning Items Asset/Cleaning Item/Resource/Towel.png using Guid(822c5358501c1d545bf4b8370b5e5680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57376a994a4bef6f7f82a70229c90275') in 0.042836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.762327 seconds.
+  path: Assets/Cleaning Items Asset/Cleaning Item/Resource/Vacuum01.png
+  artifactKey: Guid(19b2c9b776604d14fa873735dd6de692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cleaning Items Asset/Cleaning Item/Resource/Vacuum01.png using Guid(19b2c9b776604d14fa873735dd6de692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db796ac160ec07cd2a746273587e46df') in 0.048689 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 97.776436 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/side/01.png
+  artifactKey: Guid(ce7b3baa5bac4c5f908f345eea062c67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/side/01.png using Guid(ce7b3baa5bac4c5f908f345eea062c67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37dc7339cdee19ab3154fd0728a738e8') in 0.015013 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.469979 seconds.
+  path: Assets/Animations
+  artifactKey: Guid(26c3eae087150dd40848d40b3d874cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations using Guid(26c3eae087150dd40848d40b3d874cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27c008b0c489379b6590c951314061d3') in 0.008006 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002325 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.909 seconds
+Domain Reload Profiling:
+	ReloadAssembly (909ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (753ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (252ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (298ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (202ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.7 MB.
+System memory in use after: 179.9 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4398.
+Total: 2.611900 ms (FindLiveObjects: 0.184700 ms CreateObjectMapping: 0.081100 ms MarkObjects: 2.258900 ms  DeleteObjects: 0.086100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 11.741020 seconds.
+  path: Assets/Animations/Vacuum.anim
+  artifactKey: Guid(dc332c7e2c0f3fc4cb1e685c6245947f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Vacuum.anim using Guid(dc332c7e2c0f3fc4cb1e685c6245947f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27230a6a36950cbec3ed01a850af3141') in 0.018438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.996498 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/side/07.png
+  artifactKey: Guid(ee37bcd07ab542df8bbb767e0e376130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/side/07.png using Guid(ee37bcd07ab542df8bbb767e0e376130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '700a66488f93534a8955a399c5692ef5') in 0.040449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 218.943536 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/01.png
+  artifactKey: Guid(837c97d093e147f08fad42edbdefc5dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/01.png using Guid(837c97d093e147f08fad42edbdefc5dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f140ece2af12a509b4d4030972d9d57') in 0.018609 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/06.png
+  artifactKey: Guid(ef6052023c934449b26626481564291a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/06.png using Guid(ef6052023c934449b26626481564291a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f87f87ddab24372cf88abcf3b6d1dcde') in 0.034048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/05.png
+  artifactKey: Guid(bad0d81b8607435d808c11b3c25d28cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/05.png using Guid(bad0d81b8607435d808c11b3c25d28cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2c576572bb43b5b18d20a522c1c8a9b') in 0.016395 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/08.png
+  artifactKey: Guid(b0e1f74670ab4c89b41c04e87833c22d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/08.png using Guid(b0e1f74670ab4c89b41c04e87833c22d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '796d4f9daf6e39fbf0ddb562711013b2') in 0.019646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/10.png
+  artifactKey: Guid(7b0304eaa99345bb86a9945ce0c3ca60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/10.png using Guid(7b0304eaa99345bb86a9945ce0c3ca60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0ac4d9d4cbd34c16b4818206cd77abb') in 0.018490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/03.png
+  artifactKey: Guid(d95a354a4e784bdbb6669eb981a07ea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/03.png using Guid(d95a354a4e784bdbb6669eb981a07ea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea12479b3eb02621f0a408c8d327dea5') in 0.026208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/07.png
+  artifactKey: Guid(b7b707d791ad45349553a1d46650d73a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/07.png using Guid(b7b707d791ad45349553a1d46650d73a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd12108cc27512e1246878dcd1c9355ad') in 0.020421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/04.png
+  artifactKey: Guid(921fbb646e19473dba47bb4c24b083fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/04.png using Guid(921fbb646e19473dba47bb4c24b083fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83febd8f081709da0dcf03151d00c08') in 0.015705 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/09.png
+  artifactKey: Guid(88c187bd86d94d7996dfba9e1d3a7617) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/09.png using Guid(88c187bd86d94d7996dfba9e1d3a7617) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ea28de3d0d480136248fcd92261968a') in 0.014567 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/02.png
+  artifactKey: Guid(a8faf10a6bf7421dbecd09c57b54cc68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/run/side/02.png using Guid(a8faf10a6bf7421dbecd09c57b54cc68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff878ef3c56785cf2df00046f4bdfb06') in 0.017576 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002286 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.974 seconds
+Domain Reload Profiling:
+	ReloadAssembly (974ms)
+		BeginReloadAssembly (102ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (830ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (249ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (349ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (244ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.8 MB.
+System memory in use after: 180.0 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4402.
+Total: 2.845600 ms (FindLiveObjects: 0.246900 ms CreateObjectMapping: 0.098600 ms MarkObjects: 2.401000 ms  DeleteObjects: 0.097800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1122.368058 seconds.
+  path: Assets/Prefabs/Weapon/Vacuum.prefab
+  artifactKey: Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Weapon/Vacuum.prefab using Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '587aca65c7a907d6db810d66ae94bcae') in 0.075985 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002564 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.077 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1078ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (68ms)
+		EndReloadAssembly (881ms)
+			LoadAssemblies (102ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (269ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (378ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (263ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.9 MB.
+System memory in use after: 180.0 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4406.
+Total: 2.989900 ms (FindLiveObjects: 0.179600 ms CreateObjectMapping: 0.079200 ms MarkObjects: 2.633900 ms  DeleteObjects: 0.096400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002403 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.011 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1012ms)
+		BeginReloadAssembly (89ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (877ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (286ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (346ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (235ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.9 MB.
+System memory in use after: 180.0 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4409.
+Total: 2.585900 ms (FindLiveObjects: 0.199200 ms CreateObjectMapping: 0.085500 ms MarkObjects: 2.208200 ms  DeleteObjects: 0.092000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002397 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.894 seconds
+Domain Reload Profiling:
+	ReloadAssembly (894ms)
+		BeginReloadAssembly (103ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (749ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (241ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (307ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (209ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.9 MB.
+System memory in use after: 180.1 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4412.
+Total: 3.036100 ms (FindLiveObjects: 0.180500 ms CreateObjectMapping: 0.083000 ms MarkObjects: 2.662100 ms  DeleteObjects: 0.109500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 350.835722 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/01.png
+  artifactKey: Guid(1f2b808deed244e18d31ba3c25ad903b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/01.png using Guid(1f2b808deed244e18d31ba3c25ad903b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e415725f0d78c64c6a61f291441c4a') in 0.064161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/13.png
+  artifactKey: Guid(35e3a5955bcc4c42983d277f02301310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/13.png using Guid(35e3a5955bcc4c42983d277f02301310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2313c2adf2d3ec48e02c22bd6d9058a2') in 0.014146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/05.png
+  artifactKey: Guid(4aaa03da07e349ed88f707ecf6e48f7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/05.png using Guid(4aaa03da07e349ed88f707ecf6e48f7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c94664f9e2fbd0f262b71ef4d538d4f') in 0.023159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/14.png
+  artifactKey: Guid(79363507da254783b48c41142e566d6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/14.png using Guid(79363507da254783b48c41142e566d6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e7d00e7b7997ff84c9b63bf79a2786b') in 0.014198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/09.png
+  artifactKey: Guid(9bfcddf9fdf04a18864f6b2b3a24b6f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/09.png using Guid(9bfcddf9fdf04a18864f6b2b3a24b6f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f99a55835a0baea4f58214da4fe7245') in 0.012989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/21.png
+  artifactKey: Guid(8a7fa5ee982d41f59168a37a6a39b740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/21.png using Guid(8a7fa5ee982d41f59168a37a6a39b740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee4226d98a1628a4947372061bf7ab25') in 0.014251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/02.png
+  artifactKey: Guid(7c9fc627ffc44b619d4c7f0cf66b456b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/02.png using Guid(7c9fc627ffc44b619d4c7f0cf66b456b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6cf97ad775b0aa4ccb58b692ad5e379') in 0.018534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/15.png
+  artifactKey: Guid(f4229b51d82b42a8b9523e84dbdc87fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/15.png using Guid(f4229b51d82b42a8b9523e84dbdc87fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ff1d9228209ca612142c3568667ee83') in 0.016501 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/16.png
+  artifactKey: Guid(ba6f329c497841979702d8911be4bfef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/16.png using Guid(ba6f329c497841979702d8911be4bfef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4e90f330cfef82ef816ec622ed592da') in 0.014436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/06.png
+  artifactKey: Guid(8be645a5255e42199a144f6c8f410373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/06.png using Guid(8be645a5255e42199a144f6c8f410373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1449e1d23ca30a56d3943a24802d7600') in 0.011901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/11.png
+  artifactKey: Guid(63e0e644d9614e1cbd86f2b205af7cfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/11.png using Guid(63e0e644d9614e1cbd86f2b205af7cfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45c10c35db08c9929cc3e8b26e32bb94') in 0.021063 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/07.png
+  artifactKey: Guid(e5967d7251274c00be22b6f665752fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/07.png using Guid(e5967d7251274c00be22b6f665752fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dabe1e7246a9d52ca9b57f9e418f3fe') in 0.013297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/17.png
+  artifactKey: Guid(b07face15d8a482aa346b674823302ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/17.png using Guid(b07face15d8a482aa346b674823302ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e92e4bc06dd56eaeb4eb0dbd60312194') in 0.013035 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/20.png
+  artifactKey: Guid(1af574e62e6b46c69ae00889bafbf9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/20.png using Guid(1af574e62e6b46c69ae00889bafbf9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8890c4366fc930c9176748cf702ac57a') in 0.013702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/10.png
+  artifactKey: Guid(22bcbf11f2204883a54ad783d5578ef0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/10.png using Guid(22bcbf11f2204883a54ad783d5578ef0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aadf6bb98455ea09267087536c7805c') in 0.013692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/12.png
+  artifactKey: Guid(1b9c8645125a49e8b99593fa147f2fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/12.png using Guid(1b9c8645125a49e8b99593fa147f2fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e476633a137c4815f91f1c9369dfa0e') in 0.014415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000461 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/18.png
+  artifactKey: Guid(36bc14a36f5849f5a4e73824539669da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/18.png using Guid(36bc14a36f5849f5a4e73824539669da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fb1cd8b0b663afd71b3c90dcb972e66') in 0.018700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/03.png
+  artifactKey: Guid(82ffad24c6e24652b9a46f330e3d2356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/03.png using Guid(82ffad24c6e24652b9a46f330e3d2356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70b9a022e69276b0678b68a31c8fa5da') in 0.013430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/19.png
+  artifactKey: Guid(2993d091693846d0ba44c06a0bffafb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/19.png using Guid(2993d091693846d0ba44c06a0bffafb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e476ef1292dddc896b70dbeac9a8cab5') in 0.012769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/04.png
+  artifactKey: Guid(02e3db5a54f24f7e9a998965d2be29c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/04.png using Guid(02e3db5a54f24f7e9a998965d2be29c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3823fc153313cab8e5e7ecd3062e87f7') in 0.012974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/08.png
+  artifactKey: Guid(4d275fd6e0f14372b9b363a649b955cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Sprites/Character/idle/down/08.png using Guid(4d275fd6e0f14372b9b363a649b955cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df5c39246cfa943ba292ebe7d0dde1f7') in 0.013366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 65.917469 seconds.
+  path: Assets/Prefabs/Weapon/Vacuum.prefab
+  artifactKey: Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Weapon/Vacuum.prefab using Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6a8365561d0dd98b70acad8d2f291c6') in 0.027519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 68.187940 seconds.
+  path: Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Demo A.unity
+  artifactKey: Guid(12c06f5688ab48d687f6ed9c3d098c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAsset/Comic Battle Royale/2D Character - Astronaut/Variant A/Demo A.unity using Guid(12c06f5688ab48d687f6ed9c3d098c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3cf82937b11f84750961f7c821d5783') in 0.007826 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004078 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.865 seconds
+Domain Reload Profiling:
+	ReloadAssembly (865ms)
+		BeginReloadAssembly (97ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (726ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (222ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (305ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (211ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.0 MB.
+System memory in use after: 180.1 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4416.
+Total: 2.673900 ms (FindLiveObjects: 0.190600 ms CreateObjectMapping: 0.079800 ms MarkObjects: 2.304100 ms  DeleteObjects: 0.098300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002226 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.876 seconds
+Domain Reload Profiling:
+	ReloadAssembly (877ms)
+		BeginReloadAssembly (96ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (738ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (222ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (303ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (211ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.0 MB.
+System memory in use after: 180.1 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4419.
+Total: 2.884800 ms (FindLiveObjects: 0.242800 ms CreateObjectMapping: 0.091200 ms MarkObjects: 2.457700 ms  DeleteObjects: 0.092100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 150.776059 seconds.
+  path: Assets/Animations/Cleanny.controller
+  artifactKey: Guid(48d9c9739c2db9b41babf70580527eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Cleanny.controller using Guid(48d9c9739c2db9b41babf70580527eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1edce954ab614a9d43bf1fbdf82ae74b') in 0.021218 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002948 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.884 seconds
+Domain Reload Profiling:
+	ReloadAssembly (884ms)
+		BeginReloadAssembly (104ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (728ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (232ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (291ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (199ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.0 MB.
+System memory in use after: 180.1 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4422.
+Total: 2.685200 ms (FindLiveObjects: 0.187600 ms CreateObjectMapping: 0.082100 ms MarkObjects: 2.325600 ms  DeleteObjects: 0.089100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 68.563835 seconds.
+  path: Assets/Animations/Cleanny.controller
+  artifactKey: Guid(48d9c9739c2db9b41babf70580527eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Cleanny.controller using Guid(48d9c9739c2db9b41babf70580527eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c788a0b864789effb090dbd874a19fd3') in 0.018884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 131.799109 seconds.
+  path: Assets/Animations/Vacuum.anim
+  artifactKey: Guid(dc332c7e2c0f3fc4cb1e685c6245947f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Vacuum.anim using Guid(dc332c7e2c0f3fc4cb1e685c6245947f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '934f7abac50be7b30bc71ff7132d2536') in 0.003197 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002500 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.914 seconds
+Domain Reload Profiling:
+	ReloadAssembly (915ms)
+		BeginReloadAssembly (110ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (756ms)
+			LoadAssemblies (105ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (240ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (301ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (209ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.0 MB.
+System memory in use after: 180.1 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4425.
+Total: 2.747200 ms (FindLiveObjects: 0.184700 ms CreateObjectMapping: 0.080400 ms MarkObjects: 2.377000 ms  DeleteObjects: 0.104100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 774.943253 seconds.
+  path: Assets/Prefabs/Sliders
+  artifactKey: Guid(428341d56d31fab488bc9c94b266a4f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Sliders using Guid(428341d56d31fab488bc9c94b266a4f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f15626952dd3680b19f7b945164da7') in 0.012582 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002805 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.904 seconds
+Domain Reload Profiling:
+	ReloadAssembly (905ms)
+		BeginReloadAssembly (107ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (755ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (233ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (308ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (211ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.0 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4428.
+Total: 3.048700 ms (FindLiveObjects: 0.240900 ms CreateObjectMapping: 0.099600 ms MarkObjects: 2.581600 ms  DeleteObjects: 0.125000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002645 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.955 seconds
+Domain Reload Profiling:
+	ReloadAssembly (956ms)
+		BeginReloadAssembly (133ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (780ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (239ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (329ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (220ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.0 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4431.
+Total: 2.748300 ms (FindLiveObjects: 0.184000 ms CreateObjectMapping: 0.093400 ms MarkObjects: 2.371900 ms  DeleteObjects: 0.098100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002234 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.993 seconds
+Domain Reload Profiling:
+	ReloadAssembly (994ms)
+		BeginReloadAssembly (109ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (837ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (240ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (80ms)
+			SetupLoadedEditorAssemblies (353ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (85ms)
+				ProcessInitializeOnLoadAttributes (249ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3878 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.0 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4434.
+Total: 2.596200 ms (FindLiveObjects: 0.179700 ms CreateObjectMapping: 0.084300 ms MarkObjects: 2.238900 ms  DeleteObjects: 0.092500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 532.140565 seconds.
+  path: Assets/Scripts/Vacuum.cs
+  artifactKey: Guid(569f0a9e5ce49fa429eedc05a24cc802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Vacuum.cs using Guid(569f0a9e5ce49fa429eedc05a24cc802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '888616dfe5c76849d8c3b4e7b0d85758') in 0.028329 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005461 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.996 seconds
+Domain Reload Profiling:
+	ReloadAssembly (997ms)
+		BeginReloadAssembly (104ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (850ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (240ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (76ms)
+			SetupLoadedEditorAssemblies (376ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (125ms)
+				ProcessInitializeOnLoadAttributes (232ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4438.
+Total: 3.259700 ms (FindLiveObjects: 0.227200 ms CreateObjectMapping: 0.108200 ms MarkObjects: 2.820300 ms  DeleteObjects: 0.102300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.065 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1065ms)
+		BeginReloadAssembly (106ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (914ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (309ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (73ms)
+			SetupLoadedEditorAssemblies (375ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (268ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4441.
+Total: 2.632500 ms (FindLiveObjects: 0.176800 ms CreateObjectMapping: 0.085300 ms MarkObjects: 2.278100 ms  DeleteObjects: 0.091400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002450 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.903 seconds
+Domain Reload Profiling:
+	ReloadAssembly (904ms)
+		BeginReloadAssembly (107ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (753ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (226ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (326ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (227ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4444.
+Total: 2.925000 ms (FindLiveObjects: 0.180800 ms CreateObjectMapping: 0.087300 ms MarkObjects: 2.558100 ms  DeleteObjects: 0.098000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002474 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.930 seconds
+Domain Reload Profiling:
+	ReloadAssembly (930ms)
+		BeginReloadAssembly (109ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (773ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (255ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (319ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (79ms)
+				ProcessInitializeOnLoadAttributes (222ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4447.
+Total: 2.808800 ms (FindLiveObjects: 0.254400 ms CreateObjectMapping: 0.094800 ms MarkObjects: 2.356500 ms  DeleteObjects: 0.101700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002271 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.910 seconds
+Domain Reload Profiling:
+	ReloadAssembly (910ms)
+		BeginReloadAssembly (98ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (769ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (240ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (315ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (85ms)
+				ProcessInitializeOnLoadAttributes (211ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4450.
+Total: 2.804700 ms (FindLiveObjects: 0.200100 ms CreateObjectMapping: 0.084800 ms MarkObjects: 2.424900 ms  DeleteObjects: 0.093900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002455 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.009 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1009ms)
+		BeginReloadAssembly (104ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (860ms)
+			LoadAssemblies (138ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (252ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (70ms)
+			SetupLoadedEditorAssemblies (345ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (79ms)
+				ProcessInitializeOnLoadAttributes (242ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4453.
+Total: 4.013700 ms (FindLiveObjects: 0.370400 ms CreateObjectMapping: 0.187800 ms MarkObjects: 3.308900 ms  DeleteObjects: 0.145300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002758 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.937 seconds
+Domain Reload Profiling:
+	ReloadAssembly (938ms)
+		BeginReloadAssembly (110ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (776ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (247ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (311ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (209ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4456.
+Total: 2.992700 ms (FindLiveObjects: 0.234300 ms CreateObjectMapping: 0.099300 ms MarkObjects: 2.557900 ms  DeleteObjects: 0.100300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002524 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.911 seconds
+Domain Reload Profiling:
+	ReloadAssembly (911ms)
+		BeginReloadAssembly (110ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (757ms)
+			LoadAssemblies (101ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (250ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (305ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (209ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4459.
+Total: 2.616600 ms (FindLiveObjects: 0.191700 ms CreateObjectMapping: 0.081000 ms MarkObjects: 2.250400 ms  DeleteObjects: 0.092600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 644.077269 seconds.
+  path: Assets/Prefabs/Weapon/Vacuum.prefab
+  artifactKey: Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Weapon/Vacuum.prefab using Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c424d19155aa6e7a38e8510f67e55eea') in 0.069116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.429823 seconds.
+  path: Assets/Prefabs/Weapon/Vacuum.prefab
+  artifactKey: Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Weapon/Vacuum.prefab using Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94f03e478c69e7bfdd69a597c4501055') in 0.044177 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.456846 seconds.
+  path: Assets/Prefabs/Weapon/Vacuum.prefab
+  artifactKey: Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Weapon/Vacuum.prefab using Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e507d0b7b848e8e116aebf24f24ec375') in 0.027018 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.017191 seconds.
+  path: Assets/Prefabs/Weapon/Vacuum.prefab
+  artifactKey: Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Weapon/Vacuum.prefab using Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f051dbbd3b77f4e0123fe1288e435f84') in 0.011435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.737511 seconds.
+  path: Assets/Prefabs/Weapon/Vacuum.prefab
+  artifactKey: Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Weapon/Vacuum.prefab using Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9417c7dc682526a48a0404664d74fa48') in 0.013109 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003049 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.239 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1239ms)
+		BeginReloadAssembly (129ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (1061ms)
+			LoadAssemblies (174ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (349ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (390ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (94ms)
+				ProcessInitializeOnLoadAttributes (271ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4463.
+Total: 2.729700 ms (FindLiveObjects: 0.195700 ms CreateObjectMapping: 0.088100 ms MarkObjects: 2.357100 ms  DeleteObjects: 0.088000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002493 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.952 seconds
+Domain Reload Profiling:
+	ReloadAssembly (952ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (799ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (242ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (335ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (232ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4466.
+Total: 3.953000 ms (FindLiveObjects: 0.316200 ms CreateObjectMapping: 0.336900 ms MarkObjects: 3.179700 ms  DeleteObjects: 0.119100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 8.899198 seconds.
+  path: Assets/Prefabs/Weapon/Vacuum.prefab
+  artifactKey: Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Weapon/Vacuum.prefab using Guid(c15e0027ec18c9f4eb0af590a27341c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad2ea637e9714245d39bbc116fbe5005') in 0.047494 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002314 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.927 seconds
+Domain Reload Profiling:
+	ReloadAssembly (927ms)
+		BeginReloadAssembly (103ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (772ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (239ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (309ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (214ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.2 MB.
+System memory in use after: 180.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4470.
+Total: 3.598100 ms (FindLiveObjects: 0.200800 ms CreateObjectMapping: 0.100400 ms MarkObjects: 3.058700 ms  DeleteObjects: 0.236500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003157 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.895 seconds
+Domain Reload Profiling:
+	ReloadAssembly (895ms)
+		BeginReloadAssembly (99ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (753ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (246ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (65ms)
+			SetupLoadedEditorAssemblies (298ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (204ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.2 MB.
+System memory in use after: 180.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4473.
+Total: 2.896600 ms (FindLiveObjects: 0.296000 ms CreateObjectMapping: 0.151700 ms MarkObjects: 2.357400 ms  DeleteObjects: 0.090700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002352 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.863 seconds
+Domain Reload Profiling:
+	ReloadAssembly (863ms)
+		BeginReloadAssembly (99ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (721ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (227ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (296ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (79ms)
+				ProcessInitializeOnLoadAttributes (199ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3879 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.2 MB.
+System memory in use after: 180.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4476.
+Total: 2.729600 ms (FindLiveObjects: 0.196300 ms CreateObjectMapping: 0.083500 ms MarkObjects: 2.351300 ms  DeleteObjects: 0.097600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -64,18 +64,32 @@ public class LevelUI : MonoBehaviour
         while (true)
         {
             //리스트로만들어서 랜덤
-            ran[0] = Random.Range(0, items.Length);
-            ran[1] = Random.Range(0, items.Length);
-            ran[2] = Random.Range(0, items.Length);
+            //ran[0] = Random.Range(0, items.Length);
+            //ran[1] = Random.Range(0, items.Length);
+            //ran[2] = Random.Range(0, items.Length);
+            ran[0] = RandomItem(0, items.Length, new int[] { 10 });
+            ran[1] = RandomItem(0, items.Length, new int[] { 10 });
+            ran[2] = RandomItem(0, items.Length, new int[] { 10 });
+
+            if (items[4].level == items[4].data.damages.Length && items[8].level == items[8].data.damages.Length
+                && items[10].level != items[10].data.damages.Length)
+            {
+                Debug.Log("UPGRADE");
+                ran[0] = 10;
+            }
+            else
+                Debug.Log("No");
+
             if (ran[0] != ran[1] && ran[1] != ran[2] && ran[0] != ran[2])
                 break;
+            
         }
         for (int index = 0; index < ran.Length; index++)
         {
             Item ranItem = items[ran[index]];
             //만렙일경우
             if (ranItem.level == ranItem.data.damages.Length)
-            {
+            {                
                 items[3].gameObject.SetActive(true); //현재 3 Posion 이라
                 //items[Random.Range(4, 7)].gameObject.SetActive(true); 랜덤
             }
@@ -86,5 +100,18 @@ public class LevelUI : MonoBehaviour
                 ranItem.gameObject.SetActive(true);
             }
         }
+    }
+
+    int RandomItem(int min, int max, int[] excludes)
+    {
+        int randomIndex;
+        List<int> excludeList = new List<int>(excludes);
+
+        do
+        {
+            randomIndex = Random.Range(min, max);
+        } while (excludeList.Contains(randomIndex));
+
+        return randomIndex;
     }
 }

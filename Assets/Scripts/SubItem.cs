@@ -49,9 +49,6 @@ public class SubItem : MonoBehaviour
             case ItemData.ItemType.Water:
                 SpeedUp();
                 break;
-            case ItemData.ItemType.Iron:
-                HealthRecharge();
-                break;
             case ItemData.ItemType.Bin:
                 ExpIncrease();
                 break;
@@ -83,7 +80,8 @@ public class SubItem : MonoBehaviour
     }
     void HealthRecharge()
     {
-        GameManager.instance.health += rate;
+        if(GameManager.instance.health < GameManager.instance.maxHealth)
+            GameManager.instance.health += rate;
     }
     void ExpIncrease()
     {

@@ -59,6 +59,11 @@ public class Weapon : MonoBehaviour
                     timer = 0f;
                 }
                 break;
+            case 10:
+                {
+                    //돌아다니기
+                }
+                break;
             default:
                 break;
         }
@@ -118,6 +123,13 @@ public class Weapon : MonoBehaviour
             case 7:
                 speed = 0.03f;
                 Detergent();
+                break;
+            case 10:
+                {
+                    ActiveRobotVacuum();
+                    ActiveRobotVacuum();
+                    ActiveRobotVacuum();
+                }
                 break;
             default:
                 break;
@@ -225,10 +237,17 @@ public class Weapon : MonoBehaviour
     {
         Transform bullet;
         bullet = GameManager.instance.pool.Get(prefabId).transform;
-        bullet.position = GameManager.instance.player.transform.position -  new Vector3(0f,0.3f,0f);
+        bullet.position = GameManager.instance.player.transform.position - new Vector3(0f,0.3f,0f);
         bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.Detergent);
         StartCoroutine(Deactivate(bullet.gameObject, 1.5f));
-
+    }
+    void ActiveRobotVacuum()
+    {
+        Transform bullet;
+        bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.parent = transform;
+        bullet.localPosition = Vector3.zero;
+        bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.RobotVacuum);
     }
 }
 
