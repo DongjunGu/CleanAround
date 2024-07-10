@@ -11,8 +11,11 @@ public class Weapon : MonoBehaviour
     public float speed;
 
     float timer;
+    float activeTime;
     PlayerController player;
     Transform magnetic;
+
+    bool isVacuumWorking = false;
     void Awake()
     {
         player = GameManager.instance.player;
@@ -59,9 +62,17 @@ public class Weapon : MonoBehaviour
                     timer = 0f;
                 }
                 break;
-            case 10:
+            case 12:                
+                timer += Time.deltaTime;
+                if (timer > 1f)
                 {
-                    //돌아다니기
+                    activeTime += 0.05f;
+                    if (activeTime > 1f && !isVacuumWorking)
+                    {
+                        activeTime = 0f;
+                        StartCoroutine(VacuumWorking());                        
+                    }
+                    timer = 0f;
                 }
                 break;
             default:
@@ -72,6 +83,30 @@ public class Weapon : MonoBehaviour
         {
             LevelUp(10, 1);
         }
+    }
+    IEnumerator VacuumWorking()
+    {
+        isVacuumWorking = true;
+        Transform vacuum = player.transform.Find("Weapon12").GetChild(0);
+        vacuum.gameObject.SetActive(true);
+        //애니메이션 trigger
+        GameManager.instance.player.playerAnimator.SetTrigger("onVacuum");
+        //collider
+        GameManager.instance.player.capCollider.enabled = false;
+        Transform magn = player.transform.Find("Weapon6").GetChild(0);
+        if (magn != null)
+        {
+            magn.GetComponent<CircleCollider2D>().enabled = false;
+        }
+        yield return new WaitForSeconds(5f);
+        if (magn != null)
+        {
+            magn.GetComponent<CircleCollider2D>().enabled = true;
+        }
+        GameManager.instance.player.capCollider.enabled = true;
+        vacuum.gameObject.SetActive(false);
+        GameManager.instance.player.playerAnimator.ResetTrigger("onVacuum");
+        isVacuumWorking = false;
     }
 
     public void LevelUp(float damage, int count)
@@ -129,6 +164,12 @@ public class Weapon : MonoBehaviour
                     ActiveRobotVacuum();
                     ActiveRobotVacuum();
                     ActiveRobotVacuum();
+                    ActiveRobotVacuum();
+                }   
+                break;
+            case 12:
+                {
+                    ActiveVacuum(); //청소기 활성화
                 }
                 break;
             default:
@@ -248,6 +289,15 @@ public class Weapon : MonoBehaviour
         bullet.parent = transform;
         bullet.localPosition = Vector3.zero;
         bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.RobotVacuum);
+    }
+   void ActiveVacuum()
+    {
+        Transform bullet;
+        bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.parent = transform;
+        bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.Vacuum);
+        bullet.gameObject.SetActive(false);
+        GameManager.instance.vacuumGauge.SetActive(true);
     }
 }
 

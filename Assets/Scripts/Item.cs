@@ -180,15 +180,6 @@ public class Item : MonoBehaviour
                 }
                 level++;
                 break;
-            case ItemData.ItemType.RobotVacuum:
-                if (level == 0)
-                {
-                    GameObject newWeapon = new GameObject();
-                    weapon = newWeapon.AddComponent<Weapon>();
-                    weapon.Init(data);
-                }
-                level++;
-                break;
             case ItemData.ItemType.Iron:
                 if (level == 0)
                 {
@@ -232,7 +223,30 @@ public class Item : MonoBehaviour
                 level++;
                 break;
             case ItemData.ItemType.Posion:
-                GameManager.instance.health = GameManager.instance.maxHealth;
+                if (GameManager.instance.health >= GameManager.instance.maxHealth * 0.9f)
+                    GameManager.instance.health = GameManager.instance.maxHealth;
+                else
+                    GameManager.instance.health += GameManager.instance.maxHealth * 0.1f;
+                break;
+
+            case ItemData.ItemType.RobotVacuum:
+                if (level == 0)
+                {
+                    GameObject newWeapon = new GameObject();
+                    weapon = newWeapon.AddComponent<Weapon>();
+                    weapon.Init(data);
+                }
+                level++;
+                break;
+
+            case ItemData.ItemType.Vacuum:
+                if (level == 0)
+                {
+                    GameObject newWeapon = new GameObject();
+                    weapon = newWeapon.AddComponent<Weapon>();
+                    weapon.Init(data);
+                }
+                level++;
                 break;
         }
 

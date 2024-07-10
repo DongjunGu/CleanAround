@@ -4,9 +4,26 @@ using UnityEngine;
 
 public class Vacuum : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody2D rb;
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+    void OnEnable()
+    {
+        
+    }
     void LateUpdate()
     {
+        
+    }
+    void FixedUpdate()
+    {
+        if(GameManager.instance.player != null)
+        {
+            Vector2 pos = GameManager.instance.player.transform.position + new Vector3(0f, -1f, 0f);
+            rb.MovePosition(pos);
+        }
         if (GameManager.instance.player.inputVector.x != 0)
         {
             if (GameManager.instance.player.inputVector.x > 0)

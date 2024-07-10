@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
-    public enum InfoType { Exp, Level, Kill, Time, Health}
+    public enum InfoType { Exp, Level, Kill, Time, Health, VacuumGauge}
     public InfoType type;
 
     Text levelText;
-    Slider expSlider;
+    Slider getSlider;
+    float timer;
 
     void Awake()
     {
         levelText = GetComponent<Text>();
-        expSlider = GetComponent<Slider>();
+        getSlider = GetComponent<Slider>();
     }
 
     void LateUpdate()
@@ -24,7 +25,7 @@ public class HUD : MonoBehaviour
             case InfoType.Exp:
                 float curExp = GameManager.instance.exp;
                 float maxExp = GameManager.instance.nextExp[Mathf.Min(GameManager.instance.level, GameManager.instance.nextExp.Length - 1)];
-                expSlider.value = curExp / maxExp;
+                getSlider.value = curExp / maxExp;
                 break;
             case InfoType.Level:
                 levelText.text = string.Format("Lv.{0:F0}", GameManager.instance.level); //string º¯È¯
@@ -42,7 +43,19 @@ public class HUD : MonoBehaviour
             case InfoType.Health:
                 float curHp = GameManager.instance.health;
                 float maxHp = GameManager.instance.maxHealth;
-                expSlider.value = curHp / maxHp;
+                getSlider.value = curHp / maxHp;
+                break;
+            case InfoType.VacuumGauge:
+                timer += Time.deltaTime;
+                if (timer > 1f)
+                {
+                    getSlider.value += 0.05f;
+                    if(getSlider.value == 1f)
+                    {
+                        getSlider.value = 0f;
+                    }
+                    timer = 0f;
+                }
                 break;
         }
     }

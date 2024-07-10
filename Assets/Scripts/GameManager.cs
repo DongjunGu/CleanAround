@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public int kill;
     public float exp;
     public float increaseExp;
+    public GameObject vacuumGauge;
     public int[] nextExp = { 3, 10, 20, 45, 70, 120, 200, 300, 450, 600 };
     [Header("# Game Control")]
     public float gameTime;

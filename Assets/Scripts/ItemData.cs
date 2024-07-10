@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptable Object/ItemData")]
 public class ItemData : ScriptableObject
 {
-    public enum ItemType { Melee, Range, Water, Posion, Garbage, FeatherDuster, Magnetic, Detergent, Iron, Bin, DustPan , RobotVacuum }
+    public enum ItemType { Melee, Range, Water, Posion, Garbage, FeatherDuster, Magnetic, Detergent, Iron, Bin, DustPan, RobotVacuum, Vacuum }
     [Header("Main Info")]
     public ItemType itemType;
     public int itemId;
