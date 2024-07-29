@@ -75,6 +75,22 @@ public class Weapon : MonoBehaviour
                     timer = 0f;
                 }
                 break;
+            case 13:
+                timer += Time.deltaTime;
+                if (timer > speed)
+                {
+                    UpgradedSwipe();
+                    timer = 0f;
+                }
+                break;
+            case 14:
+                timer += Time.deltaTime;
+                if (timer > speed)
+                {
+                    UpgradedDetergent();
+                    timer = 0f;
+                }
+                break;
             default:
                 break;
         }
@@ -84,6 +100,7 @@ public class Weapon : MonoBehaviour
             LevelUp(10, 1);
         }
     }
+
     IEnumerator VacuumWorking()
     {
         isVacuumWorking = true;
@@ -93,15 +110,15 @@ public class Weapon : MonoBehaviour
         GameManager.instance.player.playerAnimator.SetTrigger("onVacuum");
         //collider
         GameManager.instance.player.capCollider.enabled = false;
-        Transform magn = player.transform.Find("Weapon6").GetChild(0);
-        if (magn != null)
+        Transform magn = player.transform.Find("Weapon6");
+        if (magn != null && magn.childCount > 0)
         {
-            magn.GetComponent<CircleCollider2D>().enabled = false;
+            magn.GetChild(0).GetComponent<CircleCollider2D>().enabled = false;
         }
         yield return new WaitForSeconds(5f);
-        if (magn != null)
+        if (magn != null && magn.childCount > 0)
         {
-            magn.GetComponent<CircleCollider2D>().enabled = true;
+            magn.GetChild(0).GetComponent<CircleCollider2D>().enabled = true;
         }
         GameManager.instance.player.capCollider.enabled = true;
         vacuum.gameObject.SetActive(false);
@@ -171,6 +188,14 @@ public class Weapon : MonoBehaviour
                 {
                     ActiveVacuum(); //청소기 활성화
                 }
+                break;
+            case 13:
+                UpgradedSwipe();
+                speed = 3f;
+                break;
+            case 14:
+                speed = 0.03f;
+                UpgradedDetergent();
                 break;
             default:
                 break;
@@ -256,7 +281,23 @@ public class Weapon : MonoBehaviour
         bullet.localPosition = Vector3.zero;
         bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.FeatherDuster);
         StartCoroutine(Deactivate(bullet.gameObject, 0.5f));
-
+    }
+    void UpgradedSwipe()
+    {
+        Transform bullet;
+        if (transform.childCount > 0)
+        {
+            bullet = transform.GetChild(0);
+        }
+        else
+        {
+            bullet = GameManager.instance.pool.Get(prefabId).transform;
+            bullet.parent = transform;
+        }
+        bullet.gameObject.SetActive(true);
+        bullet.localPosition = Vector3.zero;
+        bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.UpgradeFeather);
+        StartCoroutine(Deactivate(bullet.gameObject, 0.5f));
     }
     void Magnetic()
     {
@@ -281,6 +322,21 @@ public class Weapon : MonoBehaviour
         bullet.position = GameManager.instance.player.transform.position - new Vector3(0f,0.3f,0f);
         bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.Detergent);
         StartCoroutine(Deactivate(bullet.gameObject, 1.5f));
+    }
+    void UpgradedDetergent()
+    {
+        Transform formalDetergent = player.transform.Find("Weapon7");
+        if(formalDetergent != null)
+        {
+            formalDetergent.gameObject.SetActive(false);
+        }
+        
+
+        Transform bullet;
+        bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.position = GameManager.instance.player.transform.position - new Vector3(0f, 0.3f, 0f);
+        bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.UpgradeDetergent);
+        StartCoroutine(Deactivate(bullet.gameObject, 3.0f));
     }
     void ActiveRobotVacuum()
     {

@@ -230,16 +230,9 @@ public class Item : MonoBehaviour
                 break;
 
             case ItemData.ItemType.RobotVacuum:
-                if (level == 0)
-                {
-                    GameObject newWeapon = new GameObject();
-                    weapon = newWeapon.AddComponent<Weapon>();
-                    weapon.Init(data);
-                }
-                level++;
-                break;
-
             case ItemData.ItemType.Vacuum:
+            case ItemData.ItemType.UpgradeFeather:
+            case ItemData.ItemType.UpgradeDetergent:
                 if (level == 0)
                 {
                     GameObject newWeapon = new GameObject();
@@ -247,7 +240,7 @@ public class Item : MonoBehaviour
                     weapon.Init(data);
                 }
                 level++;
-                break;
+                break;           
         }
 
         if(level == data.damages.Length)

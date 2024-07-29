@@ -67,22 +67,29 @@ public class LevelUI : MonoBehaviour
             //ran[0] = Random.Range(0, items.Length);
             //ran[1] = Random.Range(0, items.Length);
             //ran[2] = Random.Range(0, items.Length);
-            ran[0] = RandomItem(0, items.Length, new int[] { 10, 12 });
-            ran[1] = RandomItem(0, items.Length, new int[] { 10, 12 });
-            ran[2] = RandomItem(0, items.Length, new int[] { 10, 12 });
+            ran[0] = RandomItem(0, items.Length, new int[] { 10, 12, 13, 14 });
+            ran[1] = RandomItem(0, items.Length, new int[] { 10, 12, 13, 14 });
+            ran[2] = RandomItem(0, items.Length, new int[] { 10, 12, 13, 14 });
 
-            if (items[4].level == items[4].data.damages.Length && items[8].level == items[8].data.damages.Length
+            if (items[4].level == items[4].data.damages.Length && items[8].level > 0
                 && items[10].level != items[10].data.damages.Length)
             {
-                Debug.Log("Can R-VacuumActive");
                 ran[0] = 10;
             }
-
-            if (items[0].level == items[0].data.damages.Length && items[9].level == items[9].data.damages.Length
+            if (items[0].level == items[0].data.damages.Length && items[9].level > 0
                 && items[12].level != items[12].data.damages.Length)
             {
-                Debug.Log("Can VacuumActive");
                 ran[0] = 12;
+            }
+            if (items[5].level == items[5].data.damages.Length && items[11].level > 0
+                && items[13].level != items[13].data.damages.Length)
+            {
+                ran[0] = 13;
+            }
+            if (items[7].level == items[7].data.damages.Length && items[2].level > 0
+                && items[14].level != items[14].data.damages.Length)
+            {
+                ran[0] = 14;
             }
 
             if (ran[0] != ran[1] && ran[1] != ran[2] && ran[0] != ran[2])
