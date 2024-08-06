@@ -9,6 +9,8 @@ public class Item : MonoBehaviour
     public int level;
     public Weapon weapon;
     public SubItem subItem;
+    public GameObject skillBox;
+    public Transform skillImage;
     Image icon;
     Text textLevel;
     Text textName;
@@ -65,6 +67,7 @@ public class Item : MonoBehaviour
                     GameObject newWeapon = new GameObject();
                     weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
+                    MakeImage(data);
                 }
                 else
                 {
@@ -82,6 +85,7 @@ public class Item : MonoBehaviour
                     GameObject newWeapon = new GameObject();
                     weapon =  newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
+                    MakeImage(data);
                 }
                 else
                 {
@@ -100,6 +104,7 @@ public class Item : MonoBehaviour
                     GameObject newWeapon = new GameObject();
                     weapon =  newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
+                    MakeImage(data);
                 }
                 else
                 {
@@ -118,6 +123,7 @@ public class Item : MonoBehaviour
                     GameObject newSubItem = new GameObject();
                     subItem = newSubItem.AddComponent<SubItem>();
                     subItem.Init(data);
+                    MakeImage(data);
                 }
                 else
                 {
@@ -132,6 +138,7 @@ public class Item : MonoBehaviour
                     GameObject newWeapon = new GameObject();
                     weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
+                    MakeImage(data);
                 }
                 else
                 {
@@ -152,6 +159,7 @@ public class Item : MonoBehaviour
                     GameObject newWeapon = new GameObject();
                     weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
+                    MakeImage(data);
                 }
                 else
                 {
@@ -169,6 +177,7 @@ public class Item : MonoBehaviour
                     GameObject newWeapon = new GameObject();
                     weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
+                    MakeImage(data);
                 }
                 else
                 {
@@ -186,6 +195,7 @@ public class Item : MonoBehaviour
                     GameObject newSubItem = new GameObject();
                     subItem = newSubItem.AddComponent<SubItem>();
                     subItem.Init(data);
+                    MakeImage(data);
                 }
                 else
                 {
@@ -200,6 +210,7 @@ public class Item : MonoBehaviour
                     GameObject newSubItem = new GameObject();
                     subItem = newSubItem.AddComponent<SubItem>();
                     subItem.Init(data);
+                    MakeImage(data);
                 }
                 else
                 {
@@ -214,6 +225,7 @@ public class Item : MonoBehaviour
                     GameObject newSubItem = new GameObject();
                     subItem = newSubItem.AddComponent<SubItem>();
                     subItem.Init(data);
+                    MakeImage(data);
                 }
                 else
                 {
@@ -238,6 +250,7 @@ public class Item : MonoBehaviour
                     GameObject newWeapon = new GameObject();
                     weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
+                    MakeImage(data);
                 }
                 level++;
                 break;           
@@ -247,5 +260,11 @@ public class Item : MonoBehaviour
         {
             GetComponent<Button>().interactable = false;
         }
+    }
+
+    void MakeImage(ItemData data)
+    {
+        GameObject skills = Instantiate(skillBox, skillImage);
+        skills.transform.GetChild(0).GetComponent<Image>().sprite = data.itemIcon; 
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Weapon : MonoBehaviour
 
     float timer;
     float activeTime;
+    Image skillImage;
     PlayerController player;
     Transform magnetic;
 
@@ -143,7 +145,8 @@ public class Weapon : MonoBehaviour
         id = data.itemId;
         damage = data.baseDamage;
         count = data.baseCount;
-
+        //skillImage.sprite = data.itemIcon;
+        
         for (int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)
         {
             if (data.prtojectile == GameManager.instance.pool.prefabs[index])

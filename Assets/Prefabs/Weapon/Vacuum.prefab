@@ -341,6 +341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CFXR2 Cartoon Fight (Loop) 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3611011244838148531, guid: 46d30566c88a98740b1e565a208e106a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9210302305875501300, guid: 46d30566c88a98740b1e565a208e106a, type: 3}
       propertyPath: m_RootOrder
       value: 0

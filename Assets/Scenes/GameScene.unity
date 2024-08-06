@@ -182,6 +182,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &6588835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,6 +833,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &77444516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,6 +1000,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &108044208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,6 +1506,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &218000033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3361,6 +3369,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &625222701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3684,6 +3694,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &664982269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4647,6 +4659,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &756395370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4891,6 +4905,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &770532339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5889,6 +5905,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &1080580107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6129,6 +6147,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &1088610414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7556,6 +7576,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &1457445707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7890,6 +7912,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &1485902211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9649,6 +9673,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &1899548755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9814,6 +9840,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &1913604892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10252,6 +10280,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972411999}
   m_CullTransparentMesh: 1
+--- !u!1 &1981586400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1981586401}
+  - component: {fileID: 1981586403}
+  - component: {fileID: 1981586402}
+  m_Layer: 5
+  m_Name: Skills
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1981586401
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981586400}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2044583490}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 168, y: 270}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1981586402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981586400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b753696f4e6284ba03ecc468afce2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1981586403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981586400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 5
+    m_Right: 0
+    m_Top: 21
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 15, y: 15}
+  m_Spacing: {x: 1, y: 1}
+  m_Constraint: 1
+  m_ConstraintCount: 5
 --- !u!1 &1995218860
 GameObject:
   m_ObjectHideFlags: 0
@@ -10311,6 +10412,8 @@ MonoBehaviour:
   level: 0
   weapon: {fileID: 0}
   subItem: {fileID: 0}
+  skillBox: {fileID: 5326893852002454704, guid: 627f34eaf17d0c841a3df548fcbcac94, type: 3}
+  skillImage: {fileID: 1981586401}
 --- !u!114 &1995218863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10697,6 +10800,7 @@ RectTransform:
   - {fileID: 496627329}
   - {fileID: 69216532}
   - {fileID: 1731787019}
+  - {fileID: 1981586401}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
