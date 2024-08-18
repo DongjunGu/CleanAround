@@ -11,6 +11,7 @@ public class Item : MonoBehaviour
     public SubItem subItem;
     public GameObject skillBox;
     public Transform skillImage;
+    public GameObject levelDia;
     Image icon;
     Text textLevel;
     Text textName;
@@ -21,15 +22,15 @@ public class Item : MonoBehaviour
         icon.sprite = data.itemIcon;
 
         Text[] texts = GetComponentsInChildren<Text>();
-        textLevel = texts[0];
-        textName = texts[1];
-        textDesc = texts[2];
+        //textLevel = texts[0];
+        textName = texts[0];
+        textDesc = texts[1];
         textName.text = data.itemName;
     }
 
     void OnEnable()
     {
-        textLevel.text = "Lv." + (level + 1);
+        //textLevel.text = "Lv." + (level + 1);
         switch (data.itemType)
         {
             case ItemData.ItemType.Melee:
@@ -76,6 +77,7 @@ public class Item : MonoBehaviour
                     nextDamage += data.baseDamage * data.damages[level - 1];
                     nextCount += data.counts[level - 1];
                     weapon.LevelUp(nextDamage, nextCount);
+                    LevelUPDia();
                 }
                 level++;
                 break;
@@ -266,5 +268,12 @@ public class Item : MonoBehaviour
     {
         GameObject skills = Instantiate(skillBox, skillImage);
         skills.transform.GetChild(0).GetComponent<Image>().sprite = data.itemIcon; 
+    }
+
+    void LevelUPDia()
+    {
+        Transform levelUI;
+        levelUI = transform.Find("LevelGrid");
+        Instantiate(levelDia, levelUI);
     }
 }

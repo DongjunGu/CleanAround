@@ -10,10 +10,9 @@ public class Weapon : MonoBehaviour
     public float damage;
     public int count;
     public float speed;
-
     float timer;
     float activeTime;
-    Image skillImage;
+
     PlayerController player;
     Transform magnetic;
 
