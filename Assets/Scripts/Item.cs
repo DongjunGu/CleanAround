@@ -88,6 +88,7 @@ public class Item : MonoBehaviour
                     weapon =  newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
                     MakeImage(data);
+                    LevelUPDia();
                 }
                 else
                 {
@@ -97,6 +98,7 @@ public class Item : MonoBehaviour
                     nextCount += data.counts[level - 1];
                     weapon.LevelUp(nextDamage, nextCount);
                     weapon.speed -= 0.3f;
+                    LevelUPDia();
                 }
                 level++;
                 break;
@@ -107,6 +109,7 @@ public class Item : MonoBehaviour
                     weapon =  newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
                     MakeImage(data);
+                    LevelUPDia();
                 }
                 else
                 {
@@ -116,6 +119,7 @@ public class Item : MonoBehaviour
                     nextCount += data.counts[level - 1];
                     weapon.LevelUp(nextDamage, nextCount);
                     weapon.speed -= 0.1f;
+                    LevelUPDia();
                 }
                 level++;
                 break;
@@ -126,11 +130,13 @@ public class Item : MonoBehaviour
                     subItem = newSubItem.AddComponent<SubItem>();
                     subItem.Init(data);
                     MakeImage(data);
+                    LevelUPDia();
                 }
                 else
                 {
                     float nextRate = data.damages[level - 1];
                     subItem.LevelUp(nextRate);
+                    LevelUPDia();
                 }
                 level++;
                 break;
@@ -141,6 +147,7 @@ public class Item : MonoBehaviour
                     weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
                     MakeImage(data);
+                    LevelUPDia();
                 }
                 else
                 {
@@ -152,6 +159,7 @@ public class Item : MonoBehaviour
                     weapon.speed -= 0.5f;
                     FeatherParticle.featherSize += 0.3f;
                     FeatherParticle.sphereRadiusSize += 0.3f;
+                    LevelUPDia();
                 }
                 level++;
                 break;
@@ -162,6 +170,7 @@ public class Item : MonoBehaviour
                     weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
                     MakeImage(data);
+                    LevelUPDia();
                 }
                 else
                 {
@@ -170,6 +179,7 @@ public class Item : MonoBehaviour
                     nextDamage += data.baseDamage + data.damages[level - 1];
                     weapon.LevelUp(nextDamage, nextCount);
                     weapon.MagneticUpgrade();
+                    LevelUPDia();
                 }
                 level++;
                 break;
@@ -180,6 +190,7 @@ public class Item : MonoBehaviour
                     weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
                     MakeImage(data);
+                    LevelUPDia();
                 }
                 else
                 {
@@ -188,6 +199,7 @@ public class Item : MonoBehaviour
                     nextDamage += data.baseDamage * data.damages[level - 1];
                     nextCount += data.counts[level - 1];
                     weapon.LevelUp(nextDamage, nextCount);
+                    LevelUPDia();
                 }
                 level++;
                 break;
@@ -198,11 +210,13 @@ public class Item : MonoBehaviour
                     subItem = newSubItem.AddComponent<SubItem>();
                     subItem.Init(data);
                     MakeImage(data);
+                    LevelUPDia();
                 }
                 else
                 {
                     float nextRate = data.damages[level];
                     subItem.LevelUp(nextRate);
+                    LevelUPDia();
                 }
                 level++;
                 break;
@@ -213,11 +227,13 @@ public class Item : MonoBehaviour
                     subItem = newSubItem.AddComponent<SubItem>();
                     subItem.Init(data);
                     MakeImage(data);
+                    LevelUPDia();
                 }
                 else
                 {
                     float nextRate = data.damages[level];
                     subItem.LevelUp(nextRate);
+                    LevelUPDia();
                 }
                 level++;
                 break;
@@ -228,11 +244,13 @@ public class Item : MonoBehaviour
                     subItem = newSubItem.AddComponent<SubItem>();
                     subItem.Init(data);
                     MakeImage(data);
+                    LevelUPDia();
                 }
                 else
                 {
                     float nextRate = data.damages[level];
                     subItem.LevelUp(nextRate);
+                    LevelUPDia();
                 }
                 level++;
                 break;
@@ -253,6 +271,7 @@ public class Item : MonoBehaviour
                     weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
                     MakeImage(data);
+
                 }
                 level++;
                 break;           
