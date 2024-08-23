@@ -283,13 +283,13 @@ public class Item : MonoBehaviour
         }
     }
 
-    void MakeImage(ItemData data)
+    void MakeImage(ItemData data) // 획득한 아이템 이미지 추가
     {
         GameObject skills = Instantiate(skillBox, skillImage);
         skills.transform.GetChild(0).GetComponent<Image>().sprite = data.itemIcon; 
     }
 
-    void LevelUPDia()
+    void LevelUPDia() //아이템 레벨 다이아로 표기
     {
         Transform levelUI;
         levelUI = transform.Find("LevelGrid");

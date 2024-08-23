@@ -104,7 +104,7 @@ public class Enemy : MonoBehaviour
     
     void DropExp()
     {
-        GameObject exp = GameManager.instance.pool.Get(2);
+        GameObject exp = GameManager.instance.pool.Get(4);
         exp.transform.position = transform.position;
     }
     void Death() //animation에서 호출

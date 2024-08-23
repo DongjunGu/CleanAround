@@ -144,7 +144,6 @@ public class Weapon : MonoBehaviour
         id = data.itemId;
         damage = data.baseDamage;
         count = data.baseCount;
-        //skillImage.sprite = data.itemIcon;
         
         for (int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)
         {
