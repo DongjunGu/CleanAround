@@ -102,31 +102,6 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    IEnumerator VacuumWorking()
-    {
-        isVacuumWorking = true;
-        Transform vacuum = player.transform.Find("Weapon12").GetChild(0);
-        vacuum.gameObject.SetActive(true);
-        //애니메이션 trigger
-        GameManager.instance.player.playerAnimator.SetTrigger("onVacuum");
-        //collider
-        GameManager.instance.player.capCollider.enabled = false;
-        Transform magn = player.transform.Find("Weapon6");
-        if (magn != null && magn.childCount > 0)
-        {
-            magn.GetChild(0).GetComponent<CircleCollider2D>().enabled = false;
-        }
-        yield return new WaitForSeconds(5f);
-        if (magn != null && magn.childCount > 0)
-        {
-            magn.GetChild(0).GetComponent<CircleCollider2D>().enabled = true;
-        }
-        GameManager.instance.player.capCollider.enabled = true;
-        vacuum.gameObject.SetActive(false);
-        GameManager.instance.player.playerAnimator.ResetTrigger("onVacuum");
-        isVacuumWorking = false;
-    }
-
     public void LevelUp(float damage, int count)
     {
         this.damage = damage;
@@ -286,6 +261,8 @@ public class Weapon : MonoBehaviour
     void UpgradedSwipe()
     {
         Transform bullet;
+        Transform formalFeather = player.transform.Find("Weapon5");
+        formalFeather.gameObject.SetActive(false);
         if (transform.childCount > 0)
         {
             bullet = transform.GetChild(0);
@@ -342,6 +319,9 @@ public class Weapon : MonoBehaviour
     void ActiveRobotVacuum()
     {
         Transform bullet;
+        Transform formalGarbage = player.transform.Find("Weapon4");
+        formalGarbage.gameObject.SetActive(false);
+
         bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.parent = transform;
         bullet.localPosition = Vector3.zero;
@@ -349,12 +329,37 @@ public class Weapon : MonoBehaviour
     }
    void ActiveVacuum()
     {
-        Transform bullet;
+        Transform bullet;        
+
         bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.parent = transform;
         bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.Vacuum);
         bullet.gameObject.SetActive(false);
         GameManager.instance.vacuumGauge.SetActive(true);
+    }
+    IEnumerator VacuumWorking()
+    {
+        isVacuumWorking = true;
+        Transform vacuum = player.transform.Find("Weapon12").GetChild(0);
+        vacuum.gameObject.SetActive(true);
+        //애니메이션 trigger
+        GameManager.instance.player.playerAnimator.SetTrigger("onVacuum");
+        //collider
+        GameManager.instance.player.capCollider.enabled = false;
+        Transform magn = player.transform.Find("Weapon6");
+        if (magn != null && magn.childCount > 0)
+        {
+            magn.GetChild(0).GetComponent<CircleCollider2D>().enabled = false;
+        }
+        yield return new WaitForSeconds(5f);
+        if (magn != null && magn.childCount > 0)
+        {
+            magn.GetChild(0).GetComponent<CircleCollider2D>().enabled = true;
+        }
+        GameManager.instance.player.capCollider.enabled = true;
+        vacuum.gameObject.SetActive(false);
+        GameManager.instance.player.playerAnimator.ResetTrigger("onVacuum");
+        isVacuumWorking = false;
     }
 }
 

@@ -47,4 +47,5 @@ public class SpawnData
     public float spawnTime;
     public int health;
     public float speed;
+    [SerializeField] string memo;
 }

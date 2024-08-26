@@ -51,9 +51,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameManager.instance.isLive)
             return;
-        GameManager.instance.health -= Time.deltaTime * 10;
+        if(collision.gameObject.tag == "Enemy")
+            GameManager.instance.health -= Time.deltaTime * 10;
 
-        if(GameManager.instance.health < 0)
+        if (GameManager.instance.health < 0)
         {
             for(int index = 2; index < transform.childCount; index++)
             {

@@ -1177,7 +1177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &266054083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4621,18 +4621,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.2
+  - spawnTime: 0.7
+    health: 5
+    speed: 1.5
+    memo: Rabbit_kid
+  - spawnTime: 0.5
     health: 10
     speed: 1.5
-  - spawnTime: 0.2
+    memo: Rabbit
+  - spawnTime: 0.3
     health: 15
     speed: 2
+    memo: Monster_kid
   - spawnTime: 0.3
-    health: 25
+    health: 20
     speed: 2
+    memo: Monster
+  - spawnTime: 0.2
+    health: 30
+    speed: 3
+    memo: Alien
   - spawnTime: 0.3
     health: 30
     speed: 2
+    memo: 
+  - spawnTime: 0.3
+    health: 30
+    speed: 2
+    memo: 
+  - spawnTime: 0.3
+    health: 30
+    speed: 2
+    memo: 
   levelTime: 0
 --- !u!1 &1007097460
 GameObject:
@@ -9897,9 +9917,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 5812121094283471851, guid: 0f78c2100b9404644987743cd021c7f3, type: 3}
+  - {fileID: 6571071657388307628, guid: 9341936ca5b34fa4d88593c76fc964ba, type: 3}
+  - {fileID: 4364700036042551749, guid: 5220bb5ee6212af47943a77fc66d156b, type: 3}
+  - {fileID: 1971142068298684602, guid: 9e00dc73a2780b74c81fb33354e42abe, type: 3}
+  - {fileID: 4222556595429554987, guid: a719c2eac552b7d479f6b72c9d71b02d, type: 3}
+  - {fileID: 385883619916705524, guid: c822511d5f1d1ab4b858415b3bd2d732, type: 3}
+  - {fileID: 6600703878392304812, guid: 95586ce62aea6d845911ff40ef2f6879, type: 3}
   - {fileID: 8592738142232374067, guid: 0ae35ee1448c9b146aa28f35a585fa51, type: 3}
-  - {fileID: 3789426657615666722, guid: 9a97ad5c55993114081da5972e656147, type: 3}
   - {fileID: 8528493213072484013, guid: dc7ea896ee19d4b4eb9aa08d1d16b23d, type: 3}
   - {fileID: 772375084949650030, guid: 8ff83d1da0b05c24689596c5a2ea236b, type: 3}
   - {fileID: 191758556171972024, guid: 5e4343a72eead034d9865f0b08a2f18e, type: 3}
@@ -10797,6 +10821,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 778985587922332720, guid: 9f4346996dab7fa47a27eecbde7f62b6, type: 3}
+    - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: pool
       value: 
       objectReference: {fileID: 1997680723}
@@ -10812,6 +10840,10 @@ PrefabInstance:
       propertyPath: levelUI
       value: 
       objectReference: {fileID: 496627332}
+    - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
+      propertyPath: spawner
+      value: 
+      objectReference: {fileID: 944200939}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: resultUI
       value: 
@@ -10830,7 +10862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: maxGameTime
-      value: 120
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: vacuumGauge

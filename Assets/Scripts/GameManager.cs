@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [Header("# Game Object")]
     public PlayerController player;
+    public Spawner spawner;
     public PoolManager pool;
     public bool isLive;
     [Header("# Player Info")]
@@ -25,6 +26,9 @@ public class GameManager : MonoBehaviour
     public LevelUI levelUI;
     public Result gameoverUI;
     public GameObject enemyCleaner;
+    public GameObject boss;
+
+    private bool bossCouroutine = false;
     void Awake()
     {
         instance = this;
@@ -76,8 +80,27 @@ public class GameManager : MonoBehaviour
         if (gameTime > maxGameTime)
         {
             gameTime = maxGameTime;
-            GameEnd();
+            //보스 소환
+            BossStage();
+
+            //GameEnd();
         }
+    }
+    void BossStage()
+    {
+        StartCoroutine(BossStageCorou());
+    }
+
+    IEnumerator BossStageCorou()
+    {
+        enemyCleaner.SetActive(true);
+        spawner.gameObject.SetActive(false);
+        if (!bossCouroutine)
+        {
+            Instantiate(boss, player.transform.position, Quaternion.identity);
+            bossCouroutine = true;
+        }
+        yield return null;
     }
     public void GetExp()
     {

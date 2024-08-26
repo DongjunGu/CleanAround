@@ -88,6 +88,7 @@ public class Enemy : MonoBehaviour
             rigid.simulated = false;
             GameManager.instance.kill++;
             DropExp();
+            
             //GameManager.instance.GetExp();
         }
        
@@ -104,11 +105,12 @@ public class Enemy : MonoBehaviour
     
     void DropExp()
     {
-        GameObject exp = GameManager.instance.pool.Get(4);
+        GameObject exp = GameManager.instance.pool.Get(8);
         exp.transform.position = transform.position;
     }
     void Death() //animation에서 호출
     {
+        anim.SetBool("Dead", false);
         gameObject.SetActive(false);
     }
 }
