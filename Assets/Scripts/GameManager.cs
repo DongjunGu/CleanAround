@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [Header("# Game Object")]
     public PlayerController player;
+    public Camera mainCamera;
     public Spawner spawner;
     public PoolManager pool;
     public bool isLive;
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
     public LevelUI levelUI;
     public Result gameoverUI;
     public GameObject enemyCleaner;
-    public GameObject boss;
+    public GameObject bossController;
 
     private bool bossCouroutine = false;
     void Awake()
@@ -95,12 +96,13 @@ public class GameManager : MonoBehaviour
     {
         enemyCleaner.SetActive(true);
         spawner.gameObject.SetActive(false);
+
         if (!bossCouroutine)
         {
-            Instantiate(boss, player.transform.position, Quaternion.identity);
+            Instantiate(bossController);
             bossCouroutine = true;
         }
-        yield return null;
+        yield return null;        
     }
     public void GetExp()
     {

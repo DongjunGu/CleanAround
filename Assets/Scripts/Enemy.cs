@@ -10,13 +10,13 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D target;
     public SpriteRenderer[] spriteRenderers;
     public SpriteRenderer[] entireRenderers;
-    bool isLive;
-    bool isHit;
+    protected bool isLive;
+    protected bool isHit;
 
-    Rigidbody2D rigid;
-    Collider2D col;
-    Animator anim;
-    WaitForFixedUpdate wait;
+    protected Rigidbody2D rigid;
+    protected Collider2D col;
+    protected  Animator anim;
+    protected WaitForFixedUpdate wait;
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         wait = new WaitForFixedUpdate();
     }
 
-    void OnEnable()
+    protected virtual void OnEnable()
     {
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();
         isLive = true;
@@ -93,7 +93,7 @@ public class Enemy : MonoBehaviour
         }
        
     }
-    IEnumerator KnockBack()
+    protected virtual IEnumerator KnockBack()
     {
         isHit = true;
         Vector3 playerPos = GameManager.instance.player.transform.position;
