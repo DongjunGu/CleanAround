@@ -4624,35 +4624,31 @@ MonoBehaviour:
   - spawnTime: 0.7
     health: 5
     speed: 1.5
-    memo: Rabbit_kid
+    memo: Bee_kid
   - spawnTime: 0.5
     health: 10
     speed: 1.5
-    memo: Rabbit
+    memo: Bee
   - spawnTime: 0.3
     health: 15
     speed: 2
-    memo: Monster_kid
+    memo: Rabbit_kid
   - spawnTime: 0.3
     health: 20
     speed: 2
-    memo: Monster
+    memo: Rabbit
   - spawnTime: 0.2
     health: 30
     speed: 3
+    memo: Monster_kid
+  - spawnTime: 0.3
+    health: 30
+    speed: 2
+    memo: Monster
+  - spawnTime: 0.3
+    health: 30
+    speed: 2
     memo: Alien
-  - spawnTime: 0.3
-    health: 30
-    speed: 2
-    memo: 
-  - spawnTime: 0.3
-    health: 30
-    speed: 2
-    memo: 
-  - spawnTime: 0.3
-    health: 30
-    speed: 2
-    memo: 
   levelTime: 0
 --- !u!1 &1007097460
 GameObject:
@@ -9924,7 +9920,6 @@ MonoBehaviour:
   - {fileID: 385883619916705524, guid: c822511d5f1d1ab4b858415b3bd2d732, type: 3}
   - {fileID: 6600703878392304812, guid: 95586ce62aea6d845911ff40ef2f6879, type: 3}
   - {fileID: 8592738142232374067, guid: 0ae35ee1448c9b146aa28f35a585fa51, type: 3}
-  - {fileID: 8528493213072484013, guid: dc7ea896ee19d4b4eb9aa08d1d16b23d, type: 3}
   - {fileID: 772375084949650030, guid: 8ff83d1da0b05c24689596c5a2ea236b, type: 3}
   - {fileID: 191758556171972024, guid: 5e4343a72eead034d9865f0b08a2f18e, type: 3}
   - {fileID: 4008690649547652137, guid: 17f7ab45a8207f84f870719f0ec903d6, type: 3}

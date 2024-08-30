@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
         playerAnimator.SetFloat("playerSpeed", inputVector.magnitude);
     }
-
+   
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (!GameManager.instance.isLive)

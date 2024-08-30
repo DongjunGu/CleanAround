@@ -176,7 +176,6 @@ GameObject:
   - component: {fileID: 8528493213072484011}
   - component: {fileID: 8528493213072484009}
   - component: {fileID: 8528493213072484008}
-  - component: {fileID: 8528493213072483990}
   - component: {fileID: 151206771256937790}
   m_Layer: 6
   m_Name: BossAlien
@@ -239,7 +238,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -264,35 +263,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.10778284, y: 2.6466646}
   m_Size: {x: 4.739455, y: 8.353178}
   m_Direction: 0
---- !u!114 &8528493213072483990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8528493213072484013}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02329daec34c97648b220ae0ee8bac0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 33
-  health: 2222
-  maxHealth: 2222
-  target: {fileID: 0}
-  spriteRenderers:
-  - {fileID: 8528493214135053682}
-  - {fileID: 8528493212889243589}
-  - {fileID: 8528493213128532113}
-  - {fileID: 8528493212428413009}
-  entireRenderers:
-  - {fileID: 8528493214135053682}
-  - {fileID: 8528493212889243589}
-  - {fileID: 8528493213531824993}
-  - {fileID: 8528493213462863356}
-  - {fileID: 8528493214140150326}
-  - {fileID: 8528493213128532113}
-  - {fileID: 8528493212428413009}
 --- !u!114 &151206771256937790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,7 +270,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8528493213072484013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9adbaaf3b21ae274f83b5e33ef3f0988, type: 3}
   m_Name: 
@@ -322,6 +292,10 @@ MonoBehaviour:
   - {fileID: 8528493214140150326}
   - {fileID: 8528493213128532113}
   - {fileID: 8528493212428413009}
+  speed: 3
+  bossKid: {fileID: 8592738142232374067, guid: 0ae35ee1448c9b146aa28f35a585fa51, type: 3}
+  bossBullet: {fileID: 8062642310475530127, guid: d7b13c3682f017e41a69c6bee01058b7, type: 3}
+  interval: 5
 --- !u!1 &8528493213128532112
 GameObject:
   m_ObjectHideFlags: 0
