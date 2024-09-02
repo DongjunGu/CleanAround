@@ -88,8 +88,6 @@ public class Enemy : MonoBehaviour
             rigid.simulated = false;
             GameManager.instance.kill++;
             DropExp();
-            
-            //GameManager.instance.GetExp();
         }
        
     }

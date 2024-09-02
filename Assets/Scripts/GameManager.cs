@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     {
         isLive = false;
         enemyCleaner.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         gameoverUI.gameObject.SetActive(true);
         gameoverUI.Victory();
         Time.timeScale = 0;

@@ -292,10 +292,24 @@ MonoBehaviour:
   - {fileID: 8528493214140150326}
   - {fileID: 8528493213128532113}
   - {fileID: 8528493212428413009}
-  speed: 3
   bossKid: {fileID: 8592738142232374067, guid: 0ae35ee1448c9b146aa28f35a585fa51, type: 3}
   bossBullet: {fileID: 8062642310475530127, guid: d7b13c3682f017e41a69c6bee01058b7, type: 3}
-  interval: 5
+  BossDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GameEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  currentState: 0
 --- !u!1 &8528493213128532112
 GameObject:
   m_ObjectHideFlags: 0

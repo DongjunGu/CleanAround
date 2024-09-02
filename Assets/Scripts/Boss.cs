@@ -6,7 +6,7 @@ public class Boss : Enemy
 {
     public GameObject bossKid;
     public GameObject bossBullet;
-    public float interval = 5f;
+    
     private float timer = 0f;
     protected override void OnEnable()
     {
@@ -23,13 +23,13 @@ public class Boss : Enemy
             entireRenderer.enabled = true;
         }
     }
-    
+
     public enum BossState
     {
         Idle,
         Chase,
         CreateKid,
-        Fire,
+        FireOne,
         FireArc,
         FireCircle,
         Dead
@@ -43,20 +43,22 @@ public class Boss : Enemy
     }
     void Update()
     {
-        //timer += Time.deltaTime;
-        ////speed = 2f;
-        //if (timer >= interval)
-        //{
-        //    timer = 0f;
-
-        //    //CreateKid();
-        //    //FireCircle();
-        //    //FireOne();
-        //    speed = 0f;
-        //    FireArc();
-        //}
+        if (health <= 950 && health > 900)
+            currentState = BossState.CreateKid;
+        if (health <= 900 && health > 850)
+            currentState = BossState.FireOne;
+        if (health <= 850 && health > 800)
+            currentState = BossState.FireArc;
+        if (health <= 800 && health > 750)
+            currentState = BossState.FireCircle;
+        if(health <= 0)
+        {
+            currentState = BossState.Dead;
+            GameManager.instance.GameEnd();
+        }
+            
     }
-    
+
     IEnumerator BossPattern()
     {
         while (currentState != BossState.Dead)
@@ -64,14 +66,14 @@ public class Boss : Enemy
             switch (currentState)
             {
                 case BossState.Idle:
-                    speed = 0f;
+                    yield return StartCoroutine(Chasing());
                     break;
 
                 case BossState.CreateKid:
                     yield return StartCoroutine(CreateKid());
                     break;
 
-                case BossState.Fire:
+                case BossState.FireOne:
                     yield return StartCoroutine(FireOne());
                     break;
 
@@ -81,17 +83,29 @@ public class Boss : Enemy
                 case BossState.FireCircle:
                     yield return StartCoroutine(FireCircle());
                     break;
+                
             }
         }
-            
+
+    }
+    IEnumerator Chasing()
+    {
+        speed = 2f;
+        yield return null;
     }
     //잡몹 소환
     IEnumerator CreateKid()
     {
-        Instantiate(bossKid, transform.position + Vector3.right, Quaternion.identity);
-        Instantiate(bossKid, transform.position + Vector3.down, Quaternion.identity);
-        Instantiate(bossKid, transform.position + Vector3.left, Quaternion.identity);
-        yield return null;
+        float interval = 5f;
+        timer += Time.deltaTime;
+        if (timer >= interval)
+        {
+            timer = 0f;
+            Instantiate(bossKid, transform.position + Vector3.right, Quaternion.identity);
+            Instantiate(bossKid, transform.position + Vector3.down, Quaternion.identity);
+            Instantiate(bossKid, transform.position + Vector3.left, Quaternion.identity);
+            yield return null;
+        }
     }
     //평타
 
@@ -102,34 +116,9 @@ public class Boss : Enemy
         Rigidbody2D bulletRigid = bullet.GetComponent<Rigidbody2D>();
         Vector2 dir = GameManager.instance.player.transform.position - transform.position;
         bulletRigid.AddForce(dir.normalized * 10f, ForceMode2D.Impulse);
-        yield return null;
+        yield return new WaitForSeconds(3.0f);
+
     }
-    IEnumerator FireCircle()
-    {
-        speed = 2f;
-        float angleStep = 360f / 6;
-        float angle = 0f;
-        float fireSpeed = 5f;
-        int bulletCount = 12;
-        
-        for (int i = 0; i < bulletCount; i++)
-        {
-            float dirX = Mathf.Sin(angle * Mathf.Deg2Rad);
-            float dirY = Mathf.Cos(angle * Mathf.Deg2Rad);
-
-            Vector3 dir = new Vector3(dirX, dirY, 0f).normalized;
-
-            GameObject bullet = Instantiate(bossBullet, transform.position, Quaternion.identity);
-            bullet.transform.up = dir;
-
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.velocity = dir * fireSpeed;
-
-            angle += angleStep;
-        }
-        yield return null;
-    }
-
     IEnumerator FireArc()
     {
         float arcAngle = 90;
@@ -160,7 +149,36 @@ public class Boss : Enemy
 
             angle += angleStep;
         }
-        yield return null;
+
+        yield return new WaitForSeconds(3.0f);
     }
+
+    IEnumerator FireCircle()
+    {
+        speed = 0f;
+        float angleStep = 360f / 30;
+        float angle = 0f;
+        float fireSpeed = 5f;
+        int bulletCount = 30;
+
+        for (int i = 0; i < bulletCount; i++)
+        {
+            float dirX = Mathf.Sin(angle * Mathf.Deg2Rad);
+            float dirY = Mathf.Cos(angle * Mathf.Deg2Rad);
+
+            Vector3 dir = new Vector3(dirX, dirY, 0f).normalized;
+
+            GameObject bullet = Instantiate(bossBullet, transform.position, Quaternion.identity);
+            bullet.transform.up = dir;
+
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = dir * fireSpeed;
+
+            angle += angleStep;
+        }
+        speed = 2f;
+
+        yield return new WaitForSeconds(5.0f);
+    }    
     //범위
 }
