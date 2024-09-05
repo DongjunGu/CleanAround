@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public float gameTime;
     public float maxGameTime;
     public LevelUI levelUI;
+    public GameObject HUDUI;
     public Result gameoverUI;
     public GameObject enemyCleaner;
     public GameObject bossController;

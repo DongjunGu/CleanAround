@@ -154,7 +154,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 3885550945438787805, guid: c436a7e5ebc486d4d9a2e0593e5c5aaf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9198113, b: 0.9198113, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -276,8 +276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  health: 1000
-  maxHealth: 1000
+  health: 5000
+  maxHealth: 5000
   target: {fileID: 0}
   spriteRenderers:
   - {fileID: 8528493214135053682}
@@ -292,23 +292,9 @@ MonoBehaviour:
   - {fileID: 8528493214140150326}
   - {fileID: 8528493213128532113}
   - {fileID: 8528493212428413009}
-  bossKid: {fileID: 8592738142232374067, guid: 0ae35ee1448c9b146aa28f35a585fa51, type: 3}
+  bossKid: {fileID: 8592738142232374067, guid: 6dce2005de49fbf4f90bb2a154904796, type: 3}
   bossBullet: {fileID: 8062642310475530127, guid: d7b13c3682f017e41a69c6bee01058b7, type: 3}
-  BossDead:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GameEnd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  bossHpUI: {fileID: 3096771216292118760, guid: 7506ddc1f6c4eac49bd08e58128789ca, type: 3}
   currentState: 0
 --- !u!1 &8528493213128532112
 GameObject:

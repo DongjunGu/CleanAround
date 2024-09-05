@@ -6,7 +6,7 @@ public class Boss : Enemy
 {
     public GameObject bossKid;
     public GameObject bossBullet;
-    
+    public GameObject bossHpUI;
     private float timer = 0f;
     protected override void OnEnable()
     {
@@ -22,12 +22,34 @@ public class Boss : Enemy
             entireRenderer.color = Color.white;
             entireRenderer.enabled = true;
         }
-    }
 
+        Instantiate(bossHpUI, GameManager.instance.HUDUI.transform);
+    }
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Bullet") || !isLive)
+            return;
+
+        health -= collision.GetComponent<Bullet>().damage;
+
+
+        if (health > 0)
+        {
+            anim.SetTrigger("Hit");
+        }
+        else
+        {
+            anim.SetBool("Dead", true);
+
+            isLive = false;
+            col.enabled = false;
+            rigid.simulated = false;
+            GameManager.instance.kill++;
+        }
+    }
     public enum BossState
     {
         Idle,
-        Chase,
         CreateKid,
         FireOne,
         FireArc,
@@ -43,22 +65,21 @@ public class Boss : Enemy
     }
     void Update()
     {
-        if (health <= 950 && health > 900)
+        if (health > maxHealth * 0.75f)
             currentState = BossState.CreateKid;
-        if (health <= 900 && health > 850)
+        if (health <= maxHealth * 0.75 && health > maxHealth * 0.5f)
             currentState = BossState.FireOne;
-        if (health <= 850 && health > 800)
+        if (health <= maxHealth * 0.5f && health > maxHealth * 0.25f)
             currentState = BossState.FireArc;
-        if (health <= 800 && health > 750)
+        if (health <= maxHealth * 0.25f)
             currentState = BossState.FireCircle;
-        if(health <= 0)
+        if (health <= 0)
         {
             currentState = BossState.Dead;
             GameManager.instance.GameEnd();
         }
-            
-    }
 
+    }
     IEnumerator BossPattern()
     {
         while (currentState != BossState.Dead)
@@ -83,7 +104,7 @@ public class Boss : Enemy
                 case BossState.FireCircle:
                     yield return StartCoroutine(FireCircle());
                     break;
-                
+
             }
         }
 
@@ -96,31 +117,48 @@ public class Boss : Enemy
     //잡몹 소환
     IEnumerator CreateKid()
     {
-        float interval = 5f;
-        timer += Time.deltaTime;
-        if (timer >= interval)
+        //float interval = 5f;
+        //timer += Time.deltaTime;
+        //if (timer >= interval)
+        //{
+        //    timer = 0f;
+        //    Instantiate(bossKid, transform.position + Vector3.right, Quaternion.identity);
+        //    Instantiate(bossKid, transform.position + Vector3.down, Quaternion.identity);
+        //    Instantiate(bossKid, transform.position + Vector3.left, Quaternion.identity);
+        //    yield return null;
+        //}
+        Vector3[] spawnOffsets = { Vector3.right, Vector3.down, Vector3.left };
+
+        foreach (Vector3 offset in spawnOffsets)
         {
-            timer = 0f;
-            Instantiate(bossKid, transform.position + Vector3.right, Quaternion.identity);
-            Instantiate(bossKid, transform.position + Vector3.down, Quaternion.identity);
-            Instantiate(bossKid, transform.position + Vector3.left, Quaternion.identity);
-            yield return null;
+            GameObject bossKidInstance = Instantiate(bossKid, transform.position + offset, Quaternion.identity);
+            bossKidInstance.transform.SetParent(transform);
         }
+
+        yield return new WaitForSeconds(3.0f);
+
     }
-    //평타
 
     //총알
     IEnumerator FireOne()
     {
-        GameObject bullet = Instantiate(bossBullet, transform);
-        Rigidbody2D bulletRigid = bullet.GetComponent<Rigidbody2D>();
-        Vector2 dir = GameManager.instance.player.transform.position - transform.position;
-        bulletRigid.AddForce(dir.normalized * 10f, ForceMode2D.Impulse);
+        StartCoroutine(CreateKid());
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject bullet;
+            bullet = Instantiate(bossBullet, transform);
+            Rigidbody2D bulletRigid = bullet.GetComponent<Rigidbody2D>();
+            Vector2 dir = GameManager.instance.player.transform.position - transform.position;
+            bulletRigid.AddForce(dir.normalized * 10f, ForceMode2D.Impulse);
+            yield return new WaitForSeconds(0.1f);
+        }
         yield return new WaitForSeconds(3.0f);
-
     }
+
+    //부채꼴 발사
     IEnumerator FireArc()
     {
+        StartCoroutine(CreateKid());
         float arcAngle = 90;
         float fireSpeed = 5f;
         float fireRotateSpeed = 200f;
@@ -153,8 +191,10 @@ public class Boss : Enemy
         yield return new WaitForSeconds(3.0f);
     }
 
+    //원형 발사
     IEnumerator FireCircle()
     {
+        StartCoroutine(CreateKid());
         speed = 0f;
         float angleStep = 360f / 30;
         float angle = 0f;
@@ -179,6 +219,5 @@ public class Boss : Enemy
         speed = 2f;
 
         yield return new WaitForSeconds(5.0f);
-    }    
-    //범위
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
-    public enum InfoType { Exp, Level, Kill, Time, Health, VacuumGauge}
+    public enum InfoType { Exp, Level, Kill, Time, Health, VacuumGauge, BossHealth}
     public InfoType type;
 
     Text levelText;
@@ -56,6 +56,12 @@ public class HUD : MonoBehaviour
                     }
                     timer = 0f;
                 }
+                break;
+            case InfoType.BossHealth:
+                GameObject bossAlien = GameObject.Find("BossAlien(Clone)");
+                float BossHp = bossAlien.GetComponent<Boss>().health;
+                float BossmaxHp = bossAlien.GetComponent<Boss>().maxHealth;
+                getSlider.value = BossHp / BossmaxHp;
                 break;
         }
     }
