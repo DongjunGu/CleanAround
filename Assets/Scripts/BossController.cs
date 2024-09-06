@@ -20,8 +20,7 @@ public class BossController : MonoBehaviour
         yield return StartCoroutine(CameraMove());
 
         Instantiate(wall, GameManager.instance.player.transform.position, Quaternion.identity);
-        //yield return new WaitForSeconds(3f);
-        yield return new WaitForSeconds(0.1f); //임시
+        yield return new WaitForSeconds(3f);
         //보스 소환
         GameObject bossObject = Instantiate(boss, GameManager.instance.player.transform.position + Vector3.up * 5f + Vector3.right * 7f, Quaternion.identity);
         bossObject.GetComponent<Boss>().enabled = false;
@@ -34,8 +33,7 @@ public class BossController : MonoBehaviour
     {
         pixelPerfectCamera = Camera.main.GetComponent<PixelPerfectCamera>();
 
-        //yield return new WaitForSeconds(2f);
-        yield return new WaitForSeconds(0.1f); //임시
+        yield return new WaitForSeconds(2f);
         StartCoroutine(ChangeRefSolX(pixelPerfectCamera.refResolutionX, 300, 0.5f));
         StartCoroutine(ChangeRefSolY(pixelPerfectCamera.refResolutionY, 300, 0.5f));
         yield return StartCoroutine(ChangeAssetsPPUOverTime(pixelPerfectCamera.assetsPPU, 15, 0.5f));
@@ -43,8 +41,7 @@ public class BossController : MonoBehaviour
     IEnumerator CameraMove2()
     {
         pixelPerfectCamera = Camera.main.GetComponent<PixelPerfectCamera>();
-        //yield return new WaitForSeconds(2f);
-        yield return new WaitForSeconds(0.1f); //임시
+        yield return new WaitForSeconds(2f);
         StartCoroutine(ChangeRefSolX(pixelPerfectCamera.refResolutionX, 250, 0.5f));
         StartCoroutine(ChangeRefSolY(pixelPerfectCamera.refResolutionY, 250, 0.5f));
         yield return StartCoroutine(ChangeAssetsPPUOverTime(pixelPerfectCamera.assetsPPU, 20, 0.5f));

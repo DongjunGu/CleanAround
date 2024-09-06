@@ -276,8 +276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  health: 5000
-  maxHealth: 5000
+  health: 10000
+  maxHealth: 10000
   target: {fileID: 0}
   spriteRenderers:
   - {fileID: 8528493214135053682}

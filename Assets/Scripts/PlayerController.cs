@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         if (!GameManager.instance.isLive)
             return;
         if(collision.gameObject.tag == "Enemy")
-            GameManager.instance.health -= Time.deltaTime * 10;
+            GameManager.instance.health -= Time.deltaTime * 30;
 
         if (GameManager.instance.health < 0)
         {

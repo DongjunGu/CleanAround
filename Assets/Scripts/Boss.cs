@@ -7,7 +7,6 @@ public class Boss : Enemy
     public GameObject bossKid;
     public GameObject bossBullet;
     public GameObject bossHpUI;
-    private float timer = 0f;
     protected override void OnEnable()
     {
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();

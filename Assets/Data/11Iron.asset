@@ -20,7 +20,7 @@ MonoBehaviour:
   baseDamage: 0
   baseCount: 0
   damages:
-  - 10
+  - 1
   - 4
   - 5
   - 6
