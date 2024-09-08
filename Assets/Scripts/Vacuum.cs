@@ -9,14 +9,6 @@ public class Vacuum : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    void OnEnable()
-    {
-        
-    }
-    void LateUpdate()
-    {
-        
-    }
     void FixedUpdate()
     {
         if(GameManager.instance.player != null)

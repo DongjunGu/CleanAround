@@ -233,7 +233,6 @@ public class Weapon : MonoBehaviour
             bullet.GetComponent<Bullet>().Init(damage, -10, targetPosition, ItemData.ItemType.Garbage);
             StartCoroutine(Deactivate(bullet.gameObject, 2.0f));
         }
-
     }
     IEnumerator Deactivate(GameObject bullet, float delay)
     {

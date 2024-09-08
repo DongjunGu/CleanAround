@@ -59,7 +59,9 @@ public class HUD : MonoBehaviour
                 break;
             case InfoType.BossHealth:
                 GameObject bossAlien = GameObject.Find("BossAlien(Clone)");
-                if (bossAlien.activeSelf)
+                if (bossAlien == null)
+                    return;
+                else
                 {
                     float BossHp = bossAlien.GetComponent<Boss>().health;
                     float BossmaxHp = bossAlien.GetComponent<Boss>().maxHealth;

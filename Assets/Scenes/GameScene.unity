@@ -10140,6 +10140,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2078836028832359996, guid: ff8cfd00f4b6104449ed076fcbfb7094, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078836028832359999, guid: ff8cfd00f4b6104449ed076fcbfb7094, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2078836030015631205, guid: ff8cfd00f4b6104449ed076fcbfb7094, type: 3}
       propertyPath: m_Name
       value: Grid
@@ -10320,7 +10328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: maxGameTime
-      value: 1
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: vacuumGauge
@@ -10336,15 +10344,15 @@ PrefabInstance:
       objectReference: {fileID: 8961175141849656178, guid: d6fad64128649b24f8bfd5f4df2d42d4, type: 3}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: nextExp.Array.size
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: nextExp.Array.data[0]
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: nextExp.Array.data[1]
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: nextExp.Array.data[2]
@@ -10360,7 +10368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: nextExp.Array.data[5]
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: nextExp.Array.data[6]
@@ -10377,6 +10385,22 @@ PrefabInstance:
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: nextExp.Array.data[9]
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
+      propertyPath: nextExp.Array.data[10]
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
+      propertyPath: nextExp.Array.data[11]
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
+      propertyPath: nextExp.Array.data[12]
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
+      propertyPath: nextExp.Array.data[13]
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: popUI.m_PersistentCalls.m_Calls.Array.size

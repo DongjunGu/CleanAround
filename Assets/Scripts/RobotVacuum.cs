@@ -34,7 +34,6 @@ public class RobotVacuum : MonoBehaviour
         angle = Random.Range(0f, 2f * Mathf.PI);
         direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
     }
-
     void MoveInCircle() //원형 범위
     {
         Vector2 centerPosition = GameManager.instance.player.transform.position;

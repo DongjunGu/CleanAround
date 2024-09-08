@@ -32,11 +32,7 @@ public class Boss : Enemy
         health -= collision.GetComponent<Bullet>().damage;
 
 
-        if (health > 0)
-        {
-            anim.SetTrigger("Hit");
-        }
-        else
+        if (health <= 0)
         {
             anim.SetBool("Dead", true);
 
