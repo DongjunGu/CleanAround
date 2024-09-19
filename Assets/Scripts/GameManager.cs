@@ -39,11 +39,12 @@ public class GameManager : MonoBehaviour
     {
         health = maxHealth;
 
-        //TODO 기본무기
         levelUI.Select(0);
 
         isLive = true;
         Time.timeScale = 1;
+        AudioManager.instance.PlayBgm(true);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Start);
     }
     public void GameOver()
     {
