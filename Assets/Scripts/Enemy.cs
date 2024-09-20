@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour
         
         if (health > 0)
         {
-            anim.SetTrigger("Hit");
+            anim.SetTrigger("Hit");            
         }
         else
         {
@@ -87,6 +87,7 @@ public class Enemy : MonoBehaviour
             col.enabled = false;
             rigid.simulated = false;
             GameManager.instance.kill++;
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
             DropExp();
         }
        

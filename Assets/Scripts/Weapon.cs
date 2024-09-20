@@ -36,14 +36,14 @@ public class Weapon : MonoBehaviour
                 if (timer > speed)
                 {
                     timer = 0f;
-                    Fire();
+                    Throw();
                 }
                 break;
             case 4:
                 timer += Time.deltaTime;
                 if (timer > speed)
                 {
-                    Throw();
+                    Garbage();
                     timer = 0f;
                 }
                 break;
@@ -138,7 +138,7 @@ public class Weapon : MonoBehaviour
                 speed = 0.5f;
                 break;
             case 4:
-                Throw();
+                Garbage();
                 speed = 4f;
                 break;
             case 5:
@@ -202,7 +202,7 @@ public class Weapon : MonoBehaviour
             bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.Melee); //관통
         }
     }
-    void Fire()
+    void Throw()
     {
         if (!player.scanner.nearestTarget)
             return;
@@ -215,9 +215,10 @@ public class Weapon : MonoBehaviour
         bullet.position = transform.position;
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir, ItemData.ItemType.Range);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Throw);
     }
 
-    void Throw()
+    void Garbage()
     {
         for (int index = 0; index < count; index++)
         {
@@ -231,6 +232,7 @@ public class Weapon : MonoBehaviour
             bullet.position = transform.position;
             bullet.Translate(bullet.up * 0.5f, Space.World);
             bullet.GetComponent<Bullet>().Init(damage, -10, targetPosition, ItemData.ItemType.Garbage);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Garbage);
             StartCoroutine(Deactivate(bullet.gameObject, 2.0f));
         }
     }
@@ -255,6 +257,7 @@ public class Weapon : MonoBehaviour
         bullet.gameObject.SetActive(true);
         bullet.localPosition = Vector3.zero;
         bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.FeatherDuster);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Swipe);
         StartCoroutine(Deactivate(bullet.gameObject, 0.5f));
     }
     void UpgradedSwipe()
@@ -274,6 +277,7 @@ public class Weapon : MonoBehaviour
         bullet.gameObject.SetActive(true);
         bullet.localPosition = Vector3.zero;
         bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.UpgradeFeather);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Swipe);
         StartCoroutine(Deactivate(bullet.gameObject, 0.5f));
     }
     void Magnetic()
@@ -306,8 +310,7 @@ public class Weapon : MonoBehaviour
         if(formalDetergent != null)
         {
             formalDetergent.gameObject.SetActive(false);
-        }
-        
+        }      
 
         Transform bullet;
         bullet = GameManager.instance.pool.Get(prefabId).transform;
@@ -340,6 +343,7 @@ public class Weapon : MonoBehaviour
     {
         isVacuumWorking = true;
         Transform vacuum = player.transform.Find("Weapon12").GetChild(0);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Vacuum);
         vacuum.gameObject.SetActive(true);
         //애니메이션 trigger
         GameManager.instance.player.playerAnimator.SetTrigger("onVacuum");

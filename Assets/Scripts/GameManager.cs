@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         isLive = true;
         Time.timeScale = 1;
         AudioManager.instance.PlayBgm(true);
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Start);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
     }
     public void GameOver()
     {
@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         gameoverUI.gameObject.SetActive(true);
         gameoverUI.Victory();
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
         Time.timeScale = 0;
     }
     public void GameRestart()
@@ -112,9 +113,11 @@ public class GameManager : MonoBehaviour
             return;
 
         exp += (1 * increaseExp);
-        if(exp >= nextExp[Mathf.Min(level,nextExp.Length-1)])
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Exp);
+        if (exp >= nextExp[Mathf.Min(level,nextExp.Length-1)])
         {
             level++;
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Levelup);
             levelUI.PopUI();
             exp = 0;
         }

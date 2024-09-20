@@ -60,6 +60,7 @@ public class Item : MonoBehaviour
 
     public void OnClick()
     {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         switch (data.itemType)
         {
             case ItemData.ItemType.Melee:

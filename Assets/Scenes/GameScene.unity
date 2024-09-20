@@ -5208,10 +5208,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmClip: {fileID: 8300000, guid: a81482b6014d6b448aa2ce8803ddc49a, type: 3}
-  bgmVolume: 0.15
-  sfxClips: []
-  sfxVolume: 0.5
-  channels: 10
+  bgmVolume: 0.1
+  sfxClips:
+  - {fileID: 8300000, guid: 913c0709cd92ff64e9523219802a9b41, type: 3}
+  - {fileID: 8300000, guid: 2a185521f84b65e41a4308650b9129fe, type: 3}
+  - {fileID: 8300000, guid: bf0bd9cd0d7bc724fbf2bc3cca40c014, type: 3}
+  - {fileID: 8300000, guid: 519c41342aa218a4eae4afcc5e324009, type: 3}
+  - {fileID: 8300000, guid: 2ffafac1d61bfe541b59d5b66f2e15e1, type: 3}
+  - {fileID: 8300000, guid: dba0b332b553aa94e9d650ea8e44b027, type: 3}
+  - {fileID: 8300000, guid: d09ced37802a3b84c9c85f36d7b803d8, type: 3}
+  - {fileID: 8300000, guid: c1a0c8127954cd1438cd90c76227e2b3, type: 3}
+  - {fileID: 8300000, guid: a4d98f5b2efe35f4ca405baee155d5a7, type: 3}
+  - {fileID: 8300000, guid: 909cf1a97f9a4d54db07ef1bac29efd5, type: 3}
+  sfxVolume: 0.15
+  channels: 12
 --- !u!4 &1352678878
 Transform:
   m_ObjectHideFlags: 0
