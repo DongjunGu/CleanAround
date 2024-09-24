@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Tilemap.Extras.Edi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFXREditor", "CFXREditor.csproj", "{A08D44F2-EACB-D99C-A09C-9B9D3D2CD515}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{D538095F-645E-748C-FFAA-65577A4352FC}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Tilemap.Extras.Placeholder.EditorTests", "Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj", "{BD2FFD36-D65C-D317-939F-6420B3857464}"
 EndProject
 Global
@@ -39,6 +41,10 @@ Global
 		{A08D44F2-EACB-D99C-A09C-9B9D3D2CD515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A08D44F2-EACB-D99C-A09C-9B9D3D2CD515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A08D44F2-EACB-D99C-A09C-9B9D3D2CD515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D538095F-645E-748C-FFAA-65577A4352FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D538095F-645E-748C-FFAA-65577A4352FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D538095F-645E-748C-FFAA-65577A4352FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D538095F-645E-748C-FFAA-65577A4352FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BD2FFD36-D65C-D317-939F-6420B3857464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BD2FFD36-D65C-D317-939F-6420B3857464}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD2FFD36-D65C-D317-939F-6420B3857464}.Release|Any CPU.ActiveCfg = Release|Any CPU

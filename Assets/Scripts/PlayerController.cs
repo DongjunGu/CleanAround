@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Scanner scanner;
     public Animator playerAnimator;
     public CapsuleCollider2D capCollider;
+    public Joystick joystick;
 
     Rigidbody2D rigidBody;
     SpriteRenderer spriteRenderer;
@@ -21,6 +22,13 @@ public class PlayerController : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         scanner = GetComponent<Scanner>();
         capCollider = GetComponent<CapsuleCollider2D>();
+    }
+    void Update()
+    {
+        inputVector.x = joystick.Horizontal;
+        inputVector.y = joystick.Vertical;
+
+
     }
     void FixedUpdate()
     {

@@ -18,7 +18,8 @@ public class LevelUI : MonoBehaviour
     }
     public void PopUI()
     {
-        Time.timeScale = 0;
+        GameManager.instance.StopGame();
+        GameManager.instance.joystickUI.localScale = Vector3.zero;
         Next();
         GameManager.instance.isLive = false;
         StartCoroutine(WaitAndScale(0.1f, Vector3.one, 0.2f));
@@ -27,7 +28,8 @@ public class LevelUI : MonoBehaviour
     {
         GameManager.instance.isLive = true;
         StartCoroutine(WaitAndScale(0.1f, Vector3.zero, 0.2f));
-        
+        GameManager.instance.joystickUI.localScale = Vector3.one;
+
     }
 
     public IEnumerator WaitAndScale(float waitTime, Vector3 targetScale, float duration)
@@ -50,7 +52,7 @@ public class LevelUI : MonoBehaviour
         
         rect.localScale = targetScale;
         if(GameManager.instance.isLive)
-            Time.timeScale = 1;
+            GameManager.instance.ResumeGame();
     }
 
     void Next()

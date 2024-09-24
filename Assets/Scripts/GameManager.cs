@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public float maxGameTime;
     public LevelUI levelUI;
     public GameObject HUDUI;
+    public Transform joystickUI;
     public Result gameoverUI;
     public GameObject enemyCleaner;
     public GameObject bossController;
@@ -45,10 +46,13 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         AudioManager.instance.PlayBgm(true);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
+        joystickUI.gameObject.SetActive(true);
     }
     public void GameOver()
     {
         StartCoroutine(GameOverCorou());
+        joystickUI.localScale = Vector3.zero;
+        AudioManager.instance.PlayBgm(false);
     }
     IEnumerator GameOverCorou()
     {
@@ -61,6 +65,8 @@ public class GameManager : MonoBehaviour
     public void GameEnd()
     {
         StartCoroutine(GameEndCorou());
+        joystickUI.localScale = Vector3.zero;
+        AudioManager.instance.PlayBgm(false);
     }
     IEnumerator GameEndCorou()
     {
@@ -75,6 +81,16 @@ public class GameManager : MonoBehaviour
     public void GameRestart()
     {
         SceneManager.LoadScene(0);
+    }
+    public void StopGame()
+    {
+        Time.timeScale = 0;
+        AudioManager.instance.PlayBgm(false);
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        AudioManager.instance.PlayBgm(true);
     }
     void Update()
     {
