@@ -9,14 +9,18 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-
+**/[Ll]ibrary/il2cppBuildCache/
+**/[Ll]ibrary/il2cpp_android_armeabi-v7a/
+**/[Ll]ibrary/Il2cppBuildCache/
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
 # Recordings can get excessive in size
 /[Rr]ecordings/
-
+/Library/il2cppBuildCache/
+/Library/il2cpp_android_armeabi-v7a
+/Library/Il2cppBuildCache
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
 
@@ -46,7 +50,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
-
+*.so
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
