@@ -20,6 +20,7 @@ public class LevelUI : MonoBehaviour
     {
         GameManager.instance.StopGame();
         GameManager.instance.joystickUI.localScale = Vector3.zero;
+        GameManager.instance.stopButton.SetActive(false);
         Next();
         GameManager.instance.isLive = false;
         StartCoroutine(WaitAndScale(0.1f, Vector3.one, 0.2f));
@@ -27,6 +28,7 @@ public class LevelUI : MonoBehaviour
     public void HideUI()
     {
         GameManager.instance.isLive = true;
+        GameManager.instance.stopButton.SetActive(true);
         StartCoroutine(WaitAndScale(0.1f, Vector3.zero, 0.2f));
         GameManager.instance.joystickUI.localScale = Vector3.one;
 

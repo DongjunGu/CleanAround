@@ -40,19 +40,19 @@ public class FeatherParticle : MonoBehaviour
     {
         if (!GameManager.instance.isLive)
             return;
-        if (Input.GetKey(KeyCode.A))
+        if (GameManager.instance.player.inputVector.x == -1)
         {
             SetRotation(0f);
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (GameManager.instance.player.inputVector.y == -1)
         {
             SetRotation(75f);
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (GameManager.instance.player.inputVector.x == 1)
         {
             SetRotation(165f);
         }
-        else if (Input.GetKey(KeyCode.W))
+        else if (GameManager.instance.player.inputVector.y == 1)
         {
             SetRotation(255f);
         }

@@ -75,8 +75,8 @@ public class SubItem : MonoBehaviour
     //}
     void SpeedUp()
     {
-        float speed = 5;
-        GameManager.instance.player.playerSpeed = speed + speed * rate;
+        float tempSpeed = GameManager.instance.player.playerSpeed;
+        GameManager.instance.player.playerSpeed = tempSpeed + tempSpeed * rate;
     }
     void HealthRecharge()
     {

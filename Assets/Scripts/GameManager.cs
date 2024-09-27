@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public LevelUI levelUI;
     public GameObject HUDUI;
     public Transform joystickUI;
+    public GameObject stopButton;
     public Result gameoverUI;
     public GameObject enemyCleaner;
     public GameObject bossController;
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         AudioManager.instance.PlayBgm(true);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
+        stopButton.SetActive(true);
         joystickUI.gameObject.SetActive(true);
     }
     public void GameOver()
@@ -85,12 +87,14 @@ public class GameManager : MonoBehaviour
     public void StopGame()
     {
         Time.timeScale = 0;
-        AudioManager.instance.PlayBgm(false);
+        joystickUI.localScale = Vector3.zero;
+        //AudioManager.instance.PlayBgm(false);
     }
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        AudioManager.instance.PlayBgm(true);
+        joystickUI.localScale = Vector3.one;
+        //AudioManager.instance.PlayBgm(true);
     }
     void Update()
     {
