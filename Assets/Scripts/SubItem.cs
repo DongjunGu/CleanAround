@@ -57,22 +57,6 @@ public class SubItem : MonoBehaviour
                 break;
         }
     }
-    //void RateUp()
-    //{
-    //    Weapon[] weapons = transform.parent.GetComponentsInChildren<Weapon>();
-    //    foreach(Weapon weapon in weapons)
-    //    {
-    //        switch (weapon.id)
-    //        {
-    //            case 0:
-    //                weapon.speed = 150 + (150 * rate);
-    //                break;
-    //            case 1:
-    //                weapon.speed = 0.3f * (1f - rate);
-    //                break;
-    //        }
-    //    }
-    //}
     void SpeedUp()
     {
         float tempSpeed = GameManager.instance.player.playerSpeed;

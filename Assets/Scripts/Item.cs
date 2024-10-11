@@ -22,7 +22,6 @@ public class Item : MonoBehaviour
         icon.sprite = data.itemIcon;
 
         Text[] texts = GetComponentsInChildren<Text>();
-        //textLevel = texts[0];
         textName = texts[0];
         textDesc = texts[1];
         textName.text = data.itemName;
@@ -30,7 +29,6 @@ public class Item : MonoBehaviour
 
     void OnEnable()
     {
-        //textLevel.text = "Lv." + (level + 1);
         switch (data.itemType)
         {
             case ItemData.ItemType.Melee:
@@ -259,7 +257,7 @@ public class Item : MonoBehaviour
                 if (GameManager.instance.health >= GameManager.instance.maxHealth * 0.9f)
                     GameManager.instance.health = GameManager.instance.maxHealth;
                 else
-                    GameManager.instance.health += GameManager.instance.maxHealth * 0.1f;
+                    GameManager.instance.health += GameManager.instance.maxHealth * 0.2f;
                 break;
 
             case ItemData.ItemType.RobotVacuum:

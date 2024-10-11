@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public GameObject HUDUI;
     public Transform joystickUI;
     public GameObject stopButton;
+    public ResumeButton resumeButton;
     public Result gameoverUI;
     public GameObject enemyCleaner;
     public GameObject bossController;
@@ -88,16 +89,24 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         joystickUI.localScale = Vector3.zero;
-        //AudioManager.instance.PlayBgm(false);
     }
     public void ResumeGame()
     {
         Time.timeScale = 1;
         joystickUI.localScale = Vector3.one;
-        //AudioManager.instance.PlayBgm(true);
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
+            resumeButton.ChangeImage();
+        }
+
         if ((!isLive))
             return;
         gameTime += Time.deltaTime;
@@ -107,7 +116,6 @@ public class GameManager : MonoBehaviour
             //보스 소환
             BossStage();
 
-            //GameEnd();
         }
     }
     void BossStage()

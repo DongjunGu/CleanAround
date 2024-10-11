@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\SubItem.cs" />
     <Compile Include="Assets\Scripts\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Reposition.cs" />
+    <Compile Include="Assets\Scripts\AudioMixerController.cs" />
     <Compile Include="Assets\Scripts\BossController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
