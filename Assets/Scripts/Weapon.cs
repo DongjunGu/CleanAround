@@ -309,14 +309,16 @@ public class Weapon : MonoBehaviour
         Transform formalDetergent = player.transform.Find("Weapon7");
         if(formalDetergent != null)
         {
+            GameManager.instance.bulletCleaner.SetActive(true);
             formalDetergent.gameObject.SetActive(false);
+            GameManager.instance.bulletCleaner.SetActive(false);
         }      
 
         Transform bullet;
         bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = GameManager.instance.player.transform.position - new Vector3(0f, 0.3f, 0f);
         bullet.GetComponent<Bullet>().Init(damage, -10, Vector3.zero, ItemData.ItemType.UpgradeDetergent);
-        StartCoroutine(Deactivate(bullet.gameObject, 3.0f));
+        StartCoroutine(Deactivate(bullet.gameObject, 2.0f));
     }
     void ActiveRobotVacuum()
     {

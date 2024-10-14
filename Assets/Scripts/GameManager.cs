@@ -31,8 +31,9 @@ public class GameManager : MonoBehaviour
     public ResumeButton resumeButton;
     public Result gameoverUI;
     public GameObject enemyCleaner;
+    public GameObject bulletCleaner;
     public GameObject bossController;
-
+    public GameObject bossGrid;
     private bool bossCouroutine = false;
     void Awake()
     {

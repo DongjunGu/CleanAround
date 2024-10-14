@@ -13,10 +13,11 @@ public class BossController : MonoBehaviour
     void OnEnable()
     {
         StartCoroutine(BossStageStart());
-
+        Instantiate(GameManager.instance.bossGrid, GameManager.instance.player.transform.position, Quaternion.identity);
     }
     IEnumerator BossStageStart()
     {
+        GameManager.instance.player.enabled = false;
         yield return StartCoroutine(CameraMove());
 
         Instantiate(wall, GameManager.instance.player.transform.position, Quaternion.identity);
@@ -27,6 +28,7 @@ public class BossController : MonoBehaviour
         //화면 작게
         yield return StartCoroutine(CameraMove2());
         bossObject.GetComponent<Boss>().enabled = true;
+        GameManager.instance.player.enabled = true;
     }
 
     IEnumerator CameraMove()
