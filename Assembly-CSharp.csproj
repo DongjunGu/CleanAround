@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Magnetic.cs" />
+    <Compile Include="Assets\Scripts\BulletCleaner.cs" />
     <Compile Include="Assets\Scripts\EnemyClean.cs" />
     <Compile Include="Assets\Scripts\LevelUI.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -92,7 +93,6 @@
     <Compile Include="Assets\Scripts\BossController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\BulletCleaner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
