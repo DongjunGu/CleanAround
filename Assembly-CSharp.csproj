@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Magnetic.cs" />
+    <Compile Include="Assets\Scripts\CharacterSwitch.cs" />
     <Compile Include="Assets\Scripts\BulletCleaner.cs" />
     <Compile Include="Assets\Scripts\EnemyClean.cs" />
     <Compile Include="Assets\Scripts\LevelUI.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\VacuumGauge.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
+    <Compile Include="Assets\Scripts\UIController.cs" />
     <Compile Include="Assets\Joystick\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Scripts\HpUI.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
