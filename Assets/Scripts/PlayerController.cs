@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Animator playerAnimator;
     public CapsuleCollider2D capCollider;
     public Joystick joystick;
+    public RuntimeAnimatorController[] anims;
 
     Rigidbody2D rigidBody;
     SpriteRenderer spriteRenderer;
@@ -27,14 +28,18 @@ public class PlayerController : MonoBehaviour
     {
         inputVector.x = joystick.Horizontal;
         inputVector.y = joystick.Vertical;
-
-
     }
     void FixedUpdate()
     {
         Vector2 moveVet = inputVector * playerSpeed * Time.fixedDeltaTime;
         rigidBody.MovePosition(rigidBody.position + moveVet);
     }
+    public void ChangeCharacter(int id)
+    {
+        GameManager.instance.playerId = id;
+        playerAnimator.runtimeAnimatorController = anims[GameManager.instance.playerId];
+    }
+
 
     void OnMove(InputValue value)
     {

@@ -13,4 +13,8 @@ public class CharacterSwitch : MonoBehaviour
     {
         anim.SetTrigger(characterName);
     }
+    public static float Speed
+    {
+        get { return GameManager.instance.playerId == 2 ? 1.1f : 1f; }
+    }
 }

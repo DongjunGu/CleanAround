@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public float exp;
     public float increaseExp;
     public GameObject vacuumGauge;
+    public int playerId;
     public int[] nextExp = { 3, 10, 20, 45, 70, 120, 200, 300, 450, 600 };
     [Header("# Game Control")]
     public float gameTime;
@@ -39,14 +40,16 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
     }
-    public void GameStart()
+    public void GameStart(int id)
     {
+        id = playerId;
         health = maxHealth;
 
-        levelUI.Select(0);
+        levelUI.Select(id % 2);
 
         isLive = true;
         Time.timeScale = 1;
+        player.playerSpeed *= CharacterSwitch.Speed;
         AudioManager.instance.PlayBgm(true);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         stopButton.SetActive(true);
@@ -85,6 +88,7 @@ public class GameManager : MonoBehaviour
     public void GameRestart()
     {
         SceneManager.LoadScene(0);
+        ResumeGame();
     }
     public void StopGame()
     {
@@ -150,6 +154,10 @@ public class GameManager : MonoBehaviour
             levelUI.PopUI();
             exp = 0;
         }
+    }
+    public void SelectSFX()
+    {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
     }
 
 }

@@ -59,7 +59,7 @@ public class SubItem : MonoBehaviour
     }
     void SpeedUp()
     {
-        float tempSpeed = GameManager.instance.player.playerSpeed;
+        float tempSpeed = GameManager.instance.player.playerSpeed * CharacterSwitch.Speed;
         GameManager.instance.player.playerSpeed = tempSpeed + tempSpeed * rate;
     }
     void HealthRecharge()

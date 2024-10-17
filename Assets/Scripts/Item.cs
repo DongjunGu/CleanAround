@@ -68,6 +68,7 @@ public class Item : MonoBehaviour
                     weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
                     MakeImage(data);
+                    LevelUPDia();
                 }
                 else
                 {
@@ -288,7 +289,7 @@ public class Item : MonoBehaviour
         skills.transform.GetChild(0).GetComponent<Image>().sprite = data.itemIcon; 
     }
 
-    void LevelUPDia() //아이템 레벨 다이아로 표기
+    public void LevelUPDia() //아이템 레벨 다이아로 표기
     {
         Transform levelUI;
         levelUI = transform.Find("LevelGrid");
