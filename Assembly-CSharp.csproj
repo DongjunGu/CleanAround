@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Vacuum.cs" />
     <Compile Include="Assets\Scripts\Result.cs" />
     <Compile Include="Assets\Scripts\Scanner.cs" />
+    <Compile Include="Assets\Scripts\UnlockController.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\BossHpUI.cs" />
     <Compile Include="Assets\Scripts\Joystick2.cs" />

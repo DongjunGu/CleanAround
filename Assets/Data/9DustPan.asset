@@ -20,10 +20,10 @@ MonoBehaviour:
   baseDamage: 100
   baseCount: 0
   damages:
-  - 105
-  - 115
-  - 130
-  - 150
-  - 170
+  - 0.1
+  - 0.12
+  - 0.15
+  - 0.17
+  - 0.2
   counts: 0000000000000000000000000000000000000000
   prtojectile: {fileID: 0}

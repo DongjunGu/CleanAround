@@ -11,6 +11,6 @@ public class VacuumGauge : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rect.position = Camera.main.WorldToScreenPoint(GameManager.instance.player.transform.position + Vector3.up * 0.6f);
+        rect.position = Camera.main.WorldToScreenPoint(GameManager.instance.player.transform.position + Vector3.up * CharacterSwitch.UIMove * 0.6f);
     }
 }

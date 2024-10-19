@@ -59,7 +59,8 @@ public class SubItem : MonoBehaviour
     }
     void SpeedUp()
     {
-        float tempSpeed = GameManager.instance.player.playerSpeed * CharacterSwitch.Speed;
+        float tempSpeed = GameManager.instance.player.playerSpeed;
+        //float tempSpeed = GameManager.instance.player.playerSpeed * CharacterSwitch.Speed;
         GameManager.instance.player.playerSpeed = tempSpeed + tempSpeed * rate;
     }
     void HealthRecharge()
@@ -73,6 +74,10 @@ public class SubItem : MonoBehaviour
     }
     void MaxHpIncrease()
     {
-        GameManager.instance.maxHealth = rate;
+        //float tempHealth = GameManager.instance.maxHealth * CharacterSwitch.Health;
+        float tempHealth = GameManager.instance.maxHealth;
+        GameManager.instance.maxHealth = tempHealth + tempHealth * rate;
+        GameManager.instance.health += tempHealth * rate;
     }
 }
+

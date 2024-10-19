@@ -12,6 +12,6 @@ public class HpUI : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rect.position = Camera.main.WorldToScreenPoint(GameManager.instance.player.transform.position + Vector3.down);
+        rect.position = Camera.main.WorldToScreenPoint(GameManager.instance.player.transform.position + Vector3.down * CharacterSwitch.UIMove);
     }
 }

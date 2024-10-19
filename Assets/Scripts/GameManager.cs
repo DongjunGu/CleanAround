@@ -49,7 +49,11 @@ public class GameManager : MonoBehaviour
 
         isLive = true;
         Time.timeScale = 1;
+
         player.playerSpeed *= CharacterSwitch.Speed;
+        maxHealth *= CharacterSwitch.Health;
+        health = maxHealth;
+
         AudioManager.instance.PlayBgm(true);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         stopButton.SetActive(true);
