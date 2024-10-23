@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\ResumeButton.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\SceneController.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Joystick\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Scripts\FeatherParticle.cs" />

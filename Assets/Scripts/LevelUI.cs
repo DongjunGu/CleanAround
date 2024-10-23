@@ -67,29 +67,31 @@ public class LevelUI : MonoBehaviour
         int[] ran = new int[3];
         while (true)
         {
-            //리스트로만들어서 랜덤
-            //ran[0] = Random.Range(0, items.Length);
-            //ran[1] = Random.Range(0, items.Length);
-            //ran[2] = Random.Range(0, items.Length);
             ran[0] = RandomItem(0, items.Length, new int[] { 10, 12, 13, 14 });
             ran[1] = RandomItem(0, items.Length, new int[] { 10, 12, 13, 14 });
             ran[2] = RandomItem(0, items.Length, new int[] { 10, 12, 13, 14 });
 
+            //RobotVacuum
             if (items[4].level == items[4].data.damages.Length && items[8].level > 0
                 && items[10].level != items[10].data.damages.Length)
             {
                 ran[0] = 10;
             }
+            //Vacuum
             if (items[0].level == items[0].data.damages.Length && items[9].level > 0
                 && items[12].level != items[12].data.damages.Length)
             {
                 ran[0] = 12;
             }
+
+            //RedDuster
             if (items[5].level == items[5].data.damages.Length && items[11].level > 0
                 && items[13].level != items[13].data.damages.Length)
             {
                 ran[0] = 13;
             }
+
+            //ToxicAcid
             if (items[7].level == items[7].data.damages.Length && items[2].level > 0
                 && items[14].level != items[14].data.damages.Length)
             {
@@ -106,8 +108,7 @@ public class LevelUI : MonoBehaviour
             //만렙일경우
             if (ranItem.level == ranItem.data.damages.Length)
             {                
-                items[3].gameObject.SetActive(true); //현재 3 Posion 이라
-                //items[Random.Range(4, 7)].gameObject.SetActive(true); 랜덤
+                items[3].gameObject.SetActive(true); //Posion
             }
             else
             {

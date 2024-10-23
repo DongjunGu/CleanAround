@@ -34,6 +34,7 @@ public class Boss : Enemy
 
         if (health <= 0)
         {
+            bossHpUI.SetActive(false);
             anim.SetBool("Dead", true);
 
             isLive = false;

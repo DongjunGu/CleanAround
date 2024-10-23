@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     public GameObject bulletCleaner;
     public GameObject bossController;
     public GameObject bossGrid;
+
+    public bool bossClear = false;
     private bool bossCouroutine = false;
     void Awake()
     {
@@ -76,6 +78,7 @@ public class GameManager : MonoBehaviour
     public void GameEnd()
     {
         StartCoroutine(GameEndCorou());
+        bossClear = true;
         joystickUI.localScale = Vector3.zero;
         AudioManager.instance.PlayBgm(false);
     }

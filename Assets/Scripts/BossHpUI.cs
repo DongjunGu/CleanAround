@@ -16,7 +16,6 @@ public class BossHpUI : MonoBehaviour
         if(bossAlien != null)
         {
             rect.position = Camera.main.WorldToScreenPoint(bossAlien.transform.position + Vector3.up * 5.5f);
-        }
-        
+        }        
     }
 }
