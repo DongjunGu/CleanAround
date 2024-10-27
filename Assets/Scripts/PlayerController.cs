@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Vector2 moveVet = inputVector * playerSpeed * Time.fixedDeltaTime;
+        Vector2 moveVet = inputVector.normalized * playerSpeed * Time.fixedDeltaTime;
         rigidBody.MovePosition(rigidBody.position + moveVet);
     }
     public void ChangeCharacter(int id)
