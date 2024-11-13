@@ -28586,6 +28586,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ce3b90c3bb9576d4ea254f6874f4193b, type: 3}
   - {fileID: 8300000, guid: a4d98f5b2efe35f4ca405baee155d5a7, type: 3}
   - {fileID: 8300000, guid: 1df552344f44a6248b33d0c13a711784, type: 3}
+  - {fileID: 8300000, guid: 3d5a88b3fa4b5484c8c6b5069f1f560b, type: 3}
+  - {fileID: 8300000, guid: 4eaf2564c0cad334d8c4f9865f4169f8, type: 3}
+  - {fileID: 8300000, guid: f6887099430e0a24aa65beae611c181b, type: 3}
   sfxVolume: 0.15
   channels: 12
 --- !u!4 &1352678878
@@ -37028,7 +37031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: maxGameTime
-      value: 300
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7283941627102967044, guid: 33ae8115a70aac147ab3f6e5db8045db, type: 3}
       propertyPath: pauseButton

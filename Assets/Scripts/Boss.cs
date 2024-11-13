@@ -7,6 +7,12 @@ public class Boss : Enemy
     public GameObject bossKid;
     public GameObject bossBullet;
     public GameObject bossHpUI;
+    public GameObject spawnparticle;
+    public GameObject jumpparticle;
+    void Start()
+    {
+        StartCoroutine(BossPattern());
+    }
     protected override void OnEnable()
     {
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();
@@ -16,13 +22,9 @@ public class Boss : Enemy
         anim.SetBool("Dead", false);
         isHit = false;
         health = maxHealth;
-        foreach (SpriteRenderer entireRenderer in entireRenderers)
-        {
-            entireRenderer.color = Color.white;
-            entireRenderer.enabled = true;
-        }
 
-        Instantiate(bossHpUI, GameManager.instance.HUDUI.transform);
+        GameObject newBossHpUI = Instantiate(bossHpUI, GameManager.instance.HUDUI.transform);
+        newBossHpUI.transform.SetSiblingIndex(0);
     }
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
@@ -31,16 +33,15 @@ public class Boss : Enemy
 
         health -= collision.GetComponent<Bullet>().damage;
 
+        anim.SetTrigger("Hit");
 
         if (health <= 0)
         {
-            bossHpUI.SetActive(false);
             anim.SetBool("Dead", true);
 
             isLive = false;
             col.enabled = false;
             rigid.simulated = false;
-            GameManager.instance.kill++;
         }
     }
     public enum BossState
@@ -55,10 +56,6 @@ public class Boss : Enemy
 
     public BossState currentState = BossState.Idle;
 
-    void Start()
-    {
-        StartCoroutine(BossPattern());
-    }
     void Update()
     {
         if (health > maxHealth * 0.75f)
@@ -78,6 +75,7 @@ public class Boss : Enemy
     }
     IEnumerator BossPattern()
     {
+        speed = 2f;
         while (currentState != BossState.Dead)
         {
             switch (currentState)
@@ -107,22 +105,11 @@ public class Boss : Enemy
     }
     IEnumerator Chasing()
     {
-        speed = 2f;
         yield return null;
     }
     //잡몹 소환
     IEnumerator CreateKid()
     {
-        //float interval = 5f;
-        //timer += Time.deltaTime;
-        //if (timer >= interval)
-        //{
-        //    timer = 0f;
-        //    Instantiate(bossKid, transform.position + Vector3.right, Quaternion.identity);
-        //    Instantiate(bossKid, transform.position + Vector3.down, Quaternion.identity);
-        //    Instantiate(bossKid, transform.position + Vector3.left, Quaternion.identity);
-        //    yield return null;
-        //}
         Vector3[] spawnOffsets = { Vector3.right, Vector3.down, Vector3.left };
 
         foreach (Vector3 offset in spawnOffsets)
@@ -138,6 +125,8 @@ public class Boss : Enemy
     //총알
     IEnumerator FireOne()
     {
+        speed = 0f;
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine(CreateKid());
         for (int i = 0; i < 5; i++)
         {
@@ -146,17 +135,20 @@ public class Boss : Enemy
             Rigidbody2D bulletRigid = bullet.GetComponent<Rigidbody2D>();
             Vector2 dir = GameManager.instance.player.transform.position - transform.position;
             bulletRigid.AddForce(dir.normalized * 10f, ForceMode2D.Impulse);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.BossThrow);
             yield return new WaitForSeconds(0.1f);
         }
+        speed = 2f;
         yield return new WaitForSeconds(3.0f);
+
     }
 
     //부채꼴 발사
     IEnumerator FireArc()
-    {
+    {        
         StartCoroutine(CreateKid());
         float arcAngle = 90;
-        float fireSpeed = 5f;
+        float fireSpeed = 8f;
         float fireRotateSpeed = 200f;
         int bulletCount = 6;
         Vector3 directionToTarget = (GameManager.instance.player.transform.position - transform.position).normalized;
@@ -166,7 +158,9 @@ public class Boss : Enemy
         float angleStep = arcAngle / (bulletCount - 1);
         float angleStart = baseAngle - arcAngle / 2f;
         float angle = angleStart;
-
+        speed = 0f;
+        yield return new WaitForSeconds(0.5f);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.BossArc);
         for (int i = 0; i < bulletCount; i++)
         {
             float dirX = Mathf.Cos(angle * Mathf.Deg2Rad); // 방향 계산
@@ -183,20 +177,25 @@ public class Boss : Enemy
 
             angle += angleStep;
         }
-
-        yield return new WaitForSeconds(3.0f);
+        speed = 2f;
+        yield return new WaitForSeconds(5.0f);
+        
     }
 
     //원형 발사
     IEnumerator FireCircle()
     {
-        StartCoroutine(CreateKid());
+        speed = 0f;
+        anim.SetTrigger("Jump");
+        yield return new WaitForSeconds(1f);
+
+        StartCoroutine(CreateKid());        
         speed = 0f;
         float angleStep = 360f / 30;
         float angle = 0f;
         float fireSpeed = 5f;
         int bulletCount = 30;
-
+        
         for (int i = 0; i < bulletCount; i++)
         {
             float dirX = Mathf.Sin(angle * Mathf.Deg2Rad);
@@ -212,8 +211,24 @@ public class Boss : Enemy
 
             angle += angleStep;
         }
+        yield return new WaitForSeconds(0.5f);
         speed = 2f;
 
         yield return new WaitForSeconds(5.0f);
+    }
+
+    public IEnumerator SpawnParticle()
+    {
+        spawnparticle.SetActive(true);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.BossJump);
+        yield return new WaitForSeconds(1.0f);
+        spawnparticle.SetActive(false);
+    }
+    public IEnumerator JumpParticle()
+    {
+        jumpparticle.SetActive(true);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.BossJump);
+        yield return new WaitForSeconds(1.0f);
+        jumpparticle.SetActive(false);
     }
 }

@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
     AudioSource[] sfxPlayers;
     int channelIndex;
 
-    public enum Sfx { Win, Levelup, Exp, Hit, Select, Garbage, Liquid, Swipe, Throw, Vacuum }
+    public enum Sfx { Win, Levelup, Exp, Hit, Select, Garbage, Liquid, Swipe, Throw, Vacuum, BossThrow, BossArc, BossJump }
     void Awake()
     {
         instance = this;

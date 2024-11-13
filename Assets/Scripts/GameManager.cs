@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator GameEndCorou()
     {
+        yield return new WaitForSeconds(1.5f);
         isLive = false;
         enemyCleaner.SetActive(true);
         yield return new WaitForSeconds(1f);

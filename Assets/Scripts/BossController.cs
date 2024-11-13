@@ -25,9 +25,11 @@ public class BossController : MonoBehaviour
         //보스 소환
         GameObject bossObject = Instantiate(boss, GameManager.instance.player.transform.position + Vector3.up * 5f + Vector3.right * 7f, Quaternion.identity);
         bossObject.GetComponent<Boss>().enabled = false;
+        bossObject.GetComponent<Animator>().SetTrigger("Spawn");
         //화면 작게
         yield return StartCoroutine(CameraMove2());
         bossObject.GetComponent<Boss>().enabled = true;
+        bossObject.GetComponent<Animator>().SetBool("Walk", true);
         GameManager.instance.player.enabled = true;
     }
 

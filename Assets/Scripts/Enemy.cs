@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
 
     protected Rigidbody2D rigid;
     protected Collider2D col;
-    protected  Animator anim;
+    protected Animator anim;
     protected WaitForFixedUpdate wait;
     void Awake()
     {
@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
         anim.SetBool("Dead", false);
         isHit = false;
         health = maxHealth;
-        foreach(SpriteRenderer entireRenderer in entireRenderers)
+        foreach (SpriteRenderer entireRenderer in entireRenderers)
         {
             entireRenderer.color = Color.white;
             entireRenderer.enabled = true;
@@ -74,15 +74,15 @@ public class Enemy : MonoBehaviour
         health -= collision.GetComponent<Bullet>().damage;
 
         StartCoroutine(KnockBack());
-        
+
         if (health > 0)
         {
-            anim.SetTrigger("Hit");            
+            anim.SetTrigger("Hit");
         }
         else
         {
             anim.SetBool("Dead", true);
-            
+
             isLive = false;
             col.enabled = false;
             rigid.simulated = false;
@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
             DropExp();
         }
-       
+
     }
     protected virtual IEnumerator KnockBack()
     {
@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         isHit = false;
     }
-    
+
     void DropExp()
     {
         GameObject exp = GameManager.instance.pool.Get(7);
