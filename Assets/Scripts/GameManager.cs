@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public GameObject bulletCleaner;
     public GameObject bossController;
     public GameObject bossGrid;
-
+    public BackGround bgImage;
     public bool bossClear = false;
     private bool bossCouroutine = false;
     void Awake()
@@ -49,16 +49,28 @@ public class GameManager : MonoBehaviour
 
         levelUI.Select(id % 2);
 
-        isLive = true;
-        Time.timeScale = 1;
-
+        
+        //Time.timeScale = 1;
+        
         player.playerSpeed *= CharacterSwitch.Speed;
         maxHealth *= CharacterSwitch.Health;
         health = maxHealth;
 
+        StartCoroutine(GameStartCorou());
+
         AudioManager.instance.PlayBgm(true);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         stopButton.SetActive(true);
+        
+    }
+    IEnumerator GameStartCorou()
+    {
+        player.GetComponent<Animator>().SetTrigger("RunDown");
+        bgImage.MoveUpForSeconds(4);
+        yield return new WaitForSeconds(4f);
+        Cursor.visible = enabled;
+        isLive = true;
+        Time.timeScale = 1;
         joystickUI.gameObject.SetActive(true);
     }
     public void GameOver()

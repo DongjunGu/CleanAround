@@ -95,6 +95,7 @@ public class Boss : Enemy
                 case BossState.FireArc:
                     yield return StartCoroutine(FireArc());
                     break;
+
                 case BossState.FireCircle:
                     yield return StartCoroutine(FireCircle());
                     break;
