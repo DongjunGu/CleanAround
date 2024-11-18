@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         inputVector.x = joystick.Horizontal;
         inputVector.y = joystick.Vertical;
+        isDead();
     }
     void FixedUpdate()
     {
@@ -59,17 +60,12 @@ public class PlayerController : MonoBehaviour
 
         playerAnimator.SetFloat("playerSpeed", inputVector.magnitude);
     }
-   
-    private void OnCollisionStay2D(Collision2D collision)
+    
+    void isDead()
     {
-        if (!GameManager.instance.isLive)
-            return;
-        if(collision.gameObject.tag == "Enemy")
-            GameManager.instance.health -= Time.deltaTime * 30;
-
         if (GameManager.instance.health < 0)
         {
-            for(int index = 2; index < transform.childCount; index++)
+            for (int index = 2; index < transform.childCount; index++)
             {
                 transform.GetChild(index).gameObject.SetActive(false);
             }

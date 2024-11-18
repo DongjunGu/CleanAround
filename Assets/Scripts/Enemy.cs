@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float health;
     public float maxHealth;
+    public float damage;
     public Rigidbody2D target;
     public SpriteRenderer[] spriteRenderers;
     public SpriteRenderer[] entireRenderers;
@@ -44,10 +45,7 @@ public class Enemy : MonoBehaviour
     {
         if (!isLive || isHit)
             return;
-        Vector2 dirVec = (target.position - rigid.position).normalized;
-        Vector2 moveVec = dirVec * speed * Time.fixedDeltaTime;
-        rigid.MovePosition(rigid.position + moveVec);
-        rigid.velocity = Vector2.zero;
+        Move();
     }
 
     void LateUpdate()
@@ -64,8 +62,15 @@ public class Enemy : MonoBehaviour
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
+        damage = data.damage;
     }
-
+    protected virtual void Move()
+    {
+        Vector2 dirVec = (target.position - rigid.position).normalized;
+        Vector2 moveVec = dirVec * speed * Time.fixedDeltaTime;
+        rigid.MovePosition(rigid.position + moveVec);
+        rigid.velocity = Vector2.zero;
+    }
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Bullet") || !isLive)
@@ -90,7 +95,13 @@ public class Enemy : MonoBehaviour
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
             DropExp();
         }
-
+    }
+    protected virtual void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.instance.health -= Time.deltaTime * damage;
+        }
     }
     protected virtual IEnumerator KnockBack()
     {

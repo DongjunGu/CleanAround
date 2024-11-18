@@ -9,9 +9,16 @@ public class Boss : Enemy
     public GameObject bossHpUI;
     public GameObject spawnparticle;
     public GameObject jumpparticle;
+    public GameObject[] Arms;
+    public GameObject[] Ranges;
+    public GameObject[] WallRanges;
+    Transform wall;
+    bool isMoving = false;
+    bool isRangeClear = false;
     void Start()
     {
         StartCoroutine(BossPattern());
+        damage = 35f;
     }
     protected override void OnEnable()
     {
@@ -22,9 +29,15 @@ public class Boss : Enemy
         anim.SetBool("Dead", false);
         isHit = false;
         health = maxHealth;
-
         GameObject newBossHpUI = Instantiate(bossHpUI, GameManager.instance.HUDUI.transform);
         newBossHpUI.transform.SetSiblingIndex(0);
+    }
+    protected override void Move()
+    {
+        if (isMoving)
+            return;
+
+        base.Move();
     }
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
@@ -51,6 +64,8 @@ public class Boss : Enemy
         FireOne,
         FireArc,
         FireCircle,
+        ArmAttack,
+        RangeAttack,
         Dead
     }
 
@@ -61,9 +76,9 @@ public class Boss : Enemy
         if (health > maxHealth * 0.75f)
             currentState = BossState.CreateKid;
         if (health <= maxHealth * 0.75 && health > maxHealth * 0.5f)
-            currentState = BossState.FireOne;
-        if (health <= maxHealth * 0.5f && health > maxHealth * 0.25f)
             currentState = BossState.FireArc;
+        if (health <= maxHealth * 0.5f && health > maxHealth * 0.25f)
+            currentState = BossState.ArmAttack;
         if (health <= maxHealth * 0.25f)
             currentState = BossState.FireCircle;
         if (health <= 0)
@@ -99,6 +114,9 @@ public class Boss : Enemy
                 case BossState.FireCircle:
                     yield return StartCoroutine(FireCircle());
                     break;
+                case BossState.ArmAttack:
+                    yield return StartCoroutine(ArmAttack());
+                    break;
 
             }
         }
@@ -126,20 +144,18 @@ public class Boss : Enemy
     //총알
     IEnumerator FireOne()
     {
-        speed = 0f;
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(CreateKid());
         for (int i = 0; i < 5; i++)
         {
-            GameObject bullet;
-            bullet = Instantiate(bossBullet, transform);
+            GameObject bullet = Instantiate(bossBullet, transform.position, Quaternion.identity);
+            bullet.transform.SetParent(transform);
             Rigidbody2D bulletRigid = bullet.GetComponent<Rigidbody2D>();
             Vector2 dir = GameManager.instance.player.transform.position - transform.position;
             bulletRigid.AddForce(dir.normalized * 10f, ForceMode2D.Impulse);
             AudioManager.instance.PlaySfx(AudioManager.Sfx.BossThrow);
             yield return new WaitForSeconds(0.1f);
         }
-        speed = 2f;
         yield return new WaitForSeconds(3.0f);
 
     }
@@ -162,6 +178,7 @@ public class Boss : Enemy
         speed = 0f;
         yield return new WaitForSeconds(0.5f);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.BossArc);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.BossArc);
         for (int i = 0; i < bulletCount; i++)
         {
             float dirX = Mathf.Cos(angle * Mathf.Deg2Rad); // 방향 계산
@@ -170,6 +187,7 @@ public class Boss : Enemy
             Vector3 dir = new Vector3(dirX, dirY, 0f).normalized;
 
             GameObject bullet = Instantiate(bossBullet, transform.position, Quaternion.identity);
+            bullet.transform.SetParent(transform);
             bullet.transform.up = dir;
 
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -186,6 +204,10 @@ public class Boss : Enemy
     //원형 발사
     IEnumerator FireCircle()
     {
+        if(!isRangeClear)
+            yield return StartCoroutine(RangeAttack());
+
+        isRangeClear = true;
         speed = 0f;
         anim.SetTrigger("Jump");
         yield return new WaitForSeconds(1f);
@@ -205,6 +227,7 @@ public class Boss : Enemy
             Vector3 dir = new Vector3(dirX, dirY, 0f).normalized;
 
             GameObject bullet = Instantiate(bossBullet, transform.position, Quaternion.identity);
+            bullet.transform.SetParent(transform);
             bullet.transform.up = dir;
 
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -217,7 +240,97 @@ public class Boss : Enemy
 
         yield return new WaitForSeconds(5.0f);
     }
+    IEnumerator ArmAttack()
+    {
+        speed = 0f;
+        TriggerAnimation(Ranges, "Notice");
+        yield return new WaitForSeconds(1f);
+        TriggerAnimation(Arms, "ArmAttack");
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Scratch);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Scratch);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Scratch);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Scratch);
+        ToggleColliders(Ranges, true);
+        yield return new WaitForSeconds(1.5f);
+        ToggleColliders(Ranges, false);
 
+        speed = 2f;
+        yield return new WaitForSeconds(2.0f);
+        StartCoroutine(FireOne());
+        yield return new WaitForSeconds(5.0f);
+    }
+
+    IEnumerator RangeAttack()
+    {
+        wall = GameObject.Find("Wall(Clone)").transform;
+        GameObject[] squares = new GameObject[]
+        {
+        wall.Find("Square1").gameObject,
+        wall.Find("Square2").gameObject,
+        wall.Find("Square3").gameObject,
+        wall.Find("Square4").gameObject
+        };
+
+        // 이동 관련 설정
+        isMoving = true;
+        col.enabled = false;
+        while (Vector3.Distance(transform.position, wall.position) > 0.2f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, wall.position, 4f * Time.deltaTime);
+            yield return null;
+        }
+
+        transform.position = wall.position;
+        anim.SetBool("Walk", false);
+
+        // 패턴 실행
+        yield return ExecutePattern(new[] { squares[0], squares[3] }, 5f, 3.5f); // 11시, 5시
+        yield return ExecutePattern(new[] { squares[1], squares[2] }, 5f, 3.5f); // 1시, 7시
+        yield return ExecutePattern(new[] { squares[1], squares[2], squares[3] }, 5f); // 1시, 5시, 7시
+        yield return ExecutePattern(new[] { squares[0], squares[1], squares[2] }, 5f); // 11시, 5시, 7시
+
+        // 이동 완료
+        anim.SetBool("Walk", true);
+        isMoving = false;
+        col.enabled = true;
+    }
+    private IEnumerator ExecutePattern(GameObject[] activeSquares, float activeDuration, float delayAfter = 0f)
+    {
+        // 활성화
+        foreach (var square in activeSquares)
+        {
+            square.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(activeDuration);
+
+        // 비활성화
+        foreach (var square in activeSquares)
+        {
+            square.SetActive(false);
+        }
+
+        // 딜레이
+        if (delayAfter > 0)
+        {
+            yield return new WaitForSeconds(delayAfter);
+        }
+    }
+    private void TriggerAnimation(GameObject[] objects, string triggerName)
+    {
+        foreach (var obj in objects)
+        {
+            obj.GetComponent<Animator>().SetTrigger(triggerName);
+        }
+    }
+
+    private void ToggleColliders(GameObject[] objects, bool isEnabled)
+    {
+        foreach (var obj in objects)
+        {
+            obj.GetComponent<CapsuleCollider2D>().enabled = isEnabled;
+        }
+    }
     public IEnumerator SpawnParticle()
     {
         spawnparticle.SetActive(true);
@@ -228,6 +341,7 @@ public class Boss : Enemy
     public IEnumerator JumpParticle()
     {
         jumpparticle.SetActive(true);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.BossJump);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.BossJump);
         yield return new WaitForSeconds(1.0f);
         jumpparticle.SetActive(false);

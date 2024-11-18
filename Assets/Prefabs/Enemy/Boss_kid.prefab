@@ -524,6 +524,7 @@ MonoBehaviour:
   speed: 2.5
   health: 50
   maxHealth: 50
+  damage: 25
   target: {fileID: 0}
   spriteRenderers:
   - {fileID: 8592738140763732059}

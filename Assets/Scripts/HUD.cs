@@ -49,7 +49,7 @@ public class HUD : MonoBehaviour
                 timer += Time.deltaTime;
                 if (timer > 1f)
                 {
-                    getSlider.value += 0.05f;
+                    getSlider.value += 0.035f;
                     if(getSlider.value == 1f)
                     {
                         getSlider.value = 0f;

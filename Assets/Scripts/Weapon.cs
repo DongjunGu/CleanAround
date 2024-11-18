@@ -67,7 +67,8 @@ public class Weapon : MonoBehaviour
                 timer += Time.deltaTime;
                 if (timer > 1f)
                 {
-                    activeTime += 0.05f;
+                    //HUD¿¬°á
+                    activeTime += 0.035f;
                     if (activeTime > 1f && !isVacuumWorking)
                     {
                         activeTime = 0f;

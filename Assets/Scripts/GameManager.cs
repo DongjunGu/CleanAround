@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [Header("# Game Object")]
     public PlayerController player;
-    public Camera mainCamera;
     public Spawner spawner;
     public PoolManager pool;
     public bool isLive;
