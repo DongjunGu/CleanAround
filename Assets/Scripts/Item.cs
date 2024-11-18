@@ -118,7 +118,7 @@ public class Item : MonoBehaviour
                     nextDamage += data.baseDamage * data.damages[level-1];
                     nextCount += data.counts[level - 1];
                     weapon.LevelUp(nextDamage, nextCount);
-                    weapon.speed -= 0.1f;
+                    weapon.speed -= 0.05f;
                     LevelUPDia();
                 }
                 level++;
