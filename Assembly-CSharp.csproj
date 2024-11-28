@@ -68,7 +68,6 @@
     <Compile Include="Assets\Scripts\Scanner.cs" />
     <Compile Include="Assets\Scripts\UnlockController.cs" />
     <Compile Include="Assets\Scripts\VirusObject.cs" />
-    <Compile Include="Assets\Scripts\RangeScript.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\BossHpUI.cs" />
     <Compile Include="Assets\Scripts\Joystick2.cs" />

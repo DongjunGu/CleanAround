@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
             return;
         if (inputVector.x != 0)
         {
-            spriteRenderer.flipX = inputVector.x > 0; //비교연산자   
+            spriteRenderer.flipX = inputVector.x > 0;
         }
 
         playerAnimator.SetFloat("playerSpeed", inputVector.magnitude);

@@ -97,10 +97,10 @@ public class Weapon : MonoBehaviour
                 break;
         }
 
-        if (Input.GetButtonDown("Jump")) //Test
-        {
-            LevelUp(10, 1);
-        }
+        //if (Input.GetButtonDown("Jump")) //Test
+        //{
+        //    LevelUp(10, 1);
+        //}
     }
 
     public void LevelUp(float damage, int count)
@@ -108,7 +108,7 @@ public class Weapon : MonoBehaviour
         this.damage = damage;
         this.count += count;
         if (id == 0) //근접무기
-            Batch();
+            Broom();
 
     }
     public void Init(ItemData data)
@@ -133,7 +133,7 @@ public class Weapon : MonoBehaviour
         {
             case 0:
                 speed = -150;
-                Batch();
+                Broom();
                 break;
             case 1:
                 speed = 0.5f;
@@ -179,7 +179,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    void Batch()
+    void Broom()
     {
         for (int index = 0; index < count; index++)
         {

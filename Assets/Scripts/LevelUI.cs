@@ -74,33 +74,21 @@ public class LevelUI : MonoBehaviour
             //RobotVacuum
             if (items[4].level == items[4].data.damages.Length && items[8].level > 0
                 && items[10].level != items[10].data.damages.Length)
-            {
                 ran[0] = 10;
-            }
             //Vacuum
             if (items[0].level == items[0].data.damages.Length && items[9].level > 0
                 && items[12].level != items[12].data.damages.Length)
-            {
                 ran[0] = 12;
-            }
-
             //RedDuster
             if (items[5].level == items[5].data.damages.Length && items[11].level > 0
                 && items[13].level != items[13].data.damages.Length)
-            {
                 ran[0] = 13;
-            }
-
             //ToxicAcid
             if (items[7].level == items[7].data.damages.Length && items[2].level > 0
                 && items[14].level != items[14].data.damages.Length)
-            {
                 ran[0] = 14;
-            }
-
             if (ran[0] != ran[1] && ran[1] != ran[2] && ran[0] != ran[2])
                 break;
-            
         }
         for (int index = 0; index < ran.Length; index++)
         {
@@ -113,12 +101,10 @@ public class LevelUI : MonoBehaviour
             else
             {
                 //만약 0 1 둘다 만렙일경우 특수 아이템활성화
-                //만약 노출되는게 2개라면 만렙이 아닌것들 노출
                 ranItem.gameObject.SetActive(true);
             }
         }
     }
-
     int RandomItem(int min, int max, int[] excludes)
     {
         int randomIndex;
